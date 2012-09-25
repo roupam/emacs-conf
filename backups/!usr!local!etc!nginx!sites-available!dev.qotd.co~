@@ -1,0 +1,22 @@
+server {
+
+	listen   80; ## listen for ipv4
+	server_name  dev.qotd.co auth.qotd.co ash.qotd.co;
+
+	access_log  /var/log/nginx/dev.qotd.co.access.log;
+	error_log /var/log/nginx/dev.qotd.co.error.log;
+
+	location /static {
+	    	root /Users/rpg/project/zulu/src/public;
+	}
+	location / {
+		proxy_pass   http://127.0.0.1:5000;
+		proxy_set_header Host $http_host;
+    		error_page   413 http://$host/static/error_pages/413.html;
+	}
+
+  	location /xhr/feedback-screen {
+	  proxy_pass http://localhost:5001/;
+	}
+}
+

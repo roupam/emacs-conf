@@ -1,0 +1,160 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.HelpShift;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.Shader;
+import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.ImageView;
+import com.HelpShift.extern.CrashReportData;
+import com.HelpShift.extern.ReportField;
+import com.HelpShift.sender.EmailIntentSender;
+import com.HelpShift.util.Base64;
+import com.HelpShift.HSFeedback;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ *
+ * @author rpg
+ */
+public class HSFindASolution extends Activity {
+    TextView text, emaiLabel;
+    EditText myemail, userComment;
+    Button btOK, btCancel;
+    ProgressDialog pDialog;
+    AlertDialog msgSentDialog;
+    LinearLayout root0;
+    private View.OnClickListener handleSearch;
+
+    /** Called when the activity is first created. */
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        root0 = new LinearLayout(this);
+        root0.setOrientation(LinearLayout.VERTICAL);
+        root0.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        root0.setBackgroundColor(Color.parseColor("#d2d3d4"));
+        root0.setPadding(0, 0, 0, 0);
+
+        LinearLayout root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        root.setBackgroundColor(Color.parseColor("#d2d3d4"));
+        root.setPadding(0, 0, 0, 0);
+
+        LinearLayout panel = new LinearLayout(this);
+        panel.setOrientation(LinearLayout.VERTICAL);
+        panel.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+        panel.setPadding(10, 5, 10, 5);
+
+        LinearLayout panel2 = new LinearLayout(this);
+        panel2.setOrientation(LinearLayout.VERTICAL);
+        panel2.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+        panel2.setBackgroundColor(Color.BLACK);
+        panel2.getBackground().setAlpha(255);
+        panel2.setPadding(10, 10, 10, 10);
+
+
+        TextView titleText = new TextView(this);
+        titleText.setText("Find a solution");
+        titleText.setTypeface(Typeface.DEFAULT_BOLD);
+        titleText.setTextSize(24);
+        titleText.setTextColor(Color.WHITE);
+        titleText.setGravity(Gravity.CENTER_VERTICAL);
+        titleText.setPadding(0, 0, 20, 0);
+
+        panel2.addView(titleText, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+        root.addView(panel2);
+
+        emaiLabel = new TextView(this);
+        emaiLabel.setText("Please describe your problem");
+        emaiLabel.setTextSize(18);
+        emaiLabel.setTextColor(Color.parseColor("#262626"));
+        emaiLabel.setPadding(0, 0, 10, 4);
+        panel.addView(emaiLabel, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+
+        myemail = new EditText(this);
+        myemail.setLines(1);
+        myemail.setTextSize(18);
+        myemail.setSingleLine(true);
+        myemail.requestFocus();
+
+        panel.addView(myemail, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+
+        btOK = new Button(this);
+        btOK.setText("FIND A SOLUTION");
+        btOK.setTextSize(18);
+        btOK.setTextColor(Color.WHITE);
+        btOK.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(),HSFeedback.class);
+                    view.getContext().startActivity(i);
+                    finish();
+                }
+            });
+
+        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[]{Color.BLACK, Color.DKGRAY});
+        gd.setCornerRadius(3f);
+        gd.setStroke(2, Color.parseColor("#010101"));
+        btOK.setBackgroundDrawable(gd);
+        panel.addView(btOK);
+
+        byte[] decodedString = Base64.decode(HSImageList.powered_by_helpshift, Base64.DEFAULT);
+        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+        BitmapDrawable powered_by_helpshift = new BitmapDrawable(decodedByte);
+
+        ImageView img = new ImageView(this);
+        img.setBackgroundDrawable(powered_by_helpshift);
+        img.setScaleType(ImageView.ScaleType.FIT_XY);
+        panel.addView(img);
+
+        root.addView(panel);
+        root0.addView(root);
+        setContentView(root0);
+    }
+}

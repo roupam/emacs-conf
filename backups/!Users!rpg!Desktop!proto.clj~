@@ -1,0 +1,6 @@
+(ns proto)
+
+(defprotocol PCaseMorph
+  "A simple protocol to change the case of a thing."
+  (upper [o])
+  (lower [o]))

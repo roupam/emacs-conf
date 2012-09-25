@@ -1,0 +1,15 @@
+section .data
+hello_world     db      "Hello World!", 0x0a
+
+section .text
+global _start
+
+start:
+mov eax, 4              ; System call write = 4
+mov ebx, 1              ; Write to standard out = 1
+mov ecx, hello_world    ; The address of hello_world string
+mov edx, 14             ; The size to write
+syscall                 ; Invoke the kernel
+mov eax, 1              ; System call number for exit = 1
+mov ebx, 0              ; Exit success = 0
+syscall                 ; Invoke the kernel

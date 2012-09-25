@@ -1,0 +1,5 @@
+  cd blog
+  rake "new_post[title]"
+  mv source/_posts/2012-08-01-title.org source/org_posts/
+  # I keep my posts in GIT so then I add it to the repo
+  git add source/org_posts/2012-08-01-title.org

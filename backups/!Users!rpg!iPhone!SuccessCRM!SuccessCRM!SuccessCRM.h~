@@ -1,0 +1,13 @@
+//
+//  SuccessCRM.h
+//  SuccessCRM
+//
+//  Created by Roupam Ghosh on 19/08/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SuccessCRM : NSObject
+-(void) showHello;
+@end

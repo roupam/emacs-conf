@@ -1,0 +1,580 @@
+package com.ibt.HelpShift;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.Shader;
+import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.ibt.HS.CrashReportData;
+import com.ibt.HS.ReportField;
+import com.ibt.HS.sender.EmailIntentSender;
+import com.ibt.HS.util.Base64;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+//    c1e946027bf142b4b48a383fe97c993e
+public class HSCrashReporterInit extends Activity {
+
+    private static final String TAG = "-----------------------------------------------------------------------";
+    private static final String EMAIL = "email";
+    private static final String FEEDBACK = "feedback";
+    private static final String STACK_TRACE = "crash-info";
+    private static final String CRASH = "crash";
+    private static final String APPLICATION_IDENTIFIER = "application-identifier";
+    private static final String REASON = "reason";
+    private static final String SYSTEM_LOG = "system-log";
+    private static final String REPORT = "extra-info";
+    private static final String APPLICATION_NAME = "application-name";
+    private static final String APPLICATION_VERSION = "application-version";
+    private static final String DEVICE_MODEL = "device-model";
+    private static final String OS_VERSION = "os-version";
+    private static final String API_KEY = "API_KEY";
+    private static final String DOMAIN_NAME = "DOMAIN_NAME";
+    private static final String PLATFORM = "platform";
+    private Handler mHandler;
+    private Handler nHandler;
+    private Handler pHandler;
+    private Handler qHandler;
+    private Map<ReportField, String> mMapping = null;
+    public static CrashReportData report;
+    TextView text, emaiLabel;
+    EditText myemail, userComment;
+    Button btOK, btCancel;
+    ProgressDialog pDialog;
+    AlertDialog msgSentDialog;
+    LinearLayout root0;
+    public static String requestJSON;
+    public static String api_key;
+    public static String domain_name;
+    public static String email;
+    public static String feedback;
+    public static String crash_info;
+    public static String application_identifier;
+    public static String application_version;
+    public static String device_model;
+    public static String os_version;
+    public static String system_log;
+    public static String reason;
+    public static String application_name;
+    public static String extra_info;
+
+    /** Called when the activity is first created. */
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Intent myIntent = getIntent();
+        api_key = myIntent.getStringExtra(API_KEY);
+        domain_name = myIntent.getStringExtra(DOMAIN_NAME);
+        email = myIntent.getStringExtra(EMAIL);
+        feedback = myIntent.getStringExtra(FEEDBACK);
+        crash_info = myIntent.getStringExtra(STACK_TRACE);
+        application_identifier = myIntent.getStringExtra(APPLICATION_IDENTIFIER);
+        application_version = myIntent.getStringExtra(APPLICATION_VERSION);
+        device_model = myIntent.getStringExtra(DEVICE_MODEL);
+        os_version = myIntent.getStringExtra(OS_VERSION);
+        system_log = myIntent.getStringExtra(SYSTEM_LOG);
+        reason = myIntent.getStringExtra(REASON);
+        application_name = myIntent.getStringExtra(APPLICATION_NAME);
+        extra_info = myIntent.getStringExtra(REPORT);
+
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//      getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+//      getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MASK_ADJUST);
+
+        byte[] decodedString = Base64.decode(HSImageList.buttonBackground, Base64.DEFAULT);
+        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+        BitmapDrawable baseBackground = new BitmapDrawable(decodedByte);
+        baseBackground.setTileModeXY(Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+
+        root0 = new LinearLayout(this);
+        root0.setOrientation(LinearLayout.VERTICAL);
+        root0.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        root0.setBackgroundColor(Color.parseColor("#d2d3d4"));
+        root0.setPadding(0, 0, 0, 0);
+
+        LinearLayout root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+//        root.setBackgroundDrawable(baseBackground);
+        root.setBackgroundColor(Color.parseColor("#d2d3d4"));
+        root.setPadding(0, 0, 0, 0);
+
+//        LinearLayout panelBack = new LinearLayout(this);
+//        panelBack.setOrientation(LinearLayout.VERTICAL);
+//        panelBack.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+//        panelBack.setBackgroundColor(Color.parseColor("#ABACAF"));
+//        panelBack.setPadding(2, 2, 2, 2);
+
+//        LinearLayout panelFront = new LinearLayout(this);
+//        panelFront.setOrientation(LinearLayout.VERTICAL);
+//        panelFront.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.FILL_PARENT));
+//        panelFront.setBackgroundColor(Color.parseColor("#d1d2d3"));
+//        //panelFront.setBackgroundDrawable(baseBackground);
+//        panelFront.setPadding(0, 0, 0, 0);
+
+        LinearLayout panel = new LinearLayout(this);
+        panel.setOrientation(LinearLayout.VERTICAL);
+        panel.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+        //panel.setBackgroundColor(Color.parseColor("#d1d2d3"));
+        //panel.setBackgroundDrawable(baseBackground);
+        panel.setPadding(10, 5, 10, 5);
+
+//        Paint strokePaint = new Paint();
+//        strokePaint.setStyle(Paint.Style.STROKE);
+//        strokePaint.setStrokeWidth(2);
+//        strokePaint.setColor(Color.parseColor("#010101"));
+//        strokePaint.setAlpha(45);
+//        
+//        Canvas canvas = new Canvas();
+//        canvas.drawPaint(strokePaint);
+//        
+//        panel.draw(canvas);
+
+//        ScrollView scroll = new ScrollView(this);
+//        root.addView(scroll, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT, 1.0f));
+
+//        GradientDrawable gd_panel 
+//                = new GradientDrawable(
+//                        GradientDrawable.Orientation.BOTTOM_TOP, new int[]
+//                        {
+//                            Color.parseColor("#e7e8e9"), Color.parseColor("#d2d3d4")
+//                        });
+//        gd_panel.setCornerRadius(3f);
+
+        LinearLayout panel2 = new LinearLayout(this);
+        panel2.setOrientation(LinearLayout.VERTICAL);
+        panel2.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+        //panel2.setBackgroundColor(Color.parseColor("#A9A9AB"));
+        panel2.setBackgroundColor(Color.BLACK);
+        panel2.getBackground().setAlpha(255);
+        //panel2.setBackgroundDrawable(gd_panel);
+        panel2.setPadding(10, 10, 10, 10);
+
+
+        TextView titleText = new TextView(this);
+        titleText.setText("Feedback");
+        titleText.setTypeface(Typeface.DEFAULT_BOLD);
+        titleText.setTextSize(24);
+        //titleText.setTextColor(Color.parseColor("#262626"));
+        titleText.setTextColor(Color.WHITE);
+        titleText.setGravity(Gravity.CENTER_VERTICAL);
+        titleText.setPadding(0, 0, 20, 0);
+
+//        root.addView(titleText, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+        panel2.addView(titleText, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+        root.addView(panel2);
+
+//        text = new TextView(this);
+//
+//        text.setText("Please help us fix this by sending us the error data.");
+//        text.setTextSize(18);
+//        text.setPadding(10,10,10,10);
+//        root.addView(text, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+
+//         Add an optional prompt for user comments
+//        int commentPromptId = ACRA.getConfig().resDialo   gCommentPrompt();
+//        if (commentPromptId != 0) {
+
+        emaiLabel = new TextView(this);
+        emaiLabel.setText("Email address");
+        emaiLabel.setTextSize(18);
+        emaiLabel.setTextColor(Color.parseColor("#262626"));
+        //emaiLabel.setPadding(emaiLabel.getPaddingLeft(), 10, emaiLabel.getPaddingRight(), 5);
+        emaiLabel.setPadding(0, 0, 10, 4);
+        panel.addView(emaiLabel, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+
+        myemail = new EditText(this);
+        myemail.setLines(1);
+        myemail.setTextSize(18);
+        myemail.setSingleLine(true);
+        myemail.requestFocus();
+
+//        myemail.setOnKeyListener(new OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int i, KeyEvent ke) {
+//                if(ke.getUnicodeChar() == ke.KEYCODE_ENTER)
+//                {
+//                    userComment.requestFocus();
+//                }
+//                
+//                return true;
+//            }
+//        });
+
+        panel.addView(myemail, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+
+        TextView commentLabel = new TextView(this);
+        commentLabel.setText("Provide feedback (optional)");
+        commentLabel.setTextColor(Color.parseColor("#262626"));
+        commentLabel.setTextSize(18);
+//        commentLabel.setPadding(commentLabel.getPaddingLeft(), 10, commentLabel.getPaddingRight(), 5);
+        commentLabel.setPadding(0, 4, 10, 4);
+        panel.addView(commentLabel, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+
+        userComment = new EditText(this);
+        userComment.setLines(6);
+        userComment.setTextSize(18);
+        userComment.setGravity(Gravity.LEFT);
+        userComment.setGravity(Gravity.TOP);
+
+        panel.addView(userComment, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        //}
+        btOK = new Button(this);
+        btOK.setText("Send");
+        btOK.setTextSize(18);
+        btOK.setOnClickListener(myhandlerOK);
+        btOK.setTextColor(Color.WHITE);
+        //btOK.setBackgroundColor(Color.BLACK);
+
+        btCancel = new Button(this);
+        btCancel.setText("Exit");
+        btCancel.setTextSize(18);
+        btCancel.setOnClickListener(myhandlerCancel);
+        btCancel.setTextColor(Color.WHITE);
+        //btCancel.setBackgroundColor(Color.BLACK);
+
+        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[]{Color.BLACK, Color.DKGRAY});
+        gd.setCornerRadius(3f);
+        gd.setStroke(2, Color.parseColor("#010101"));
+        btOK.setBackgroundDrawable(gd);
+        btCancel.setBackgroundDrawable(gd);
+
+        Button btSpace = new Button(this);
+        btSpace.setText("");
+        btSpace.setOnClickListener(myhandlerCancel);
+        btSpace.setTextColor(Color.TRANSPARENT);
+        btSpace.setBackgroundColor(Color.TRANSPARENT);
+
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+
+        LinearLayout btroot = new LinearLayout(this);
+        btroot.setOrientation(LinearLayout.HORIZONTAL);
+        btroot.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        btroot.addView(btCancel, new LinearLayout.LayoutParams(displaymetrics.widthPixels / 2 - 20, 48));
+        btroot.addView(btSpace, new LinearLayout.LayoutParams(10, LayoutParams.WRAP_CONTENT));
+        btroot.addView(btOK, new LinearLayout.LayoutParams(displaymetrics.widthPixels / 2 - 20, 48));
+
+        btroot.setPadding(4, 4, 0, 4);
+
+//        btroot.setBackgroundColor(Color.parseColor("#d1d2d3"));
+//        btroot.getBackground().setAlpha(45);
+
+        panel.addView(btroot);
+
+//        panelFront.addView(panel);
+//        panelBack.addView(panelFront);
+//        root.addView(panelBack);0
+        root.addView(panel);
+        root0.addView(root);
+        setContentView(root0);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Application Crash");
+        builder.setMessage("This application has closed unexpectedly. Send a crash report?");
+        root0.setVisibility(View.INVISIBLE);
+        builder.setPositiveButton("Send Report", new OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int arg1) {
+                root0.setVisibility(View.VISIBLE);
+            }
+        });
+        builder.setNegativeButton("No, Thanks", new OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int arg1) {
+                System.exit(0);
+            }
+        });
+        builder.create().show();
+        mHandler = new Handler();
+        nHandler = new Handler();
+        pHandler = new Handler();
+        qHandler = new Handler();
+    }
+    View.OnClickListener myhandlerCancel = new View.OnClickListener() {
+
+        public void onClick(View view) {
+            finish();
+        }
+    };
+    View.OnClickListener myhandlerOK = new View.OnClickListener() {
+
+        public void onClick(final View view) {
+
+            //Pattern emailPattern = Pattern.compile(".+@.+\\.[a-z]+");
+            Pattern emailPattern = Pattern.compile(
+                    "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}"
+                    + "\\@"
+                    + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}"
+                    + "("
+                    + "\\."
+                    + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}"
+                    + ")+");
+
+            Matcher emailMatcher = emailPattern.matcher(myemail.getText().toString());
+
+            if (!emailMatcher.matches()) {
+                AlertDialog aDialog = new AlertDialog.Builder(view.getContext()).create();
+
+                aDialog.setTitle("Invalid email");
+                aDialog.setMessage("Please enter a valid email address");
+                aDialog.setButton("OK", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        return;
+                    }
+                });
+                aDialog.show();
+
+            } else {
+
+                pDialog = ProgressDialog.show(view.getContext(), "", "Sending crash report", true);
+                new Thread(new Runnable() {
+
+                    public void run() {
+                        HttpClient httpclient = new DefaultHttpClient();
+                        HttpPost httppost = new HttpPost(domain_name + "api/crash/");
+                        try {
+                            httppost.addHeader("x-qotd-api-key", api_key);
+                            httppost.addHeader("Content-Type", "application/json");
+
+
+                            JSONObject system_log_json = new JSONObject();
+                            try {
+                                system_log_json.put(SYSTEM_LOG, system_log);
+                                system_log_json.put(REPORT, extra_info);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(EmailIntentSender.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+
+                            JSONObject finalJSON = new JSONObject();
+                            try {
+
+                                finalJSON.put(STACK_TRACE, system_log_json);
+                                finalJSON.put(APPLICATION_IDENTIFIER, application_identifier);
+                                finalJSON.put(REASON, reason);
+                                finalJSON.put(APPLICATION_NAME, application_name);
+                                finalJSON.put(APPLICATION_VERSION, application_version);
+                                finalJSON.put(DEVICE_MODEL, device_model);
+                                finalJSON.put(OS_VERSION, os_version);
+                                finalJSON.put(EMAIL, myemail.getText());
+                                finalJSON.put(FEEDBACK, userComment.getText());
+                                finalJSON.put(PLATFORM, "android");
+
+                            } catch (JSONException ex) {
+                                Logger.getLogger(HSCrashReporterInit.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+
+                            JSONObject requestJSON = new JSONObject();
+                            try {
+                                requestJSON.put(CRASH, finalJSON);
+                            } catch (JSONException e) {
+                            }
+
+                            int maxLogSize = 1000;
+                            for (int i = 0; i <= requestJSON.toString().length() / maxLogSize; i++) {
+                                int start = i * maxLogSize;
+                                int end = (i + 1) * maxLogSize;
+                                end = end > requestJSON.toString().length() ? requestJSON.toString().length() : end;
+//                                Log.d(TAG, requestJSON.toString().substring(start, end));
+                            }
+
+                            StringEntity se = new StringEntity(requestJSON.toString());
+                            httppost.setEntity(se);
+
+                            // Execute HTTP Post Request
+                            HttpResponse response = httpclient.execute(httppost);
+                            StatusLine sline = response.getStatusLine();
+
+                            String line = "";
+                            StringBuilder total = new StringBuilder();
+
+                            // Wrap a BufferedReader around the InputStream
+                            BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+                            try {
+                                // Read response until the end
+                                while ((line = rd.readLine()) != null) {
+                                    total.append(line);
+                                }
+                            } catch (IOException ex) {
+                            }
+
+//                            Log.d(TAG, total.toString());
+                            pDialog.dismiss();
+                            if (sline.getStatusCode() == 200) {
+                                mHandler.post(new Runnable() {
+
+                                    @Override
+                                    public void run() {
+                                        AlertDialog aDialog = new AlertDialog.Builder(view.getContext()).create();
+
+                                        aDialog.setTitle("Thank you");
+                                        aDialog.setMessage("The report has been submitted. This application will now close.");
+                                        aDialog.setButton("OK", new DialogInterface.OnClickListener() {
+
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                finish();
+                                                return;
+                                            }
+                                        });
+                                        aDialog.show();
+
+                                    }
+                                });
+
+                            } else {
+                                qHandler.post(new Runnable() {
+
+                                    @Override
+                                    public void run() {
+                                        AlertDialog.Builder bDialog = new AlertDialog.Builder(view.getContext());
+
+                                        bDialog.setTitle("Sorry");
+                                        bDialog.setMessage("There was an error sending the crash report. Do you want to try again?");
+                                        bDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                finish();
+                                                return;
+                                            }
+                                        });
+
+                                        bDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.dismiss();
+                                            }
+                                        });
+
+                                        AlertDialog aDialog = bDialog.create();
+                                        aDialog.show();
+
+                                    }
+                                });
+
+                            }
+                        } catch (ClientProtocolException e) {
+                            // TODO Auto-generated catch block
+//                            Log.d(TAG, "Exception Client Protocol");
+                            pDialog.dismiss();
+                            nHandler.post(new Runnable() {
+
+                                @Override
+                                public void run() {
+                                    AlertDialog.Builder bDialog = new AlertDialog.Builder(view.getContext());
+
+                                    bDialog.setTitle("Sorry");
+                                    bDialog.setMessage("There was an error sending the crash report. Do you want to try again?");
+                                    bDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            finish();
+                                            return;
+                                        }
+                                    });
+
+                                    bDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+
+                                    AlertDialog aDialog = bDialog.create();
+                                    aDialog.show();
+
+                                }
+                            });
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+//                            Log.d(TAG, "Exception IOException" + e.toString());
+                            pDialog.dismiss();
+                            pHandler.post(new Runnable() {
+
+                                @Override
+                                public void run() {
+                                    AlertDialog.Builder bDialog = new AlertDialog.Builder(view.getContext());
+
+                                    bDialog.setTitle("Sorry");
+                                    bDialog.setMessage("There was an error sending the crash report. Do you want to try again?");
+                                    bDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            finish();
+                                            return;
+                                        }
+                                    });
+
+                                    bDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+
+                                    AlertDialog aDialog = bDialog.create();
+                                    aDialog.show();
+
+                                }
+                            });
+                        }
+                    }
+                }).start();
+            }
+        }
+    };
+
+    private StringBuilder inputStreamToString(InputStream is) {
+        String line = "";
+        StringBuilder total = new StringBuilder();
+
+        // Wrap a BufferedReader around the InputStream
+        BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+        try {
+            // Read response until the end
+            while ((line = rd.readLine()) != null) {
+                total.append(line);
+            }
+        } catch (IOException ex) {
+        }
+
+        // Return full string
+        return total;
+    }
+}

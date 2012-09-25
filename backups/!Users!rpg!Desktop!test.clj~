@@ -1,0 +1,962 @@
+(ns test)
+
+(defn iterate*
+  [f x]
+  (cons x (lazy-seq (iterate* f (f x)))))
+
+(declare coprime? gcd)
+
+(defn totient*
+  "Find Euler's totient of n."
+  [n]
+  (count (filter (partial coprime? n) (range 1 (inc n)))))
+
+
+(defn coprime?
+  "Check if m & n are coprimes."
+ [n m]
+  (= (gcd m n) 1))
+
+
+(defn gcd
+  "Calculate GCD of m & n"
+ [m n]
+  (condp = m
+    0 n
+    1 1
+    (recur (mod n m) m)))
+
+
+(let [gcd (fn [m n]
+            (condp = m
+              0 n
+              1 1
+              (recur (mod n m) m)))
+      coprime? (fn [n m]
+ (= (gcd m n) 1))]
+  #(count (filter (partial coprime? %) (range 1 (inc %)))))
+
+(letfn [(gcd
+          [m n]
+          (condp = m
+            0 n
+            1 1
+            (recur (mod n m) m)))
+        (coprime?
+          [n m]
+          (= (gcd m n) 1))]
+  )
+
+(defn return-nth [coll n]
+  (if (= n 0)
+    (first coll)
+    (recur (rest coll) (dec n))))
+
+
+(defn return-count [cl]
+  (loop [n 0 res cl]
+    (if (empty? res)
+      n
+      (recur (inc n) (rest res)))))
+
+(defn return-map
+  [f coll]
+  (loop [res [] rev coll]
+    (if (empty? rev)
+      res
+      (recur (conj res (f (first rev))) (rest rev)))))
+
+(defn min-coll
+  [& colls]
+  (map (partial apply min) colls))
+
+(defn min-among-colls
+  [& colls]
+  (if (= 1 (count (into #{} (min-coll colls))))
+    (first (map min colls))
+    (recur (vec (drop 1 (first (list colls)))))))
+
+
+;; Wrong version
+ (defn return-flat
+  [coll flat]
+  (if (not (coll? (first coll)))
+    (conj flat  (return-flat (first coll)))
+    (recur (drop 1 coll) (conj flat (first coll)))))
+
+
+;;; unordered
+(defn flatten*
+  [coll res]
+  (if (seq coll)
+    (if (coll? (first coll))
+      (recur (rest coll) (concat res (flatten* (first coll) [])))
+      (recur (rest coll) (conj res (first coll))))
+    res))
+
+
+;; ordered
+(defn flatten*-2
+  [coll res]
+  (if (seq coll)
+    (if (coll? (first coll))
+      (recur (rest coll) (flatten*-2 (first coll) res))
+      (recur (rest coll) (conj res (first coll))))
+    res))
+
+
+
+;;; lazy-search
+
+(defn lazy-search
+  "Find the smallest common item in a bunch of collections."
+  [& colls]
+  (loop [colls colls]
+    (let [s-colls (sort-by first colls)
+          [[min-item & more] & others] s-colls]
+      (if (apply = (map first s-colls))
+        min-item
+        (recur (conj others more))))))
+
+;; (defn fake-reduce
+;;   [f coll]
+;;   (map #(f % %) coll))
+
+(defn pronunciation-step
+  [coll]
+  (mapcat (juxt count first) (partition-by identity coll)))
+
+(defn pronounce
+  [coll]
+  (recur (pronunciation-step (vec coll))))
+
+
+(defn paths
+  [[choice :as path]]
+  (for [op [/ * +] :let [nxt (op choice 2)] :when (integer? nxt)]
+    (cons nxt path)))
+
+(defn gen-paths
+  [path]
+  (mapcat paths path))
+
+(defn max-power-2
+  [n c]
+  (if (not (zero? (mod n 2)))
+    c
+    (recur (/ n 2) (inc c))))
+
+(defn strip-2
+  [n]
+  (if (not (zero? (mod n 2)))
+    n
+    (recur (/ n 2))))
+
+(defn shortest-path
+  [start end]
+  (+ (let [goal? (comp #{(strip-2 end)} first)]
+       (->> [[(strip-2 start)]]
+           (iterate gen-paths)
+           (map #(filter goal? %))
+           (remove empty?)
+           ffirst
+           count))
+     (max-power-2 start 0) (max-power-2 end 0)))
+
+
+(defn graph-tour
+  [coll]
+  (if (empty? (filter #(not (= (first %) (second %))) coll))
+    false
+    (if (= 1 (count (concat (filter #(not (= (first %) (second %))) coll))))
+      true
+      (= 0 (count
+           (filter odd?
+                   (map count
+                        (partition-by identity
+                                      (sort
+                                       (apply concat
+                                              (filter
+                                               #(not
+                                                 (= (first %) (second %))) coll)))))))))))
+
+(defn graph-connectivity
+  [coll]
+
+  (apply concat (filter #(= 1 ()) (partition-by identity
+                                (sort (apply concat coll))))))
+
+
+(defn divisor?
+  [d n]
+  (integer? (/ n d)))
+
+(defn divisor-list
+  [n]
+  (filter #(divisor? % n) (range 1 (+ n 1))))
+
+(defn skewed-list
+  [coll]
+  (loop [res (rest coll) skew []]
+    (if (empty? (rest res))
+      (if (= nil (first res))
+        skew
+        (conj skew (* (first res) (first res))))
+     (recur (rest (butlast res)) (conj skew (* (first res) (last res)))))))
+(defn sum-of-divisors
+  [n]
+  (reduce + (divisor-list n)))
+
+(defn dd
+  [n]
+  (apply min (skewed-list (divisor-list n))))
+
+(defn dde
+  [n]
+  (Math/log (Math/log n)))
+
+(defn com-n
+  [n]
+  [(* (/ n (dd n)) 1.0) (- 1 (/ 1 (dde n)))])
+
+(defn camel-case
+  [coll]
+  (let [res coll]
+    (if (= 1 (count res))
+      res
+      (recur (rest res)))))
+
+(defn str-to-seq
+  [word]
+   (loop [res ] (filter #(< 1 (count %)) (partition-by #{\-} word))))
+
+(defn first-char-up
+  [coll]
+  (conj (drop 1 coll) (Character/toUpperCase (first coll))))
+
+(defn rotate-seq-left
+  [n coll]
+  (if (= n 0)
+    (concat coll)
+   (recur (dec n) (conj (vec (rest coll)) (first coll)))))
+
+(defn rotate-seq-right
+  [n coll]
+  (if (= n 0)
+    coll
+    (recur (inc n) (cons (last coll) (butlast coll)))))
+
+(defn rotate-seq
+  [n coll]
+  (if (zero? n)
+    coll
+    (if (< n 0)
+     (rotate-seq (inc n) (cons (last coll) (butlast coll)))
+     (rotate-seq (dec n) (conj (vec (rest coll)) (first coll))))))
+
+;;Better Method: take mod of count...
+
+(defn revint
+  [coll n]
+  (loop [res (partition n coll) fres ()]
+    (if (zero? (count (first res)))
+    (reverse fres)
+    (recur (map #(drop 1 %) res) (conj fres (map first res))))))
+
+
+(defn count-occur
+  [coll]
+  (->> coll
+       (group-by identity)
+       (mapcat (juxt first (comp count second)))
+       (apply hash-map)))
+
+
+(defn min-path
+  [tri]
+          (loop [res tri n-max 0]
+    (if (< n-max (apply reduce +)))))
+
+(defn fiblist [m]
+  (loop [res [1 1] n m]
+    (if (= n 2)
+      (seq res)
+      (recur (conj res (+ (last res) (last (butlast res)))) (dec n)))))
+
+(defn palindrome?
+  [coll]
+  (if (even? (count coll))
+    (= (take (/ (count coll) 2) coll) (reverse (drop (/ (count coll) 2) coll)))
+    (palindrome? (concat (take (/ (count coll) 2) coll) (drop (/ (dec (count coll)) 2) coll)))))
+
+(defn reverse-seq
+  [coll]
+  (loop [*lst (empty coll) n 0 *coll coll]
+    (if (= n (count coll))
+      *lst
+      (recur (cons (first *coll) *lst) (inc n) (rest *coll)))))
+
+(defn filter-caps
+  [mystr]
+(apply str  (filter #{\A \B \C \D \E \F \G \H \I \J \K \L \M \N \O \P \Q \R \S \T \U \V \W \X \Y \Z} mystr))
+)
+
+(defn compress
+  [coll]
+  (apply concat (map set (partition-by identity coll))))
+
+(defn duplicate
+  [coll]
+      (mapcat list coll coll))
+
+(defn *replicate
+  [coll n]
+  (loop [*lst (empty coll) idx n]
+    (if (zero? idx)
+      (apply mapcat list *lst)
+      (recur (cons coll *lst) (dec idx)))))
+
+(defn *range
+  [start end]
+  (loop [lst '() m start]
+    (if (= m end)
+      (reverse lst)
+      (recur (conj lst m) (inc m)))))
+
+(defn *max
+  [& args]
+  (loop [res args max-val 0]
+    (if (empty? res)
+      max-val
+      (if (< max-val (first res))
+        (recur (rest res) (first res))
+        (recur (rest res) max-val)))))
+
+(defn *interleave
+  [coll1 coll2]
+  (mapcat list coll1 coll2))
+
+(defn *interpose
+  [c coll]
+  (loop [res '() coll coll]
+    (if (empty? coll)
+      (butlast (apply concat res))
+      (recur (cons (list (last coll) c) res) (butlast coll)))))
+
+(defn *drop-every-nth
+  [coll n]
+  (mapcat #(take (dec n) %) (partition n n (empty coll) coll)))
+
+(defn *split
+  [n coll]
+  (conj [] (vec (take n coll)) (vec (drop n coll))))
+
+(defn *perfect
+  [n]
+  (= n (- (reduce + (filter #(integer? (/ n %)) (range 1 (+ n 1)))) n)))
+
+(defn *intersection
+  [set1 set2]
+  (set (filter set1 set2)))
+
+;; (defn *word-chain
+;;   [coll]
+;;   (loop [res coll]
+;;     (let  [df (- (count (set (first res))) (count (filter identity (map (set (first res)) (set (first (rest res)))))))]
+;;       (if (= df 0)
+;;         (recur (rest res))
+;;         (if (or (= df 1) (= df (dec 0)))
+;;           (recur (rest res))
+;;           false)))))
+        
+(defn *factorial
+  [n]
+  (if (= 1 n)
+    1
+    (* n (*factorial (- n 1)))))
+
+(defn *prime-list
+  [n]
+  (loop [m 2 res (range 2 (inc n))]
+    (if (> (first m) (dec n))
+      res
+      (recur () (filter #(not (zero? (mod % 2))) res)))))
+
+(defn *half-truth
+  [& args]
+  (let [res args]
+    (if (zero? (count (filter false? args)))
+      false
+      (if (zero? (count (filter true? args)))
+        false
+        true))))
+
+(defn *filter-perfect-squares
+  [mystr]
+  (filter #(= (* (Math/sqrt %) (Math/sqrt %)) %) (map #(Integer/parseInt %) (.split mystr ","))))
+
+
+(defn *type
+  [coll]
+  (let [ecoll (empty coll)]
+    (cond
+     (= #{} ecoll) :set
+     (= {} ecoll) :map
+     (get (conj ecoll 0) 0) :vector
+     :else :list)))
+
+(defn *longestsub
+  [coll]
+  (loop [res coll idx 1]
+    (if (= idx (count coll))
+      res
+        (if (> (first res) (second res))
+          (recur (rest res) (inc idx))
+          (recur res (inc idx))))))
+
+// ------------------------- Started since today 20 Dec 2011 -------------------------
+
+(defn map-nil;
+  [akey amap]
+  (let [res (akey amap)]
+    (if (contains? amap akey)
+      (if (nil? res)
+        true
+        false)
+      false)))
+
+(defn simple-calc
+  [& args]
+  (let [*coll (into [] args)
+        *coll2 (rest (rest (rest *coll)))
+        res ((second *coll) (first *coll) (second (rest *coll)))]
+    (if (empty? *coll2)
+      res
+      (recur (cons res (into []  *coll2))))))
+
+(defn digits-base
+  [digits base & coll]
+  (let [res (into [] coll)
+        first (rem digits base)
+        new-dg (quot digits base)]
+    (if (= new-dg 0)
+      (cons first res)
+      (recur new-dg base (cons first res)))))
+
+(defn products-digits
+  [a b & coll]
+  (let [res (into [] coll)
+        first (rem (* a b) 10)
+        new-dg (quot (* a b) 10)]
+    (if (= new-dg 0)
+      (cons first res)
+      (recur new-dg 1 (cons first res)))))
+
+(defn map-construction
+  [a b & coll]
+  (into {}  (map #(assoc {} %1 %2) a b)))
+
+(defn dot-product
+  [c1 c2]
+  (reduce + (map #(* %1 %2) c1 c2)))
+
+(defn balanced?
+  [n]
+  (let [m (map #(str %) (apply concat (partition-by identity (str n))))
+        c (if (zero? (mod (count m) 2))
+            (/ (count m) 2)
+            (/ (dec (count m)) 2))
+        v1 (take c m)
+        v2 (if (zero? (mod (count m) 2))
+            (drop c m)
+            (drop (inc c) m))
+        a (reduce + (map #(Integer/parseInt %) v1))
+        b (reduce + (map #(Integer/parseInt %) v2))]
+    (if (< n 10)
+      true
+      (if (= a b)
+       true
+       false))))
+       
+(defn remap
+  [f1 coll & res]
+  (if (empty? coll)
+    res
+    (recur f1 (rest coll) (cons (f1 (first coll)) res))))
+
+
+(defn cartesian-product
+  [a b & res]
+  (let [m (first a)]
+    (if (empty? a)
+      (into #{} (apply concat res))
+      (recur (rest a) b (cons (mapcat #(assoc {} m %1) b) res)))))
+
+(defn symmetric-difference
+  [a b]
+  (let [m (filter (complement a) b)
+        n (filter (complement b) a)]
+    (into #{}  (concat m n))))
+
+
+(defn ready-binary-string
+  [s]
+  (Integer/parseInt s 2))
+
+(defn n-th-row-pascal
+  [n & res]
+  (let [m (count res)
+        nfact (reduce * (range 1 n))
+        ifact (if (zero? m) 1 (reduce * (range 1 (inc m))))
+        n-ifact (reduce * (range 1 (- n m)))
+        nci (/ nfact (* ifact n-ifact))]
+    (if (= n (count res))
+      res
+      (recur n (cons nci res)))))
+
+;; Malfunctioning
+;; (defn is-binary-tree?
+;;   [coll]
+;;   (let [v (apply concat (partition-by identity coll))
+;;         w (apply concat (remove (complement vector?) v))
+;;         z (filter false? v)]
+;;     (if (zero? (count w))
+;;       (if (= (count v) 3)
+;;         true
+;;         (if (< (count v) 3)
+;;           false
+;;           (is-binary-tree? w)))
+;;       (is-binary-tree? w))))
+
+
+(defn is-binary-tree?
+  [coll]
+  (let [u (remove (complement vector?) coll)
+        v (remove (complement list?) coll)
+        w (apply concat (remove (complement vector?) coll))]
+    (if (= (count coll) 3)
+      (if (zero? (count w))
+        (if (zero? (count (filter false? coll)))
+          (nil? ((into #{} coll) ()))
+          false)
+        (if (= (count u) 2)
+          (and (is-binary-tree? (first u)) (is-binary-tree? (second u)))
+          (is-binary-tree? w)))
+      false)))
+
+(defn symmetric-binary-tree?
+  [coll]
+  (let [u (remove (complement vector?) coll)
+        v (remove (complement list?) coll)
+        w (apply concat (remove (complement vector?) coll))]
+    (if (= (count coll) 3)
+      (if (zero? (count u))
+        (if (= (second coll) (last coll))
+          true
+          false)
+        (if (= (count u) 2)
+          (if (= (second (concat (first u))) (second (concat (second u))))
+            false
+            (and (symmetric-binary-tree? (first u)) (symmetric-binary-tree? (second u))))
+          (symmetric-binary-tree? w)))
+      false)))
+
+(defn mirror-binary-tree?
+  [coll]
+  (let [tree1 (apply vector (second coll))
+        tree2 (apply vector (last coll))
+        u (apply concat (remove (complement vector?) tree1))
+        v (apply concat (remove (complement vector?) tree2))
+        c (count u)
+        d (count v)]
+    (if (= (first tree1) (first tree2))
+      (if (= (count tree1) (count tree2))
+        (if (and (= (second u) (last v)) (= (second v) (last u)))
+          (if (and (zero? c) (zero? d))
+            true
+            (and (mirror-binary-tree? [ (second u) (last v)]) (mirror-binary-tree? [ (second v) (last u)])))
+          false)
+        false)
+      false)))
+
+(defn higher-order
+  [f]
+  (fn [ & args]
+    (apply f (reverse args))))
+
+(defn split-by-type
+  [coll]
+  (vals (group-by type coll)))
+
+
+(defn sum-of-digits-squared
+  [n]
+  (if (zero? n)
+    0
+    (+ (* (mod n 10) (mod n 10)) (sum-of-digits (quot n 10)))))
+
+(defn compare-digit-sum
+  [coll]
+  (let [f1 (fn f1 [n]
+                  (if (zero? n)
+                    0
+                    (+ (* (mod n 10) (mod n 10)) (f1 (quot n 10)))))]
+    (count (filter #(< %1 (f1 %1)) coll))))
+
+(defn universal-computation-engine
+  [coll]
+  )
+
+(defn reimplement-map
+  [f coll]
+  (if (empty? coll)
+    []
+    (cons (f (first coll)) (lazy-seq (reimplement-map f (rest coll))))))
+
+(defn lexical-closure
+  [n]
+  (fn [x]
+    (reduce * (repeat n x))))
+
+(defn distinct-items
+  [coll & res]
+  (if (empty? coll)
+    (reverse res)
+    (recur (remove #{(first coll)} coll) (cons (first coll) res))))
+
+(defn *plist
+  [r & res]
+  (drop 2 (take (+ r 2) (lazy-seq (filter (fn [n]
+        (loop [m 2]
+          (if (> m (dec n))
+            true
+            (if (zero? (mod n m))
+              false
+              (recur (inc m)))))) (range))))))
+
+(defn is-prime?
+  [r]
+  ((fn [n]
+        (loop [m 2]
+          (if (> m (dec n))
+            true
+            (if (zero? (mod n m))
+              false
+              (recur (inc m)))))) r))
+
+(defn into-camel-case-string
+  [s]
+  (let [m (remove #{"-"} (map #(apply str %1) (partition-by #{\-} s)))]
+    (apply str (cons (first m) (map #(clojure.string/capitalize %1) (rest m))))))
+
+(defn happy-number
+  [n]
+  (let [f1 (fn f1 [n]
+                  (if (zero? n)
+                    0
+                    (+ (* (mod n 10) (mod n 10)) (f1 (quot n 10)))))]
+    (if (< n 4)
+      (if (= n 1)
+        true
+        false)
+      (recur (f1 n)))))
+
+(defn balanced-prime?
+  [n]
+  (let [isprime? (fn [n]
+                   (loop [m 2]
+                     (if (> m (dec n))
+                       true
+                       (if (zero? (mod n m))
+                         false
+                         (recur (inc m))))))]
+    (if (< n 5)
+      false
+      (if (isprime? n)
+       (loop [p (dec n)
+              q (inc n)]
+         (if (isprime? p)
+           (if (isprime? q)
+             (if (= (+ p q) (* 2 n))
+               true
+               false)
+             (recur p (inc q)))
+           (if (isprime? q)
+             (recur (dec p) q)
+             (recur (dec p) (inc q)))))
+       false))))
+
+(defn *lcm
+  [& args]
+  (first (filter (partial (fn num-arg?
+                      [coll n]
+                      (if (= (count coll)
+                             (count (remove false? (map #(= (* (quot n %1) %1) n) coll))))
+                        true
+                        false))
+                    (apply concat (vector args))) (range 1 400 1/2))))
+
+
+(defn part-seq
+  [n coll & res]
+  (if (< (count coll) n)
+    (reverse res)
+    (recur n (drop n coll) (cons (take n coll) res))))
+
+(defn func-comp
+  [& coll]
+  (let [f1 (first (reverse coll))
+        fs (rest (reverse coll))]
+    (fn [& args]
+      (reduce #(%2 %1)
+              (apply f1 args) fs))))
+
+(defn card-suit
+  [s]
+  (let [r (apply concat (partition-by identity s))
+        a (first r)
+        b (second r)
+        c (cond 
+           (= a \H) :heart
+           (= a \C) :club
+           (= a \D) :diamond
+           (= a \S) :spade)
+        d (cond
+           (= b \2) 0
+           (= b \3) 1
+           (= b \4) 2
+           (= b \5) 3
+           (= b \6) 4
+           (= b \7) 5
+           (= b \8) 6
+           (= b \9) 7
+           (= b \T) 8
+           (= b \J) 9
+           (= b \Q) 10
+           (= b \K) 11
+           (= b \A) 12)
+        m {:suit c :rank d}]
+    m))
+
+(defn func-juxt
+  [& coll]
+  (fn [& args]
+    (for [f coll] (apply f args))))
+
+(defn s-reduction
+  [f coll & res]
+  (if (empty? coll)
+    res
+    (recur f (rest coll)
+           (map #(f %1 %2) coll (rest coll) res))))
+
+(defn s-reduc
+  [f coll & coll2]
+  (if (nil? coll2)
+    (loop [f f
+           coll coll
+          m 1]
+     (if (= (count coll) m)
+       coll
+       (recur f (assoc coll m (f (nth coll (dec m)) (nth coll m))) (inc m))))
+    (loop [f f
+           coll coll
+           coll2 coll2
+           m 1]
+      (if (= (count coll2) m)
+        coll2
+        (recur f coll (assoc coll2 m (f (nth coll2 (dec m)) (nth coll2 m))) (inc m))))))
+
+(defn longest-increasing-sub
+  [coll]
+  (let [trth (map-indexed #(if (zero? %1) 0 (- %2 (nth coll (dec %1)))) coll)
+        ct (map count (partition-by identity trth))
+        mx (reduce max ct)
+        ts (fn [ctl] (loop [m 0
+                           sm 0]
+                      (if (= m (count ctl))
+                        sm
+                        (if (= mx (nth ctl m))
+                         (if (= (first (drop sm trth)) 1)
+                           sm
+                           (recur (inc m) (+ sm (nth ctl m))))
+                         (recur (inc m) (+ sm (nth ctl m)))))))]
+    (if (= 0 (ts ct))
+      (if (> 2 (count (take  mx (drop (ts ct) coll))))
+        []
+        (take  mx (drop (ts ct) coll)))
+      (if (> 2 (count (take (inc mx) (drop (dec (ts ct)) coll))))
+        []
+        (take (inc mx) (drop (dec (ts ct)) coll))))))
+
+(defn *seq-reduce
+  [f col & res]
+  (if (empty? res)
+    (recur f (rest col) (cons (first col) res))
+    (recur f (rest col) (cons (f (first col) (first res)) res))))
+
+
+(defn *sr
+  [f col & res]
+  (if (instance? clojure.lang.LazySeq col)
+    (if (empty? res)
+      (recur f (rest col) (cons (first col) []))
+      (map #(reduce f (take %1 col)) (range)))))
+
+(defn filter-perfect-squares
+  [str1]
+  (let [mstr (map #(Integer/parseInt %1)
+                  (map #(apply str %1)
+                       (concat (remove #{ [\,]} (partition-by #{\,} str1)))))
+        mx (reduce max mstr)
+        t (into #{} (take mx (map #(* %1 %1) (range))))
+        flt (filter t mstr)
+        res (apply str (interpose "," flt))]
+    res))
+
+(defn word-sorting
+  [aStr]
+  (let [*alp #{\, \. \!}
+        plStr (remove *alp (apply concat (partition-by *alp aStr)))
+        slStr (remove #{[\space]} (partition-by #{\space} plStr))
+        sortedStr (sort (fn [s1 s2]
+                      (compare (.toLowerCase s1) (.toLowerCase s2))) (map #(apply str %1) slStr))]
+    sortedStr))
+
+(defn identify-keys-and-values
+  [coll]
+  (let [k (into #{} (filter keyword? coll))
+        p (partition-by k coll)]
+    (loop [p p
+           mp {}]
+      (if (empty? p)
+        mp
+        (if (and (keyword? (ffirst p)) (not (keyword? (first (second p)))))
+         (recur (drop 2 p) (assoc mp (ffirst p) (apply vector (second p))))
+         (recur (drop 1 p) (assoc mp (ffirst p) [])))))))
+
+
+(defn global-take-while
+  [n p coll]
+  (lazy-seq
+   (loop [c coll
+          m 0
+          res []]
+     (if (= m n)
+       (reverse (rest res))
+       (if (p (first c))
+         (recur (rest c) (inc m) (cons (first c) res))
+         (recur (rest c) m (cons (first c) res)))))))
+
+(defn pascal-triangle
+  [coll]
+  (let [a (first coll)
+        b (last coll)
+        get-res (fn [c]
+                  (if (= (count c) 1)
+                    (vec (cons a c))
+                    (if (= (count c) 2)
+                      (vec (cons a (reverse (cons a (vector (apply reduce + (partition 2 1 c)))))))
+                      (vec (reverse (cons b (reverse (cons a (map #(reduce + %) (partition 2 1 c))))))))))]
+    (iterate get-res coll)))
+
+
+(defn mer-with-fu
+  [f & maps]
+  (let [fmap (first maps)
+        key-set (into #{} (mapcat keys maps))]
+    (into {}
+     (map
+      (fn [key-set]
+        (assoc {} key-set (reduce f (remove nil? (map #(% key-set) maps)))))
+      key-set))))
+
+
+(defn seq-reduction
+  [f coll & coll2]
+  (let [b (first coll2)
+        coll2 (first coll2)]
+    (if (nil? b)
+      (map #(reduce f (take % (rest coll))) (range))
+      (map #(reduce f (cons coll (take % coll2))) (range 0 (inc (count coll2)))))))
+
+
+(defn oscillerate
+  [x & fs]
+  (reductions #(%2 %1) x (cycle fs)))
+
+(defn oscillerate2
+  [x & fns]
+  (cons x (lazy-seq (apply oscillerate2 ((first fns) x) (take (count fns) (rest (cycle fns)))))))
+
+(defn big-divide
+  [n p1 p2]
+  (let [a (quot (dec n) p1)
+        b (quot (dec n) p2)
+        c (quot (dec n) (* p1 p2))
+        fsum (fn [x]
+               (/ (* x (inc x)) 2))
+        a1 (* p1 (fsum a))
+        b1 (* p2 (fsum b))
+        c1 (* (* p1 p2) (fsum c))]
+    (- (+ a1 b1) c1)))
+
+
+(defn seq-pro
+  [coll]
+  (let [i-step (fn [c]
+                 (vec (mapcat #(cons (count %) (list (first %)))
+                              (partition-by identity c))))]
+    (iterate i-step (i-step coll))))
+
+
+(defn tri-min-path
+  [c & res]
+  (let [cons-f (fn [m c1 c2 res]
+                 (let [c1 (nth c1 m)
+                       e (if (<= (count c2) m) nil (nth c2 m))
+                       f (if (<= (count c2) (inc m)) nil (nth c2 (inc m)))
+                       d1 (conj c1 e)
+                       d2 (conj c1 f)]
+                   (conj res d1 d2)
+                   ))
+        gen (fn [c1 c2]
+              (loop [m (count (first c1))
+                     result []]
+                (if (= m 0)
+                  result
+                  (recur (dec m) (cons-f (dec m) c1 c2 result)))))]
+    (if (empty? c)
+      res
+      (if (empty? res)
+        (recur (rest c) (vector (first c)))
+        (recur (rest c) (gen res (first c)))))))
+
+(defn power-set
+  [a]
+  (let [pset (fn [aSet]
+               (let [v (apply concat (partition-by identity aSet))]
+                 (loop [m (count v)
+                        res []]
+                   (if (zero? m)
+                     (apply concat res)
+                     (recur (dec m) (conj res (take (count v) (partition m 1 (cycle v)))))))))
+        runf (fn [aSet]
+               (map #(into #{} %)
+                    (apply concat
+                           (map #(pset %)
+                                (map #(into #{} %) (pset aSet))))))]
+    (loop [m (count a)
+           res []]
+      (if (zero? m)
+        (conj (into #{} (concat res)) #{} a)
+        (recur (dec m) (apply conj res (into #{} (runf (disj a (nth (apply vector a) (dec m)))))))))))
+
+
+
+(defn pws
+  [s]
+  (let [s (concat s)
+        f (clojure.contrib.seq-utils/rotations s)
+        g (map #(drop 1 %1) f)]
+    (conj g f)))

@@ -1,0 +1,79 @@
+ -*- mode: org; comment-column: 0; -*-
+
+* MOBILE LOCAL KEY VALUE STORE PAIRS
+
+|-----------------+------------------------------------------------------------------------------------------------------|
+| Key             | Description                                                                                          |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| API KEY         | The developer api key                                                                                |
+| DOMAIN NAME     | The developer domain                                                                                 |
+| APP ID          | The app ID                                                                                           |
+| PLATFORM        | ios, android, windows                                                                                |
+| GENERATED UUID  | MD5 of API KEY, APP ID, PLATFORM, DEVICE, INFO DICT, TIMESTAMP, PROCESS INFO                         |
+| API VERSION     | Starts with 1.0                                                                                      |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| USER IDENTIFIER | The name of the app user fed by the developer API                                                    |
+| USER METADATA   | Extra user information for analytics (like location, age, gender,etc. to be fed in by the developer) |
+| PROFILE ID      | Profile ID for identifying the user                                                                  |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| BREADCRUMB      | The breadcrumb log trails array, for the developer to track user actions                             |
+| METADATA        | Extra app specific information that the developer might want to see, to be fed in through the API    |
+|-----------------+------------------------------------------------------------------------------------------------------|
+
+|----------------------+-----------------------------------------------------------------------|
+| APP USAGE ANALYTICS  |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+| APP START TIME       |                                                                       |
+| APP END TIME         |                                                                       |
+| EVENT TRACKING START | Start time for developer specified event to measure event performance |
+| EVENT TRACKING END   | End time for developer specified event to measure event performance   |
+| APP RUN COUNT        | Number of times the user has opened the app                           |
+| USER RETURN FLAG     | Whether the user is a new user or an already existing user            |
+| ... more to come ... |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+
+|--------------------+---------------------------------------------------------------|
+| My Issues          |                                                               |
+|--------------------+---------------------------------------------------------------|
+| GLOBAL SINCE       | Fetching issues is last global since, initial nil (timestamp) |
+| ISSUES ARRAY       | Array of Issue Dictionaries                                   |
+| ISSUE ID ARRAY     |                                                               |
+| ISSUE COUNT UNREAD | Number of unread mesg in issue                                |
+|--------------------+---------------------------------------------------------------|
+
+|--------------------+-------------------+-------------------------------+-------------------------------------------------------------+-----------------------|
+| Issue API          | Request           | Route                         | To be sent                                                  | Return Val            |
+|--------------------+-------------------+-------------------------------+-------------------------------------------------------------+-----------------------|
+| First Report Issue | POST              | api/lib/profiles              | Device UUID (identifier), Name (displayname), Email (email) | 201, Profile ID       |
+| Add new issue      | POST              | api/lib/issues/               | Issue Description (message-text), Profile ID (profile-id)   | 201, New Issue Json   |
+| Send new message   | POST              | api/lib/issues/<id>/messages/ | Message Text (message-text), Profile ID (profile-id)        | 201, New Message Json |
+| Fetching issues    | GET (send in url) | api/lib/issues/               | Profile ID (profile-id), Global Since (since)               | 200, Issues List Json |
+|--------------------+-------------------+-------------------------------+-------------------------------------------------------------+-----------------------|
+
+|--------------------------+-----------------------------------------|
+| Params for every request | Description                             |
+|--------------------------+-----------------------------------------|
+| TIMESTAMP (timestamp)    | Unix timestamp                          |
+| TOKEN (token)            | Random token at least 50 length         |
+| APP ID (platform-id)     |                                         |
+| SIGNATURE (signature)    | HMAC-SHA256(API KEY, TIMESTAMP + TOKEN) |
+|--------------------------+-----------------------------------------|
+
+* TASKS
+** iOS Issues API
+** Android Issues API + UI
+** iOS internal management of Issues
+** Android internal management of Issues
+** iOS FAQ API
+** iOS internal FAQ management
+** iOS FAQ UI
+** Android FAQ API
+** Android internal FAQ management
+** Android FAQ UI
+** WP7 UI
+** WP7 Issues API
+** WP7 internal management of Issues
+** WP7 FAQ API
+** WP7 internal FAQ management
+** WP7 FAQ UI
+** Testing

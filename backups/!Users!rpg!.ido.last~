@@ -1,0 +1,334 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/rpg/git/Clojuratica/src/" . "clj/")
+ ("/Users/rpg/git/Clojuratica/" . "src/")
+ ("/Users/rpg/git/clojurec/test/" . "clojurec/")
+ ("/Users/rpg/git/clojurec/src/cljc/" . "cljc/")
+ ("/Users/rpg/git/clojurec/src/clj/" . "clojurec/")
+ ("/Users/rpg/git/clojurec/src/" . "clj/")
+ ("/Users/rpg/git/clojurec/run/" . "ios/")
+ ("/Users/rpg/git/clojurec/" . "test/")
+ ("/Users/rpg/project/mobile/iphone/NewUI/Helpshift/" . "Helpshift/")
+ ("/Users/rpg/project/mobile/iphone/NewUI/" . "Helpshift/")
+ ("/Users/rpg/git/calabash-jvm-clojure-example/src/" . "calabash_jvm_example/")
+ ("/Users/rpg/git/calabash-jvm-clojure-example/" . "src/")
+ ("/Users/rpg/git/calabash-ios/calabash-jvm/src/" . "calabash_jvm/")
+ ("/Users/rpg/git/calabash-ios/calabash-jvm/" . "src/")
+ ("/Users/rpg/git/calabash-ios/" . "calabash-jvm/")
+ ("/Users/rpg/project/greeter/src/" . "greeter/")
+ ("/Users/rpg/project/greeter/" . "src/")
+ ("/Users/rpg/.emacs.d/elpa/muse-3.20/" . "examples/")
+ ("/Users/rpg/git/cal-jvm/src/" . "calabash_jvm_example/")
+ ("/Users/rpg/git/cal-jvm/" . "src/")
+ ("/Users/rpg/git/octopress/" . "source/")
+ ("/Users/rpg/git/octopress/source/" . "org_posts/")
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/" . "HelpShift/")
+ ("/Users/rpg/project/mobile/android/HelpShift/src/" . "com/")
+ ("/Users/rpg/project/mobile/android/HelpShift/" . "src/")
+ ("/Users/rpg/project/mobile/android/" . "HelpShift/")
+ ("/sftp:thor@thor.qotdinc.com:" . "Downloads/")
+ ("/Users/rpg/Maildir/[Gmail].Drafts/" . "cur/")
+ ("/Users/rpg/Maildir/Drafts/" . "cur/")
+ ("/Users/rpg/Maildir/[Gmail].All Mail/" . "tmp/")
+ ("/Users/rpg/Maildir/INBOX/" . "new/")
+ ("/Users/rpg/Maildir/" . "[Gmail].Drafts/")
+ ("/Users/rpg/.emacs.d/elpa/" . "muse-3.20/")
+ ("/Users/rpg/git/blog/_theme_packages/" . "dinky/")
+ ("/Users/rpg/git/jekyll-bootstrap/_posts/" . "core-samples/")
+ ("/Users/rpg/git/jekyll-bootstrap/" . "_posts/")
+ ("/Users/rpg/git/blog/" . "_theme_packages/")
+ ("/Users/rpg/org/" . "notes/")
+ ("/Users/rpg/git/mathematica/src/" . "mathematica/")
+ ("/Users/rpg/git/mathematica/" . "src/")
+ ("/Users/rpg/git/math/src/" . "math/")
+ ("/Users/rpg/git/math/" . "src/")
+ ("/Users/rpg/.emacs.d/" . "el-get/")
+ ("/Users/rpg/git/misaki/rpg/" . "template/")
+ ("/Users/rpg/git/misaki/" . "rpg/")
+ ("/Users/rpg/git/" . "octopress/")
+ ("/Users/rpg/project/mobile/iphone/HelpShift/" . "SuccessCRM/")
+ ("/Users/rpg/project/mobile/iphone/" . "NewUI/")
+ ("/Users/rpg/project/mobile/" . "android/")
+ ("/Users/rpg/Downloads/" . "mahatxt/")
+ ("/Users/rpg/project/" . "mobile/")
+ ("/Users/" . "rpg/")
+ ("/Users/rpg/" . "Desktop/")
+ ("/Users/rpg/Desktop/papers/" . "Pseduo-Complex Analysis/")
+ ("/Users/rpg/Desktop/" . "papers/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/"
+ "/Users/rpg/org/"
+ "/Users/rpg/git/octopress/source/_includes/custom/"
+ "/Users/rpg/git/octopress/"
+ "/Users/rpg/git/octopress/source/org_posts/"
+ "/Users/rpg/"
+ "/sftp:odin@odin.qotdinc.com:"
+ "/Users/rpg/.emacs.d/elpa/"
+ "/Users/rpg/git/Clojuratica/src/clj/"
+ "/Users/rpg/Desktop/papers/Pseduo-Complex Analysis/"
+ "/Users/rpg/git/clojurec/test/clojurec/"
+ "/Users/rpg/git/clojurec/src/clj/clojurec/"
+ "/Users/rpg/git/clojurec/src/cljc/cljc/"
+ "/Users/rpg/project/mobile/"
+ "/Users/rpg/project/mobile/iphone/"
+ "/Users/rpg/git/misaki/"
+ "/Users/rpg/play/objc/"
+ "/Users/rpg/git/clojurec/src/c/"
+ "/Users/rpg/git/clojurec/run/ios/"
+ "/Users/rpg/Downloads/mahatxt/"
+ "/Users/rpg/project/mobile/iphone/NewUI/Helpshift/Helpshift/"
+ "/Users/rpg/git/calabash-jvm-clojure-example/src/calabash_jvm_example/"
+ "/Users/rpg/git/incanter/"
+ "/Users/rpg/git/calabash-ios/calabash-jvm/src/calabash_jvm/"
+ "/Users/rpg/git/calabash-jvm-clojure-example/"
+ "/Users/rpg/git/cal-jvm/src/calabash_jvm_example/"
+ "/Users/rpg/git/calabash-ios/calabash-jvm/"
+ "/Users/rpg/Desktop/"
+ "/Users/rpg/.emacs.d/"
+ "/Users/rpg/project/greeter/src/greeter/"
+ "/Users/rpg/.emacs.d/elpa/muse-3.20/examples/"
+ "/Users/rpg/Downloads/"
+ "/Users/rpg/.emacs.d/elpa/bread-0.1/"
+ "/Users/rpg/git/mathematica/src/mathematica/"
+ "/Users/rpg/project/mobile/iphone/HelpShift/SuccessCRM/"
+ "/Users/rpg/org/notes/"
+ "/Users/rpg/git/octopress/source/_layouts/"
+ "/Users/rpg/git/octopress/source/_posts/"
+ "/Users/rpg/git/octopress/source/_includes/"
+ "/Users/rpg/git/octopress/sass/"
+ "/Users/rpg/git/octopress/sass/partials/"
+ "/sftp:thor@thor.qotdinc.com:"
+ "/Users/rpg/Supernatural Season 5/"
+ "/Users/rpg/Maildir/[Gmail].Drafts/cur/"
+ "/Users/rpg/Maildir/"
+ "/Users/rpg/.emacs.d/elpa/mu4e/"
+ "/Users/rpg/Downloads/mu-0.9.8.5/"
+ "/Users/rpg/git/blog/_theme_packages/dinky/"
+ "/Users/rpg/git/blog/"
+ "/Users/rpg/Desktop/papers/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "HSApiManager.java"
+ "mobile.org"
+ "_config.yml"
+ "2012-09-02-not-my-first-blog-post.org"
+ "changelog.org"
+ "android.org"
+ "color-theme-empty-void.el"
+ "clojuratica.clj"
+ "pca.tex"
+ "calc.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/" (20577 3740) "HSSubmitAnIdea.java" "HSReportAnIssue.java" "HSPersistentData.java" "HSMenuModel.java" "HSMenuCallBack.java" "HSMenu.java" "HSMainView.java" "HSJsonManager.java" "HSImageList.java" "HSFindASolution.java" "HSFeedback.java" "HSFaqScreen.java" "HSCrashReporterInit.java" "HSChatScreen.java" "HSAskAQuestion.java" "HSApiManager.java" "HelpShift.java" ".git/" ".DS_Store" "#HSApiManager.java#" "../" "./")
+
+ ("/Users/rpg/" (20577 15991) "xp.iso" "xcode446938108a.dmg" "walk/" "tmp/" "Supernatural Season 6/" "Supernatural Season 5/" "su7/" "SimFinger.zip" "rough-sheet.tm~" "rough-sheet.tm" "QNote.zip" "QNote-src.zip" "QNote Resources.zip" "QNote Resources/" "QNote/" "Public/" "Projects/" "project/" "play/" "Pictures/" "org/" "News/" "new-book.txt" "my-emacs-config-2012/" "Music/" "Movies/" "Maildir/" "mail/" "Library/" "Lé Note-Aug-18-2012/" "LeNoteAdHoc.mobileprovision" "init-art" "HDMovies/" "googlechrome.dmg" "git/" "emacs-24.0.95.tar.gz" "emacs-24.0.95/" "emacs/" "el4r-1.0.4.tar.gz" "el4r-1.0.4/" "Dropbox/" "Downloads/" "dotemacs/" "Documents/" "DeveloperIdentity.developerprofile" "Desktop/" "clojuratica/" "classes.zip" "ChatBar.png" "bin/" "Applications (Parallels)/" "Applications/" "apk/" "android-sdk.zip" "android-sdk/" ".zshrc~" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".zcompdump" ".Xauthority" ".wl~" ".wl" ".weechat/" ".w3m/" ".viminfo" ".vifm/" ".Trash/" ".TeXmacs/" ".texlive2009/" ".subversion/" ".ssh2/" ".ssh/" ".smex-items" ".slime-history.eld" ".sh_history" ".screenrc" ".rvm/" ".rnd" ".riece/" ".recentf" ".rbenv/" ".pinerc" ".org-timestamps/" ".oh-my-zsh/" ".offlineimaprc" ".offlineimap/" ".nush_history" ".nnmail-cache" ".newsrc.eld" ".newsrc" ".mu/" ".mew.el" ".m2/" ".local/" ".lighttable/" ".lesshst" ".lein/" ".jline-reply.history" ".itmstransporter/" ".irb_history" ".ido.last" ".gnus.el" ".gitconfig" ".gem/" ".fontconfig/" ".folders" ".emacs.d/" ".el4rrc.rb" ".el4r/" ".DS_Store" ".dropbox/" ".cvspass" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bundler/" ".bashrc" ".bash_profile" ".bash_history" ".authinfo" ".android/" "../" "./")
+
+ ("/Users/rpg/org/" (20577 15629) "ui.org" "TodoUniversal.zip" "TodoUniversal/" "todo.org" "polling.org" "orgcard.ref" "notes/" "mobile.toc" "mobile.tex" "mobile.synctex.gz" "mobile.pdf" "mobile.out" "mobile.org" "mobile.log" "mobile.html" "mobile.aux" "master.org" "issues.org" "hofstede-notes.org" "doc.tex" "doc.pdf" "doc.org" "doc.html" "changelog.org" "calc.org" "bipolar.org" "auto/" "android.org" ".DS_Store" "#polling.org#" "../" "./")
+
+ ("/Users/rpg/.emacs.d/" (20577 3740) "url/" "tramp" "TODO" "tmp/" "themes/" "starter-kit-ruby.el" "starter-kit-registers.el" "starter-kit-perl.el" "starter-kit-misc.el" "starter-kit-lisp.el" "starter-kit-js.el" "starter-kit-eshell.el" "starter-kit-elpa.el" "starter-kit-defuns.el" "starter-kit-bindings.el" "README.markdown" "places" "package.el" "newsticker/" "loaddefs.el" "init.el~" "init.el" "hacker-news.el" "eshell/" "Emacs config/" "elpa-to-submit/" "elpa/" "el-get/" "dominating-file.el" "custom.el" "COPYING" "color-theme-tango.el" "clang-completion-mode.el" "bbdb-autoloads.el" "backups/" "auto-save-list/" "auto-complete-etags.el" "ac-comphist.dat" ".git/" ".DS_Store" "%backup%~" "#bbdb-autoloads.el#" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/_includes/custom/" (20576 30863) "navigation.html" "header.html.orig" "header.html" "head.html" "footer.html" "category_feed.xml" "asides/" "after_footer.html" "../" "./")
+
+ ("/Users/rpg/git/octopress/" (20576 30463) "source/" "sass/" "README.markdown" "Rakefile" "public/" "plugins/" "newpost" "Gemfile.lock" "Gemfile" "config.ru" "config.rb" "CHANGELOG.markdown" "_deploy/" "_config.yml" ".themes/" ".slugignore" ".sass-cache/" ".rvmrc" ".rbenv-version" ".pygments-cache/" ".powrc" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/git/octopress/.themes/" (20576 30064) "octopress-bootstrap/" "oct2/" "object/" "minimalist/" "ji-octopress-theme/" "darkstripes/" "compbits/" "classic/" "BlogTheme/" "../" "./")
+
+ ("/Users/rpg/git/octopress/.themes/darkstripes/" (20576 30070) "source/" "sass/" "readme.md" ".git/" "../" "./")
+
+ ("/Users/rpg/git/octopress/.themes/darkstripes/source/" (20576 30070) "javascripts/" "index.html" "images/" "font/" "favicon.png" "blog/" "atom.xml" "assets/" "_layouts/" "_includes/" "../" "./")
+
+ ("/Users/rpg/git/octopress/.themes/darkstripes/source/_includes/" (20576 30070) "twitter_sharing.html" "post/" "navigation.html" "header.html" "head.html" "google_plus_one.html" "google_analytics.html" "footer.html" "facebook_like.html" "disqus.html" "custom/" "asides/" "article.html" "archive_post.html" "after_footer.html" "../" "./")
+
+ ("/Users/rpg/git/octopress/.themes/darkstripes/source/_includes/custom/" (20576 30375) "navigation.html" "header.html" "head.html" "footer.html" "category_feed.xml" "asides/" "after_footer.html" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/" (20576 29569) "stylesheets/" "robots.txt" "org_posts/" "javascripts/" "index.html" "images/" "font/" "feed/" "favicon@2x.png" "favicon.psd" "favicon.png" "favicon.ico" "blog/" "atom.xml" "assets/" "archives/" "apple-touch-icon.png" "apple-touch-icon-precomposed.psd" "apple-touch-icon-precomposed.png" "apple-touch-icon-72x72-precomposed.png" "apple-touch-icon-57x57-precomposed.png" "apple-touch-icon-144x144-precomposed.png" "apple-touch-icon-114x114-precomposed.png" "_posts/" "_layouts/" "_includes/" "404.markdown" "404.html" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/octopress/sass/" (20576 29569) "screen.scss" "screen.sass" "plugins/" "parts/" "partials/" "custom/" "config.rb" "code/" "base/" "_typography.scss" "_plugins.scss" "_parts.scss" "_partials.scss" "_colors.scss" "_code.scss" "_boilerplate2.scss" "_base.scss" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/_includes/" (20576 29569) "twitter_sharing.html" "sidebar.html" "post/" "page_content.html" "navigation.html" "header.html" "head.html" "google_plus_one.html" "google_analytics.html" "footer.html" "fancybox.html" "facebook_like.html" "external/" "disqus.html" "custom/" "bottom_scripts.html" "banner.html" "asides/" "article.html" "archive_post.html" "after_footer.html" "about_me.html" "../" "./")
+
+ ("/Users/rpg/Downloads/" (20575 60713) "zetaRas.nb" "ylechelle-OpenUDID-a3840eb/" "xyfeng-XYOrigami-d8e9929.zip" "xyfeng-XYOrigami-d8e9929/" "XQuartz-2.7.2.dmg" "xemacs-21.5.32.tar.gz" "xemacs-21.4.22-1.i386.dmg" "w3m-el-snapshot_1.4.483+0.20120614.orig.tar.gz" "w3m-el-snapshot-1.4.483+0.20120614.orig/" "vows.flv" "Vodafone_Mobile_Broadband_4.09.01.00.dmg.zip" "Vodafone Mobile Broadband 4.09.01.00.dmg" "vlad7/" "Untitled-1.nb" "UnRarX_2.2.zip" "Transmission-2.61.dmg" "tonymillion-Reachability-v3.0.0-12-g28e0d92.zip" "tonymillion-Reachability-28e0d92/" "timburks-nu-4ee2c73.zip" "timburks-nu-4ee2c73/" "Think.dmg" "thermogl-TISwipeableTableView-5cc634c/" "The_Riemann_Zeta-Function.pdf" "The Best And Most Expensive Fonts 1500 Font Collection/" "The 13th Warrior.mp4" "sweetmandm-CardSliderView-for-iOS-c1ba275.zip" "sweetmandm-CardSliderView-for-iOS-c1ba275-1.zip" "sweetmandm-CardSliderView-for-iOS-c1ba275 2/" "sweetmandm-CardSliderView-for-iOS-c1ba275/" "square-WaxSim-64952de.zip" "square-WaxSim-64952de/" "spilliams-sparrowlike-5124b41/" "Sparrow-latest.dmg" "Sparrow 1.6.3.zip" "SlavaBushtruk-APSplitViewController-6b375e9.zip" "SlavaBushtruk-APSplitViewController-6b375e9/" "Skype_5.8.0.1027.dmg" "shusta-ReorderingTableViewController-8868353.zip" "shusta-ReorderingTableViewController-8868353/" "Screenshot from 2012-07-27 17-29-41.png" "Screencast.mov" "Roboto_Hinted_20111129.zip" "Roboto_Hinted_20111129/" "riemann.pdf" "riemann-1.pdf" "riece-8.0.0.tar.gz" "riece-8.0.0/" "RH.djvu" "renegade78-MWFeedParser-b95cdfa/" "Reachability.zip" "Reachability-1.zip" "Reachability 2/" "Reachability/" "PSY - GANGNAM STYLE (강남스타일) M_V.mp4" "provision profiles/" "Press Kit/" "pokeb-asi-http-request-v1.8.1-82-g3ed0b3c.tar" "pokeb-asi-http-request-3ed0b3c/" "Paramore Decode [OFFICIAL VIDEO].mp4" "Parallels 7/" "pandoc-1.9.4.2.dmg" "palaniraja-cUISplitViewController-d033971.zip" "palaniraja-cUISplitViewController-d033971/" "page-stat.zip" "page-stat/" "Nu-2.0.1.dmg" "Notes 1.5 Release/" "new-ui-assets.zip" "new-ui-assets/" "mwaterfall-MWFeedParser-0b1d301/" "muse.info" "muse-3.20.zip" "Muhammad full movie - Innocence of Muslims 74 Min.mp4" "mu-0.9.8.5.tar.gz" "mu-0.9.8.5/" "MPlayer-OSX-Extended_rev14.zip" "MONTHLY-D-12-00629.pdf" "monofur.zip" "monofur/" "monocons/" "Mobile_Library_v2_screens.zip" "Mobile_Library_v2_screens/" "mew-6.5.tar.gz" "mew-6.5 2/" "mew-6.5/" "mew-6-1.5.tar.gz" "mattt-FormatterKit-64d65ea/" "mattgemmell-MGSplitViewController-580747f.zip" "mattgemmell-MGSplitViewController-580747f/" "mahatxt.zip" "mahatxt/" "MacRuby 0.12.zip" "MacRuby 0.12/" "MacPorts-2.1.2-10.8-MountainLion.pkg" "MacDjView.dmg" "mac-GitHub for Mac 60.zip" "logo@2x.png" "logo.png" "lockhartslament.pdf" "lmirosevic-GBCardStack-c7ce58f.zip" "lmirosevic-GBCardStack-c7ce58f/" "LJM1130_M1210_Full_Solution.dmg.download/" "Leonard Susskind on The Black Hole Wars.mp4" "LeNote/" "launcher.jar" "Lana Del Rey - Born To Die.mp4" "kwylez-Universal-iOS-App-Template-6eade4e/" "krukow-calabash-jvm-clojure-example-f465561.zip" "krukow-calabash-jvm-clojure-example-f465561-1.zip" "kgn-KGNoise-1.0.0-0-g0a3622d.zip" "kgn-KGNoise-0a3622d 2/" "kgn-KGNoise-0a3622d/" "KeyboardAccessory/" "jyr-macruby-examples-8e90ae1.zip" "jyr-macruby-examples-8e90ae1/" "jobadgeview.zip" "jobadgeview/" "jhaynie-iphonesim-d930444.zip" "jhaynie-iphonesim-d930444/" "iPhone Gradient Buttons v0.2.zip" "iPhone Gradient Buttons/" "ios2.png" "ios-sim-xcode4.3.tar.gz" "ios-sim" "install_flash_player_osx.dmg" "install_flash_player_osx-1.dmg" "Inferis-ViewDeck-922f690/" "Inferis-ViewDeck-1.4.2-17-g922f690.zip" "Incanter.dmg" "Im Shipping Up To Boston - Dropkick Murphys.mp4" "HSSendButton@2x.png" "HSSendButton.png" "HSChatBar@2x.png" "HSChatBar.png" "horizontal-line.png" "honcheng-PaperFold-for-iOS-94db46c/" "honcheng-PaperFold-for-iOS-1.0-3-g94db46c.zip" "honcheng-PaperFold-for-iOS-1-1.0-3-g94db46c.zip" "Helpshift.zip" "help-icon@2x.png" "help-icon.png" "Griffiths D.J. - Introduction to quantum mechanics.pdf" "GoogleChromeCanary.dmg" "googlechrome.dmg" "googlechrome-retina.dmg" "Glest32Data.pkg/" "geraldhuard-YFoldView-12e8368.zip" "geraldhuard-YFoldView-12e8368/" "form16-3.jpeg" "form16-2.jpeg" "form16-1.jpeg" "Fonts/" "Flux15.zip" "fishfish.pkg" "Fink-0.9.0-Intel-Installer.dmg" "email-app.psd" "emacs.d.zip" "emacs-w3m-1.4.4.tar.gz" "emacs-w3m/" "Emacs-24.1-universal-10.6.8.dmg" "dropbox-ios-sdk-1.3.2-ios6.zip" "dropbox-ios-sdk-1.3.2-ios6/" "Dropbox 1.4.12.dmg.download/" "Dropbox 1.4.11.dmg" "djcb-sauron-v0.6-26-gab5c195.zip" "delete-icon@2x.png" "delete-icon.png" "DekusDenial-UITableView-Accordion-f13b210.zip" "DekusDenial-UITableView-Accordion-f13b210/" "Day One 1.5.5.zip" "Cyberduck.app/" "Cyberduck-4.2.1.zip.download/" "Crittercism_v3_2_5_crashonly/" "Crittercism_v3_2_5/" "crittercism-Crittercism-SDK-ccee117/" "contacts.vcf" "command_line_tools_for_Xcode.dmg" "cmucl-20c-x86-darwin.tar.bz2" "cmucl-20c-x86-darwin/" "cm-10-20120923-NIGHTLY-i9300.zip.download/" "Clojuratica_Tutorial.pdf" "clex-html-help-4.6.patch5.tar.gz" "clex-4.6.patch5.tar.gz" "clex-4.6.patch5/" "chriskempson-tomorrow-theme-986798c.zip" "chriskempson-tomorrow-theme-986798c/" "ccl-1.8-darwinx86.tar.gz.download/" "borwein.pdf" "Bloc Party - Kreuzberg.mp4" "bhargava@helpshift.com - Re: iOS New UI icons/" "bhargava@helpshift.com - Plus Icon 2/" "bhargava@helpshift.com - Plus Icon/" "bhargava@helpshift.com - New Mobile Library UI [PNGs]/" "bhargava@helpshift.com - New Bubble and Send button Images/" "axali rachuli racha chemi siyvaruli nuki koshkelishvili  oto foladashvili da sxvebi.mp4" "atebits-SimFinger-cd87d88.zip" "atebits-SimFinger-cd87d88/" "assets.zip" "Arjun.mov" "Aquamacs-Emacs-2.4.dmg" "applidium-ADLivelyTableView-c2c65aa.zip" "applidium-ADLivelyTableView-c2c65aa/" "AppleWWDRCA.cer" "app-store-and-iphone-icons.zip" "app-store-and-iphone-icons-1.zip" "app-store-and-iphone-icons 2.zip" "app-store-and-iphone-icons 2/" "app-store-and-iphone-icons/" "androidfiletransfer.dmg" "alfred_1.3_249.dmg" "AlanQuatermain-AQGridView-b3270c6/" "AlanQuatermain-AQGridView-1.3-0-gb3270c6.zip" "AFNetworking-AFNetworking-bff368c/" "About Downloads.lpdf/" "7zX_1.7.1.-5003b6dcbb4d8.dmg" "532 Basic Best Fonts Collection (Malestrom)/" "29a-8/" "1707-1786-1-PB.pdf" "16Types.zip" "16Types/" "07082011125148_1312658508533_XXXPG3412X_ITRV.zip" "07082011125148_1312658508336_XXXPG3412X_ITRV.pdf" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/Desktop/" (20576 20170) "xemacs-21.5.32.tar.gz" "xcode44cltools_10_86938106a.dmg" "Windows XP/" "Underworld 2 Evolution/" "Underworld/" "Ubuntu Linux" "ubuntu" "True Blood/" "TodoUniversal.zip" "TodoUniversal/" "The Vampire Diaries/" "The Resident Evil Series/" "The Girl with the Dragon Tattoo/" "The Girl Who Played with Fire (2009)/" "The Girl who kicked the Hornets' Nest [2010]/" "TestSim/" "Supernatural/" "Screenshots6.0.zip" "Screenshots6.0/" "Screenshots-LetterBox/" "Screen Shot 2012-09-15 at 1.20.36 AM.png" "Screen Shot 2012-09-14 at 9.50.37 PM.png" "Screen Shot 2012-09-14 at 11.58.22 PM.png" "Screen Shot 2012-08-28 at 9.55.38 PM.png" "Screen Shot 2012-08-27 at 6.15.44 PM.png" "Screen Shot 2012-08-17 at 9.29.02 PM.png" "Screen Shot 2012-08-10 at 2.33.51 PM.png" "Schiff-QuantumMechanics.pdf" "pca.pdf" "papers/" "Mobile_Library_v2_screens/" "mobile/" "Lé Note 1.1.zip" "Lé Note 1.0.zip" "ID_PAN_CARD.jpg" "HSTutorialiPad.png" "Helpshift-0.1.7.zip" "Helpshift-0.1.7/" "Helpshift-0.1.6.zip" "Helpshift-0.1.6/" "Helpshift-0.1.5.zip" "Helpshift-0.1.5/" "Helpshift-0.1.4.zip" "Helpshift-0.1.4/" "Helpshift-0.1.2.zip" "Helpshift-0.1.1.zip" "CSR/" "Astrid Latest/" "2 Riemann Hypothesis/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/NewUI/Helpshift/Helpshift/" (20576 19995) "NSObject+HS_SBJson.m" "NSObject+HS_SBJson.h" "MBProgressHUD.m" "MBProgressHUD.h" "HSSingleFAQScreen.m" "HSSingleFAQScreen.h" "HSResourceManager.m" "HSResourceManager.h" "HSReportIssueViewController.m" "HSReportIssueViewController.h" "HSReportIssueView.m" "HSReportIssueView.h" "HSReportAnIssue.m" "HSReportAnIssue.h" "HSPromptUsername.m" "HSPromptUsername.h" "HSPlaceHolderTextView.m" "HSPlaceHolderTextView.h" "HSMainViewController.m" "HSMainViewController.h" "HSKGNoise.m" "HSKGNoise.h" "HSJOBadgeView.m" "HSJOBadgeView.h" "HSIssuesViewController.m" "HSIssuesViewController.h" "HSFAQViewController.m" "HSFAQViewController.h" "HSFAQListScreen.m" "HSFAQListScreen.h" "HSCustomUISearchBar.m" "HSCustomUISearchBar.h" "HSCustomCellView.m" "HSCustomCellView.h" "HSChatScreen.m" "HSChatScreen.h" "HSCardDeckViewController.m" "HSCardDeckViewController.h" "HS_SBJsonWriter.m" "HS_SBJsonWriter.h" "HS_SBJsonUTF8Stream.m" "HS_SBJsonUTF8Stream.h" "HS_SBJsonTokeniser.m" "HS_SBJsonTokeniser.h" "HS_SBJsonStreamWriterState.m" "HS_SBJsonStreamWriterState.h" "HS_SBJsonStreamWriterAccumulator.m" "HS_SBJsonStreamWriterAccumulator.h" "HS_SBJsonStreamWriter.m" "HS_SBJsonStreamWriter.h" "HS_SBJsonStreamParserState.m" "HS_SBJsonStreamParserState.h" "HS_SBJsonStreamParserAdapter.m" "HS_SBJsonStreamParserAdapter.h" "HS_SBJsonStreamParserAccumulator.m" "HS_SBJsonStreamParserAccumulator.h" "HS_SBJsonStreamParser.m" "HS_SBJsonStreamParser.h" "HS_SBJsonParser.m" "HS_SBJsonParser.h" "HS_SBJson.h" "HS_JSON.h" "HelpshiftUDID.m" "HelpshiftUDID.h" "Helpshift.m" "Helpshift.h" "Helpshift-Prefix.pch" ".git/" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/" (20576 5134) "QNote/" "NewUI/" "HSResources/" "HelpShift/" "Demo/" "CardDeck/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/" (20575 22824) "wanderlust/" "semi/" "roupam.github.com/" "octopress/" "objective-clojure/" "nu-programs/" "misaki/" "mathematica/" "jekyll-bootstrap/" "incanter/" "flim/" "darkroom-mode/" "clojurec/" "Clojuratica/" "calabash-jvm-clojure-example/" "calabash-ios/" "blog/" "BBDB/" "apel/" ".rbenv/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/" (20575 23133) "yasnippet-0.6.1/" "yaml-mode-0.0.7/" "xml-rpc-1.6.8/" "wl/" "w3m/" "w32-browser-21.0/" "w3-4.0.46/" "vm/" "twitter-20090422/" "tomorrow/" "tex-math-preview-readme.txt" "synonyms-1.0/" "swank-clojure-1.1.0/" "sunrise-commander.el" "slime-repl-20100404/" "slime-20100404.1/" "slime-20100404/" "shellfm-0.1/" "sgftree-readme.txt" "semi/" "scratch-20110708/" "Save-visited-files-readme.txt~" "Save-visited-files-readme.txt" "Save-visited-files-1.2/" "sauron/" "ruby-mode-1.1/" "rcirc-notify.el" "powerline.el" "peepopen-0.1.0/" "org2blog-0.5/" "org-table-comment-0.2/" "org-octopress.el" "org-mime-20120112/" "org-magit-0.1.2/" "org-issue/" "org-email-0.6/" "org-blog-1.18.1.1/" "org-20120813/" "octopress.el" "nterm-0.1/" "nero.el" "muse-3.20/" "mu4e/" "monk-8/" "mew/" "mc-theme3.el" "mc-theme2.el" "mc-theme.el" "mc-dark.el" "maxframe.el" "magit-1.0.0/" "lacarte-22.0/" "jukebox/" "json-1.2/" "inf-ruby-2.2.1/" "idle-highlight-mode-1.1.1/" "icomplete+-21.0/" "google-translate-0.1.1/" "go-mode-12869/" "gist-0.5/" "frame-local-vars.el" "flim/" "find-file-in-project-2.1/" "etags-table-1.1/" "etags-select-1.13/" "emacs-nav/" "emacs-eclim/" "eieio-1.4/" "ecb-2.40/" "dictionary-1.8.7/" "dictem-1.0.2/" "darkroom-mode.el" "csv-mode-1.50/" "command-frequency-1.1/" "columnify-readme.txt" "columnify-1.0/" "color-theme-zenburn-0.3/" "color-theme-wombat.el" "color-theme-wombat-0.0.1/" "color-theme-wombat+-0.0.2/" "color-theme-vim-insert-mode-0.1/" "color-theme-twilight-0.1/" "color-theme-tangotango-0.0.2/" "color-theme-tango-0.0.2/" "color-theme-solarized-1.0.0/" "color-theme-sanityinc-solarized-2.2/" "color-theme-railscasts-0.0.2/" "color-theme-monokai-0.0.5/" "color-theme-molokai-0.1/" "color-theme-ir-black-1.0.1/" "color-theme-gruber-darker-1/" "color-theme-github-0.0.3/" "color-theme-empty-void.el" "color-theme-emacs-revert-theme-0.1/" "color-theme-eclipse-0.0.2/" "color-theme-dpaste-0.0.1/" "color-theme-dg-0.1.0/" "color-theme-dawn-night-1.0/" "color-theme-complexity-0.1.1/" "color-theme-complexity-0.1.0/" "color-theme-colorful-obsolescence.el" "color-theme-colorful-obsolescence-0.0.1/" "color-theme-cobalt-0.0.2/" "color-theme-actress-0.2.1/" "color-theme-actress-0.1.0/" "color-theme-active-0.0.1/" "color-theme-6.6.1/" "clojure-mode-1.10.0/" "circe/" "bread-0.1/" "auto-complete-1.4.20110207/" "auctex-readme.txt" "auctex-11.86/" "archives/" "apel/" "android-mode-0.1/" "all-readme.txt" "ajc-java-complete/" "abacus-readme.txt" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/Supernatural Season 5/" (20573 52903) "Supernatural - [5x22] - Swan Song.mkv" "Supernatural - [5x21] - Two Minutes to Midnight.mkv" "Supernatural - [5x20] - The Devil You Know.mkv" "Supernatural - [5x19] - Hammer of the Gods.mkv" "Supernatural - [5x18] - Point of No Return.mkv" "Supernatural - [5x17] - 99 Problems.mkv" "Supernatural - [5x16] - Dark Side of the Moon.mkv" "Supernatural - [5x15] - Dead Men Don't Wear Plaid.mkv" "Supernatural - [5x14] - My Bloody Valentine.mkv" "Supernatural - [5x13] - The Song Remains the Same.mkv" "Supernatural - [5x12] - Swap Meat.mkv" "Supernatural - [5x11] - Sam, Interrupted.mkv" "Supernatural - [5x10] - Abandon All Hope.....mkv" "Supernatural - [5x09] - The Real Ghostbusters.mkv" "Supernatural - [5x08] - Changing Channels.mkv" "Supernatural - [5x07] - The Curious Case Of Dean Winchester.mkv" "Supernatural - [5x06] - I Believe the Children Are Our Future.mkv" "Supernatural - [5x05] - Fallen Idol.mkv" "Supernatural - [5x04] - The End.mkv" "Supernatural - [5x03] - Free to Be You and Me.mkv" "Supernatural - [5x02] - Good God, Y'all.mkv" "Supernatural - [5x01] - Sympathy for the Devil.mkv" "srt/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/_posts/" (20573 36452) "2012-09-02-what-goes-in-here.markdown" "2012-09-02-tribalism.markdown" "2012-09-02-not-my-first-blog-post.markdown" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/org_posts/" (20573 36485) "2012-09-02-what-goes-in-here.org" "2012-09-02-tribalism.org" "2012-09-02-not-my-first-blog-post.org" "#2012-09-02-what-goes-in-here.org#" "../" "./")
+
+ ("/Users/rpg/play/objc/" (20572 48307) "../" "./")
+
+ ("/Users/rpg/project/mobile/" (20573 48488) "plcrashreporter-1.1-beta1/" "phonegap/" "iphone/" "ipad/" "android/" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/Clojuratica/src/clj/" (20525 61136) "clojuratica.clj" "clojuratica/" "../" "./")
+
+ ("/Users/rpg/git/Clojuratica/src/" (20525 61136) "mma/" "clj/" "../" "./")
+
+ ("/Users/rpg/git/Clojuratica/" (20525 61136) "src/" "doc/" "build.xml" ".git/" "../" "./")
+
+ ("/Users/rpg/git/clojurec/test/clojurec/" (20572 47236) "vector_test.clj" "persistent_hash_map_test.clj" "core_test.clj" "../" "./")
+
+ ("/Users/rpg/git/clojurec/test/" (20572 47236) "words.txt" "english.0" "clojurec/" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/clj/cljc/" (20572 47236) "core.clj" "compiler.clj" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/cljc/cljc/" (20572 47236) "core.cljc" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/cljc/" (20572 47236) "cljc/" "../" "./")
+
+ ("/Users/" (20512 45834) "test/" "Shared/" "rpg/" ".localized" "../" "./")
+
+ ("/Users/rpg/git/misaki/rpg/" (20510 27180) "template/" "public/" "NOTICE" "LICENSE" "_config.clj" "../" "./")
+
+ ("/Users/rpg/git/misaki/" (20510 27695) "test/" "target/" "src/" "sample/" "rpg/" "README.md" "project.clj" "doc/" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/clj/clojurec/" (20572 47236) "core.clj" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/clj/" (20572 47236) "clojurec/" "cljc/" "../" "./")
+
+ ("/Users/rpg/git/clojurec/" (20572 48351) "test/" "target/" "src/" "run/" "README.md" "project.clj" ".gitmodules" ".gitignore" ".git/" ".emacs-project" "../" "./")
+
+ ("/Users/rpg/project/moby/" (20477 9969) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "logs/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/Downloads/mahatxt/" (20571 23667) "maha18.txt" "maha17.txt" "maha16.txt" "maha15.txt" "maha14.txt" "maha13.txt" "maha12.txt" "maha11.txt" "maha10.txt" "maha09.txt" "maha08.txt" "maha07.txt" "maha06.txt" "maha05.txt" "maha04.txt" "maha03.txt" "maha02.txt" "maha01.txt" "../" "./")
+
+ ("/Users/rpg/play/" (20572 47399) "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/c/" (20572 47236) "support_ios.m" "support_android.c" "preamble.c" "../" "./")
+
+ ("/Users/rpg/git/clojurec/src/" (20572 47236) "cljc/" "clj/" "c/" "../" "./")
+
+ ("/Users/rpg/git/clojurec/run/ios/" (20572 47236) "README.md" "clojurec.xcodeproj/" "clojurec/" "bootstrap.sh" ".gitignore" "../" "./")
+
+ ("/Users/rpg/git/clojurec/run/" (20572 47236) "thirdparty/" "Makefile" "ios/" "android/" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/NewUI/Helpshift/" (20569 46588) "Helpshift.xcodeproj/" "Helpshift/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/NewUI/" (20555 34439) "QNote/" "new-ui-assets/" "new ui/" "Helpshift/" "assets/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/HelpShift/" (20565 57943) "UIPlaceHolderTextView.m" "UIPlaceHolderTextView.h" "SuccessCRM/" "Resources-iPad/" "MBProgressHUD.m" "MBProgressHUD.h" "HSFAQSectionsScreen.m" "HSFAQSectionsScreen.h" "HS_SBJson/" "HelpShift.xcodeproj/" "Empty.xib" "build/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/Maildir/" (20569 46422) "Sent Messages/" "Priority/" "Notes/" "Misc/" "INBOX/" "Follow up/" "Drafts/" "Deleted Messages/" "[Gmail].Trash/" "[Gmail].Starred/" "[Gmail].Spam/" "[Gmail].Sent Mail/" "[Gmail].Important/" "[Gmail].Drafts/" "[Gmail].All Mail/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/HelpShift/SuccessCRM/" (20565 57943) "widget_icons.png" "WebAPICalls.m" "WebAPICalls.h" "UncaughtExceptionHandler.m" "UncaughtExceptionHandler.h" "UIPlaceHolderTextView.m" "UIPlaceHolderTextView.h" "TAGS" "SystemLog.m" "SystemLog.h" "question.png" "poweredby-helpshift.png" "NSObject+YAJL.m" "NSObject+YAJL.h" "NSData+Base64.m" "NSData+Base64.h" "NSBundle+YAJL.m" "NSBundle+YAJL.h" "MyClass.m" "MyClass.h" "MGSplitViewController.m" "MGSplitViewController.h" "MGSplitViewAppDelegate.m" "MGSplitViewAppDelegate.h" "MGSplitDividerView.m" "MGSplitDividerView.h" "MGSplitCornersView.m" "MGSplitCornersView.h" "MBProgressHUD.m" "MBProgressHUD.h" "JSON.h" "issue.png" "ImageList.m" "ImageList.h" "idea.png" "HSWeb.m" "HSWeb.h" "HSSupport.m" "HSSupport.h" "HSSubmitAnIssue.m" "HSSubmitAnIssue.h" "HSSubmitAnIdea.m" "HSSubmitAnIdea.h" "HSSingleFAQScreen.m" "HSSingleFAQScreen.h" "HSResourceManager.m" "HSResourceManager.h" "HSReportIssue.m" "HSReportIssue.h" "HSReportAnIssue.m" "HSReportAnIssue.h" "HSReachability.m" "HSReachability.h" "HSPromptUsername.m" "HSPromptUsername.h" "HSMenu.m" "HSMenu.h" "HSMainView.m" "HSMainView.h" "HSMain.m" "HSMain.h" "HSJOBadgeView.m" "HSJOBadgeView.h" "HSIssueScreen.m" "HSIssueScreen.h" "HSFindASolution.m" "HSFindASolution.h" "HSFeedbackViewController.m" "HSFeedbackViewController.h" "HSFAQListScreen.m" "HSFAQListScreen.h" "HSCrashReporter.m" "HSCrashReporter.h" "HSChatScreen.m" "HSChatScreen.h" "HSChatBubbleLayer.m" "HSChatBubbleLayer.h" "HSBlankViewController.m" "HSBlankViewController.h" "HelpshiftUDID.m" "HelpshiftUDID.h" "HelpShift.m" "Helpshift.h" "HelpShift-Prefix.pch" "feedback.png" "External/" "Empty.xib" "chat.png" "Base64.m" "Base64.h" "auto-complete-etags.el" "AFNetworking/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/bread-0.1/" (20566 33758) "readme.org" "readme.html" "bread.el" "bread-library.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/muse-3.20/examples/" (20567 8363) "QuickStart.muse" "publish-project" "mwolson/" "muse-made-with.png" "Makefile" "johnw/" "ikiwiki/" "emacs-muse.png" "../" "./")
+
+ ("/Users/rpg/project/greeter/src/greeter/" (20567 8714) "core.clj" "../" "./")
+
+ ("/Users/rpg/git/calabash-jvm-clojure-example/src/calabash_jvm_example/" (20569 34567) "core.clj" "../" "./")
+
+ ("/Users/rpg/git/calabash-jvm-clojure-example/" (20569 33526) "test/" "target/" "src/" "README.md" "project.clj" "doc/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/git/incanter/" (20570 37222) "target/" "src/" "script/" "README.textile" "project.clj" "modules/" "examples/" "epl-v10.html" "docs/" "data/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/git/mathematica/src/mathematica/" (20565 46475) "kernel.clj" "core.clj" "../" "./")
+
+ ("/Users/rpg/git/calabash-ios/calabash-jvm/" (20569 31551) "test/" "src/" "run-example.sh" "README" "project.clj" "example/" "copy_resources.sh" "compile-run-example.sh" ".gitignore" "../" "./")
+
+ ("/Users/rpg/git/calabash-jvm-clojure-example/src/" (20569 30982) "calabash_jvm_example/" "../" "./")
+
+ ("/Users/rpg/git/calabash-ios/calabash-jvm/src/calabash_jvm/" (20544 21442) "wait.clj" "utils.clj" "keyboard.clj" "http.clj" "events.clj" "env.clj" "core.clj" "../" "./")
+
+ ("/Users/rpg/git/calabash-ios/calabash-jvm/src/" (20544 21442) "log4j.properties" "calabash_jvm.clj" "calabash_jvm/" "../" "./")
+
+ ("/Users/rpg/git/calabash-ios/" (20544 21442) "README.md" "LICENSE" "epl-v10.html" "documentation/" "calabash-jvm/" "calabash-cucumber/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/project/greeter/src/" (20567 8680) "greeter/" "../" "./")
+
+ ("/Users/rpg/project/greeter/" (20567 8680) "test/" "src/" "README.md" "project.clj" "doc/" ".gitignore" "../" "./")
+
+ ("/Users/rpg/project/" (20567 8680) "zulu/" "yuigo/" "WebTest/" "TodoUniversal/" "TodoDroid/" "TodoApp.zip" "TodoApp/" "TableSearch/" "SuccessCRM_Android_Alpha/" "static/" "SimpleListView/" "roupam.github.com/" "overtone/" "octopress/" "nu/" "noVNC/" "ncurses/" "MVP/" "moby/" "mobile.old.May17/" "mobile.old/" "mobile/" "KeenClient-iOS/" "iOS6Test/" "HelpshiftLibrary/" "HelloiPad/" "helloClojure.zip" "helloClojure/" "hello.git/" "hello/" "greeter/" "golang/" "CordovaBasedApp/" "cloned_hello/" "ChatTestIPad/" "ChatTest/" "CalabashTest/" "backup/" "BackendTest/" "asm/" "AnimationDemo/" "android-path-like-button-read-only/" "android/" "acra.diff" "a86/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d/el-get/" (20535 25924) "el-get/" ".status.el" ".loaddefs.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/muse-3.20/" (19301 6402) "texi/" "scripts/" "README" "NEWS" "Makefile.defs.default" "Makefile" "lisp/" "experimental/" "examples/" "etc/" "COPYING" "contrib/" "ChangeLog.5" "ChangeLog.4" "ChangeLog.3" "ChangeLog.2" "ChangeLog.1" "ChangeLog" "AUTHORS" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/" (20563 9280) "xml/" "README" "QotdApp/" "HelpShift/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/" (20549 52639) "src/" "res/" "README" "project.properties" "proguard.cfg" "out/" "NOTICE.ACRA" "nbandroid/" "META-INF/" "local.properties" "LICENSE.ACRA" "libs/" "HelpShift.jar" "HelpShift.iws" "HelpShift.ipr" "HelpShift.iml" "gen/" "export.properties" "default.properties" "build.xml" "build.properties" "bin/" "ant.properties" "AndroidManifest.xml" ".project" ".git/" ".DS_Store" ".classpath" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/" (20548 43334) "com/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/" (20548 43334) "HelpShift/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/blog/" (20546 26447) "../" "./")
+
+ ("/Users/rpg/Maildir/[Gmail].Drafts/cur/" (20560 8754) "../" "./")
+
+ ("/Users/rpg/git/octopress/sass/partials/" (20546 25911) "sidebar/" "_syntax.scss" "_sidebar.scss" "_sharing.scss" "_post.sass" "_navigation.scss" "_layout.sass" "_highlight.sass" "_header.scss" "_footer.scss" "_blog.scss" "_base.sass" "_archive.scss" "_about.scss" "../" "./")
+
+ ("/Users/rpg/git/octopress/source/_layouts/" (20547 4947) "post.html" "page.html" "home.html" "default.html" "category_index.html" "base.html" "../" "./")
+
+ ("/Users/rpg/Desktop/papers/Pseduo-Complex Analysis/" (20562 10434) "prv_pca.log" "pca.txt" "pca.tex" "pca.synctex.gz" "pca.ps" "pca.pdf" "pca.log" "pca.dvi" "pca.aux" "dual.tex" "dual.synctex.gz" "dual.pdf" "dual.log" "dual.aux" "auto/" "_region_.tex" "_region_.synctex.gz" "_region_.log" "_region_.dvi" "_region_.aux" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/git/cal-jvm/src/calabash_jvm_example/" (20560 54807) "core.clj" "../" "./")
+
+ ("/Users/rpg/git/cal-jvm/src/" (20547 3216) "calabash_jvm_example/" "../" "./")
+
+ ("/Users/rpg/git/cal-jvm/" (20560 54752) "test/" "target/" "src/" "README.md" "project.clj" "doc/" ".gitignore" "../" "./")
+
+ ("/Users/rpg/.org-timestamps/" (20547 5013) "blog-org.cache" "blog-extra.cache" "../" "./")
+
+ ("/etc/" (20517 65110) "zshenv" "xtab" "ttys" "syslog.conf" "sudoers" "sshd_config~orig" "sshd_config" "ssh_host_rsa_key.pub" "ssh_host_rsa_key" "ssh_host_key.pub" "ssh_host_key" "ssh_host_dsa_key.pub" "ssh_host_dsa_key" "ssh_config" "snmp/" "shells" "services" "security/" "rtadvd.conf" "rpc" "rmtab" "resolv.conf" "rc.netboot" "rc.imaging" "rc.common" "raddb/" "racoon/" "protocols" "profile" "ppp/" "postfix/" "php.ini.default-5.2-previous" "php.ini.default" "php-fpm.conf.default" "pf.os" "pf.conf" "pf.anchors/" "periodic/" "paths.d/" "paths" "passwd~orig" "passwd" "pam.d/" "openldap/" "ntp_opendirectory.conf" "ntp.conf" "ntp-restrict.conf" "notify.conf" "nfs.conf" "newsyslog.d/" "newsyslog.conf" "networks" "nanorc" "named.conf" "moduli" "master.passwd~orig" "master.passwd" "manpaths.d/" "manpaths" "man.conf" "mail.rc" "mach_init_per_user.d/" "mach_init_per_login_session.d/" "mach_init.d/" "locate.rc" "localtime" "krb5.keytab" "kern_loader.conf" "irbrc" "ip6addrctl.conf" "hosts~orig" "hosts.equiv" "hosts" "hostconfig" "group~previous" "group" "gettytab" "ftpusers" "ftpd.conf.default" "ftpd.conf" "fstab.hd" "find.codes" "emond.d/" "efax.rc" "dnsextd.conf" "defaults/" "cups/" "csh.logout" "csh.login" "csh.cshrc" "com.apple.screensharing.agent.launchd" "bind.keys" "bashrc" "autofs.conf" "auto_master~orig" "auto_master" "auto_home" "authorization" "asl.conf" "apache2/" "aliases.db" "aliases" "afpovertcp.cfg" "AFP.conf" "../" "./")
+
+ ("/Users/rpg/.mu/" (20539 17095) "xapian/" "log/" "cache/" "../" "./")
+
+ ("/Users/rpg/Maildir/[Gmail].Drafts/" (20539 17401) "tmp/" "new/" "cur/" "../" "./")
+
+ ("/Users/rpg/Maildir/Drafts/cur/" (20539 17401) "../" "./")
+
+ ("/Users/rpg/Maildir/Drafts/new/" (20539 17401) "../" "./")
+
+ ("/Users/rpg/Maildir/Drafts/" (20539 17401) "tmp/" "new/" "cur/" "../" "./")
+
+ ("/Users/rpg/Maildir/[Gmail].All Mail/tmp/" (20539 17702) "../" "./")
+
+ ("/Users/rpg/Maildir/[Gmail].All Mail/" (20539 17401) "tmp/" "new/" "cur/" "../" "./")
+
+ ("/Users/rpg/Maildir/INBOX/new/" (20539 17401) "../" "./")
+
+ ("/Users/rpg/Maildir/INBOX/" (20539 17401) "tmp/" "new/" "cur/" "../" "./")
+
+ ("/Users/rpg/.offlineimap/" (20539 17212) "Repository-Remote/" "Repository-Local/" "pid" "Account-Gmail/" "../" "./")
+
+ ("/Users/rpg/git/jekyll-bootstrap/_posts/core-samples/" (20539 1081) "2011-12-29-jekyll-introduction.md" "../" "./")
+
+ ("/Users/rpg/git/blog/_theme_packages/dinky/" (20539 2087) "README.md" "packager.yml" "manifest.yml" "assets/" "_includes/" ".git/" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/mu4e/" (20539 16963) "version.texi.in" "version.texi" "TODO" "texinfo.tex" "stamp-vti" "org-mu4e.el" "mu4e.texi" "mu4e.info" "mu4e.el" "mu4e-view.el" "mu4e-vars.el" "mu4e-utils.el" "mu4e-speedbar.el" "mu4e-proc.el" "mu4e-meta.el.in" "mu4e-meta.el" "mu4e-mark.el" "mu4e-main.el" "mu4e-headers.el" "mu4e-compose.el" "mu4e-actions.el" "mu4e-about.org" "mu4e-about.el" "mdate-sh" "Makefile.in" "Makefile.am" "Makefile" "fdl.texi" "../" "./")
+
+ ("/Users/rpg/Downloads/mu-0.9.8.5/" (20539 16577) "widgets/" "toys/" "TODO" "stamp-h1" "README" "NEWS" "mu/" "missing" "man/" "Makefile.in" "Makefile.am" "Makefile" "m4/" "ltmain.sh" "libtool" "lib/" "install-sh" "INSTALL" "HACKING" "guile/" "gtest.mk" "emacs/" "elisp-comp" "depcomp" "COPYING" "contrib/" "configure.ac" "configure" "config.sub" "config.status" "config.log" "config.h.in" "config.h" "config.guess" "ChangeLog" "autogen.sh" "AUTHORS" "aclocal.m4" "../" "./")
+
+ ("/Users/rpg/git/blog/_theme_packages/" (20539 1706) "dinky/" "../" "./")
+
+ ("/Users/rpg/git/jekyll-bootstrap/_posts/" (20538 28624) "core-samples/" "../" "./")
+
+ ("/Users/rpg/git/jekyll-bootstrap/_site/" (20538 28647) "tags.html" "sitemap.txt" "pages.html" "lessons/" "index.html" "categories.html" "atom.xml" "assets/" "archive.html" "404.html" "../" "./")
+
+ ("/Users/rpg/git/jekyll-bootstrap/" (20538 28646) "tags.html" "sitemap.txt" "README.md" "Rakefile" "pages.html" "index.md" "changelog.md" "categories.html" "atom.xml" "assets/" "archive.html" "_site/" "_posts/" "_plugins/" "_layouts/" "_includes/" "_config.yml" "404.html" ".gitignore" ".git/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -1,0 +1,44 @@
+------------------------
+Ordering complex numbers
+------------------------
+
+If a and b are real numbers, one can have an ordering relation on
+them, that assigns them certain properties.
+Such as a < b w.r.t L(0,inf)
+
+This ordering relationship has certain properties
+For example:
+
+  a < b and b < c implies a < c (transitivity)
+  a < b implies b > a
+  a < b implies a + c < b + c
+
+and some other similar and elementary properties
+
+Now, how do we abstract this concept out...
+How do we have an order relation for complex numbers ??
+
+Think of it this way... what is an order relation?
+It is nothing but a way to indicate motion or direction on the real number line...
+
+Fix a point on the real number line (say 0)...
+At a given speed it will take more time for a point to move from 0 to 2 than 0 to 1...
+
+Now imagine this. Suppose there is a spiral starting from the
+origin. If we make the spiral tight enough, we can approximate "almost every"
+point on the complex plane. If someone were to start traversing the
+spiral starting from the origin, then w.r.t. the spiral, we can get an
+order relation for "almost all" complex numbers.
+
+Suppose the spiral is so tight, that we can approximate it by infinite
+number of concentric circles. Then, we can get a sense of distance
+using:
+
+s(z) = pi*r^2 - 2*pi*r + r*t, where z = r*e^it and 0 <= t < 2*pi
+
+And we can have order relations for complex numbers if z1 < z2 if
+s(z1) < s(z2)
+
+This is just one way of looking at it. The idea is to develop and
+implement ideas from real analysis under a given context of order
+relations.

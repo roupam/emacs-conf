@@ -1,0 +1,16 @@
+/* for plotting g(m,n) */
+
+g(s,t) = intnum(x=1,1000,t*(x - floor(x+0.5))*sin(t*log(2*x))/x^(s+1),10)
+
+{
+n = 30;
+while(n < 300,
+     m = 0;
+     while(m < 1,
+        t = g(m,n);
+        write("plotfile",n+m," ",t);
+        m = m + 0.1
+     );
+     n++
+);
+}

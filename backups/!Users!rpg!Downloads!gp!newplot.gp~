@@ -1,0 +1,11 @@
+/* for plotting g(m,n) */
+
+g(s,t) = intnum(x=1,1000,t*(x - floor(x+0.5))*sin(t*log(2*x))/x^(s+1),10)
+
+{
+n = 16;
+while(n < 300,
+    if(g(0.9,n) > sqrt(2), print(n));
+     n++
+);
+}

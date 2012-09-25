@@ -1,0 +1,14 @@
+
+import os
+import base64
+
+path="/Users/rpg/Desktop/ICONS"
+dirList=os.listdir(path)
+for fname in dirList:
+    print fname
+    f = open(fname,"r")
+    a = f.read().encode('base64')
+#   myFile = open("/Users/rpg/Desktop/ICONS/"+fname.replace('.png','')+".m","a")
+    myFile = open("/Users/rpg/Desktop/ICONS/ImageList.m","a")
+    myFile.write("static NSString *"+fname.replace('.png','')+" = @\""+a.replace('\n','')+"\";\n")
+    myFile.close()

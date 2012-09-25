@@ -1,0 +1,187 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry} % see geometry.pdf on how to lay o ut the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+\title{Proof of a Weak form of the Riemann hypothesis}
+\author{Roupam Ghosh}
+\date{\today} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle 
+\begin{center}
+\textit{Abstract:}
+\\
+We show that the non-trivial zeros of the Riemann zeta function have real part equal to half if their imaginary parts tends to infinity
+\end{center}
+
+\section{Background}
+The Riemann Hypothesis has been the most important unsolved problem in mathematics for quite a while. Bernhard Riemann, one of the greatest and most influential mathematicians of all time, stated the problem in 1859. Riemann showed the existence of a deep relationship between two very different mathematical entities., viz. the zeros of an analytic function and prime numbers.
+\\\\
+In 1900 at the International Congress of Mathematicians, David Hilbert, raised 23 problems that will shape the mathematics of the twentieth century. The Riemann Hypothesis was in that famous list. Many of Hilbert's problems have now been solved. But a solution of the Riemann Hypothesis is still awaited.
+\\\\
+The Riemann Hypothesis is usually stated as, the non-trivial zeros of the Riemann zeta function lie on the line $\Re(s) = \frac{1}{2}$. Although, this is the standard formulation, one of the exciting features of this problem is, it can be formulated in many different and unrelated ways.
+\\\\
+The Riemann zeta function was first introduced by Riemann as the analytic continuation of the sum, given by the Euler product formula over primes
+$$\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p} \left( 1 - \frac{1}{p^s}\right)^{-1}$$
+In his seminal 1859 paper, \textit{Ueber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse} Riemann gave the functional equation for zeta thereby extending it to the entire complex plane
+$$\pi^{-\frac{s}{2}} \Gamma\left(\frac{s}{2}\right)\zeta(s) = \pi^{-\frac{1-s}{2}} \Gamma\left(\frac{1-s}{2}\right)\zeta(1- s)$$
+From such a scenario Riemann gave an explicit formula relating the non-trivial zeros of $\zeta(s)$ with that of a modified form of the prime counting function
+$$J(x) = Li(x) - \sum_{\rho} Li(x^\rho) - \log 2 + \int_{x}^{\infty} \frac{dt}{t(t^2-1)\log t}$$
+This of-course shows how important the study of non-trivial zeros of the Riemann zeta function is. But this example is not the only one. There are many proofs in modern mathematics, that start with 
+\textit{"If the Riemann Hypothesis is true ..."} As of now, the Riemann hypothesis stands unsolved. 
+\\\\
+My approach in this paper would make use of integrals of fractional parts of certain functions. Assuming the integral as the area under a given curve, the approach might look elementary. But, as we shall see, fractional parts can be used to represent a high degree of complexity of various functions in a simple manner. Giving us, a simple tool to analyze the zeros of these highly complex functions.
+
+\section{The equation for non-trivial zeros}
+The fractional part of any real number $x$ is denoted and defined as:  $\{ x \} = x - \lfloor x \rfloor$
+where $\lfloor x \rfloor$ is the floor function. Obviously we get the fact that for any real $x$, $0 \leq \{ x \} < 1$. For a complex value $z = x + iy$ the fractional part is defined as $\{ x \} + i \{ y \}$, and here, $0 \leq |\{z\}| < \sqrt{2}$.
+\\\\
+We already have,
+\begin{equation}
+\zeta(s) = \frac{s}{s-1} -  s\int_{1}^{\infty} \left \{t\right\} t^{-s-1} dt
+\end{equation}
+which, is known to be valid for all $\Re(s) > 0$.
+\\\\
+We derive a similar integral that gives the Dirichlet eta function $\eta(s)$ for all $\Re(s) > 0$
+\\\\
+\textbf{Theorem 2.1:}
+\textit{For the Dirichlet eta function defined by for all $\Re(s) > 0$}
+$\eta(s) = \sum_{k = 1}^{\infty} \frac{1}{(2k - 1)^s} - \frac{1}{(2k)^s}$
+\textit{we get an equivalent expression in the form for all $\Re(s) > 0$
+where $ \kappa(t) = \left\{ t/2 \right\} + 1/2 -  \left\{ t/2 + 1/2 \right\} $, and the expression being given by 
+\begin{equation}
+\eta(s) = s\int_{1}^{\infty} \kappa(t) t^{-s-1} dt
+\end{equation}
+}
+\textbf{Proof:}
+A simple simplification of the integral shall prove this case. We have for all $t \in [1,\infty]$ $\kappa(t) = 0$ or $1$. It is not hard to see that $\kappa(t) = 0$ whenever $t \in [2k,2k+1)$ and $1$ whenever $t \in [2k-1,2k)$ for all positive integers $k$. Hence, we can write the integral as
+$$s\int_{1}^{\infty} \kappa(t) t^{-s-1} dt = \sum_{k=1}^{\infty} \int_{2k-1}^{2k} s t^{-s-1} dt$$
+Giving us the sum
+$$\sum_{k = 1}^{\infty} \frac{1}{(2k - 1)^s} - \frac{1}{(2k)^s}$$
+which is nothing but $\eta(s)$. Since we already know that this sum converges for $\Re(s) > 0$, we get our result.
+\\\\
+\textbf{Theorem 2.2:} \textit{The non-trivial zeros $\rho$ of the Riemann zeta function $( 0 < \Re(\rho) < 1 )$ satisfy the equation
+$$
+2^\rho + \frac{1}{\rho - 1} + \frac{1}{2} = \rho \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\} t^{-\rho-1} dt
+$$
+}
+\textbf{Proof:}
+We know that if $\zeta(\rho) = 0$ then so is $\eta(\rho) = 0$ for $0 < \Re(\rho) < 1$. From equation (1) we get
+\begin{equation}
+\frac{\rho}{\rho - 1} = \rho \int_{1}^{\infty} \left \{t\right\} t^{- \rho -1} dt
+\end{equation}
+Now from equation (2) substituting $2t$ in place of $t$ and simplifying for $\eta(\rho) = 0$ gives us
+\begin{equation}
+\rho \int_{1/2}^{1} \kappa(2t) t^{-\rho-1} dt
++ \rho \int_{1}^{\infty} \frac{1}{2}t^{-\rho-1} dt
+ + \rho \int_{1}^{\infty} \left\{ t \right\} t^{-\rho-1} dt
+ = \rho \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\} t^{-\rho-1} dt
+\end{equation}
+Whenever $t \in [1/2,1)$ we have $\kappa(2t) = 1$. Substituting (3) in equation (4) and evaluating gives us
+\begin{equation}
+2^\rho + \frac{1}{\rho - 1} + \frac{1}{2} = \rho \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\} t^{-\rho-1} dt
+\end{equation}
+which is our desired result.
+\\\\
+Equation (5) is the main equation in this paper. All non-trivial zeros $\rho$ of the Riemann zeta function satisify this equation. The remaining of the paper studies the non-trivial zeros by trying to evaluate the right hand side.
+
+\section{Proof of a weak form of RH}
+\textbf{Theorem 3.1:} \textit{The non-trivial zeros $\rho$ of the Riemann zeta function $\zeta(s)$ have real part equal to $\frac{1}{2}$ as $\Im(\rho) \to \infty$}
+\\\\
+\textbf{Proof:}
+Supposing $\rho = \sigma + i \tau$ (where $\zeta(\rho) = 0$ and $0 < \Re(\rho) < 1$) we can immediately get from (5) that as $\tau \to \infty$
+\begin{equation}
+2^\rho + \frac{1}{2} = \rho \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\} t^{-\rho-1} dt
+\end{equation}
+Simplifying the integral on the right we have,
+\begin{equation}
+\rho \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\} t^{-\rho-1} dt = (\sigma+i\tau)\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}t^{-\sigma-1}(\cos(\tau \log t) - i\sin(\tau\log t)) dt
+\end{equation}
+Now since, $\tau \to \infty$ using Riemann-Lebesgue lemma we have,
+\begin{equation}
+\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\sigma \sin(\tau\log t)}{t^{\sigma+1}} dt = 0 \quad \quad \int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\sigma \cos(\tau\log t)}{t^{\sigma+1}} dt = 0
+\end{equation}
+Since, because of
+$$\int_{1}^{\infty} \frac{\{t+1/2\}}{t^{\sigma+1}} dt \leq \int_{1}^{\infty} \frac{1}{t^{\sigma+1}}dt < \infty$$
+\\
+Simplifying and comparing real and imaginary parts of (6) we get these two equations
+\begin{equation}
+2^\sigma \cos(\tau \log 2) + \frac{1}{2}=\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\tau \sin(\tau\log t)}{t^{\sigma+1}} dt
+\end{equation}
+\begin{equation}
+2^\sigma \sin(\tau \log 2)=\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\tau \cos(\tau\log t)}{t^{\sigma+1}} dt
+\end{equation}
+Multiplying the above two equations by $\cos(\tau\log2)$ and $\sin(\tau\log2)$ respectively and summing them up, we get
+\begin{equation}
+2^\sigma + \frac{1}{2} \cos(\tau \log 2)=\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\tau \sin(\tau\log 2t)}{t^{\sigma+1}} dt = \int_{1}^{\infty} \frac{\left\{ t + \frac{1}{2} \right\}}{t^{\sigma}} d(-\cos(\tau\log2t)
+\end{equation}
+Now, if $\sigma + i \tau$ is a non-trivial zero then so is $(1 - \sigma) + i \tau$ giving us
+\begin{equation}
+2^{1 - \sigma} + \frac{1}{2} \cos(\tau \log 2)=\int_{1}^{\infty} \left\{ t + \frac{1}{2} \right\}\frac{\tau \sin(\tau\log 2t)}{t^{2 - \sigma}} dt = \int_{1}^{\infty} \frac{\left\{ t + \frac{1}{2} \right\}}{t^{1-\sigma}} d(-\cos(\tau\log2t)
+\end{equation}
+Subtracting we get,
+\begin{equation}
+2^\sigma - 2^{1-\sigma} = \int_{1}^{\infty} \left( \frac{\left\{ t + \frac{1}{2} \right\}}{t^{\sigma}} - \frac{\left\{ t + \frac{1}{2} \right\}}{t^{1-\sigma}}\right)d(-\cos(\tau\log2t)
+\end{equation}
+Let us denote
+$$f(t) = \left( \frac{\left\{ t + \frac{1}{2} \right\}}{t^{\sigma}} - \frac{\left\{ t + \frac{1}{2} \right\}}{t^{1-\sigma}}\right) \quad g(t) = - \cos(\tau \log 2t)$$
+We have,
+\begin{equation}
+2^\sigma - 2^{1-\sigma} = \int_{1}^{\infty} f(t) g'(t) dt
+\end{equation}
+Now $f(t)$ is a piecewise function given by, $f(t) = t + 0.5 - n$ whenever $t \in (n-1/2, n+1/2)$. Hence, treating the integral as
+$$\int_{1}^{\infty} \equiv \int_{1}^{3/2} + \int_{3/2}^{5/2} + \int_{5/2}^{7/2}... $$
+We get,
+\begin{equation}
+2^\sigma - 2^{1-\sigma} = \int_{1}^{3/2} f(t) g'(t) dt + \int_{3/2}^{5/2} f(t) g'(t) dt + \int_{5/2}^{7/2} f(t) g'(t) dt + ...
+\end{equation}
+Integrating by parts gives us,
+\begin{equation}
+2^\sigma - 2^{1-\sigma} = [ f(t) g(t) ]_{1}^{\infty} - \int_{1}^{3/2} f'(t) g(t) dt - \int_{3/2}^{5/2} f'(t) g(t) dt - ...
+\end{equation}
+\begin{equation}
+2^\sigma - 2^{1-\sigma} = - \int_{1}^{3/2} f'(t) g(t) dt - \int_{3/2}^{5/2} f'(t) g(t) dt - ...
+\end{equation}
+Without loss of generality, assume that $\sigma \geq 1/2$. We get,
+\begin{equation*}
+\begin{split}
+0 \leq 2^\sigma - 2^{1-\sigma} & \leq \left| \int_{1}^{3/2} f'(t) g(t) dt \right| + \left| \int_{3/2}^{5/2} f'(t) g(t) dt \right| + \left| \int_{5/2}^{7/2} f'(t) g(t) dt \right| + ...\\
+& \leq \int_{1}^{3/2} |f'(t)| dt + \int_{3/2}^{5/2} |f'(t)| dt + \int_{5/2}^{7/2} |f'(t)| dt + ...
+\end{split}
+\end{equation*}
+Now, in each of the intervals $t \in (n-1/2,n+1/2)$ it is not hard to show that $f'(t) \leq 0$ for $\sigma \geq 1/2$. Suppose, $f'(t) \geq 0$ for some $t \in (n-1/2,n+1/2)$ then it follows that 
+\begin{equation}
+\begin{split}
+f'(t) \geq 0 & \implies (1/t^{\sigma} - 1/t^{1-\sigma}) + (t+0.5 - n)(-\sigma/t^{1+ \sigma} + (1- \sigma)/t^{2 - \sigma}) \geq 0\\
+&\implies 0 \leq (1/t^{1-\sigma} - 1/t^{\sigma}) \leq (t+0.5 - n)((1-\sigma)/t^{2 - \sigma} - {\sigma}/t^{1+\sigma})\\
+&\implies 0 \leq (1/t^{1-\sigma} - 1/t^{\sigma}) \leq (t+0.5 - n)(\sigma/t^{1 - \sigma} - {\sigma}/t^{\sigma})/t
+\end{split}
+\end{equation}
+Which is a contradiction for $t \in (1,\infty)$ unless $\sigma = 1/2$
+\\\\
+So we get,
+\begin{equation}
+0 \leq 2^\sigma - 2^{1-\sigma} \leq -\int_{1}^{3/2} f'(t) dt - \int_{3/2}^{5/2} f'(t) dt - \int_{5/2}^{7/2} f'(t) dt + ...
+\end{equation}
+\begin{equation}
+0 \leq 2^\sigma - 2^{1-\sigma} \leq [ - f(t) ]_{1}^{\infty} = 0
+\end{equation}
+Giving us, as $\tau \to \infty$
+$$\sigma = \frac{1}{2}$$
+\section{Acknowledgements}
+My thanks goes to my mom, dad, and sister for making my life wonderful, and also, to my friend Craig Feinstein.
+\begin{thebibliography}{99} 
+\bibitem{1}Peter Borwein, Stephen Choi, Brendan Rooney, Andrea Weirathmueller \\
+\textit{"The Riemann Hypothesis: A Resource for the Afficionado and Virtuoso Alike"}. (pg. 12) 
+\bibitem{2}Peter Borwein, Stephen Choi, Brendan Rooney, Andrea Weirathmueller \\
+\textit{"The Riemann Hypothesis: A Resource for the Afficionado and Virtuoso Alike"}. (pg. 49) 
+\end{thebibliography}
+\end{document}

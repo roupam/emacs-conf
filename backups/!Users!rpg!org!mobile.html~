@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>mobile</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="mobile"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-08-14 13:52:53 IST"/>
+<meta name="author" content="Roupam Ghosh"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">mobile</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 MOBILE LOCAL KEY VALUE STORE PAIRS</a></li>
+<li><a href="#sec-2">2 Common params for signature. All these params plus the params given in the second table below must be used to generate the signature. The signature must be generated as:</a></li>
+<li><a href="#sec-3">3 Old v0.1 signature table</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> MOBILE LOCAL KEY VALUE STORE PAIRS</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key</th><th scope="col" class="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">API KEY</td><td class="left">The developer api key</td></tr>
+<tr><td class="left">DOMAIN NAME</td><td class="left">The developer domain</td></tr>
+<tr><td class="left">APP ID</td><td class="left">The app ID</td></tr>
+<tr><td class="left">PLATFORM</td><td class="left">ios, android, windows</td></tr>
+<tr><td class="left">GENERATED UUID</td><td class="left">MD5 of API KEY, APP ID, PLATFORM, DEVICE, INFO DICT, TIMESTAMP, PROCESS INFO</td></tr>
+<tr><td class="left">API VERSION</td><td class="left">Starts with 1.0</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">USER IDENTIFIER</td><td class="left">The name of the app user fed by the developer API</td></tr>
+<tr><td class="left">USER METADATA</td><td class="left">Extra user information for analytics (like location, age, gender,etc. to be fed in by the developer)</td></tr>
+<tr><td class="left">PROFILE ID</td><td class="left">Profile ID for identifying the user</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">BREADCRUMB</td><td class="left">The breadcrumb log trails array, for the developer to track user actions</td></tr>
+<tr><td class="left">METADATA</td><td class="left">Extra app specific information that the developer might want to see, to be fed in through the API</td></tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">APP USAGE ANALYTICS</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left">APP START TIME</td><td class="left"></td></tr>
+<tr><td class="left">APP END TIME</td><td class="left"></td></tr>
+<tr><td class="left">EVENT TRACKING START</td><td class="left">Start time for developer specified event to measure event performance</td></tr>
+<tr><td class="left">EVENT TRACKING END</td><td class="left">End time for developer specified event to measure event performance</td></tr>
+<tr><td class="left">APP RUN COUNT</td><td class="left">Number of times the user has opened the app</td></tr>
+<tr><td class="left">USER RETURN FLAG</td><td class="left">Whether the user is a new user or an already existing user</td></tr>
+<tr><td class="left">&hellip; more to come &hellip;</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">My Issues</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left">GLOBAL SINCE</td><td class="left">Fetching issues is last global since, initial nil (timestamp)</td></tr>
+<tr><td class="left">ISSUES ARRAY</td><td class="left">Array of Issue Dictionaries</td></tr>
+<tr><td class="left">ISSUE ID ARRAY</td><td class="left"></td></tr>
+<tr><td class="left">ISSUE COUNT UNREAD</td><td class="left">Number of unread mesg in issue</td></tr>
+<tr><td class="left">ISSUE MESSAGE CURSOR</td><td class="left">Timestamp of how many message has been fetched and stored for this issue. Update on new message sent and when unread messages are fetched</td></tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Issue API</th><th scope="col" class="left">Request</th><th scope="col" class="left">Route</th><th scope="col" class="left">To be sent</th><th scope="col" class="left">Return Val</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Get Profile</td><td class="left">GET</td><td class="left">api/lib/1/profile-exists</td><td class="left">Device UUID(identity)</td><td class="left">200, Profile ID</td></tr>
+<tr><td class="left">Create Profile</td><td class="left">POST</td><td class="left">api/lib/1/profiles</td><td class="left">Device UUID (identifier), Name (displayname), Email (email)</td><td class="left">201, Profile ID</td></tr>
+<tr><td class="left">Add new issue</td><td class="left">POST</td><td class="left">api/lib/1/issues/</td><td class="left">Issue Description (message-text), Profile ID (profile-id), Meta Data (meta)</td><td class="left">201, New Issue Json</td></tr>
+<tr><td class="left">Send new message</td><td class="left">POST</td><td class="left">api/lib/1/issues/&lt;id&gt;/messages/</td><td class="left">Message Text (message-text), Profile ID (profile-id), Message type (type)</td><td class="left">201, New Message Json</td></tr>
+<tr><td class="left">Fetching issues</td><td class="left">POST</td><td class="left">api/lib/1/my-issues/</td><td class="left">Profile ID (profile-id), Global Since (since), Message Cursor Json (mc)</td><td class="left">200, Issues List Json with unread message count</td></tr>
+<tr><td class="left">Fetching single msg</td><td class="left">GET</td><td class="left">api/lib/1/issues/&lt;issue-id&gt;/messages/</td><td class="left">Issue Message Cursor(since)</td><td class="left">200, Message list Json</td></tr>
+<tr><td class="left">Fetch FAQs</td><td class="left">GET</td><td class="left">api/lib/1/faqs/</td><td class="left"></td><td class="left">200, Section list json</td></tr>
+<tr><td class="left">Mark FAQ as helpful</td><td class="left">POST</td><td class="left">api/lib/1/faqs/&lt;faq<sub>id&gt</sub>;/helpful/</td><td class="left"></td><td class="left">200, Marked/Not Marked</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Common params for signature. All these params plus the params given in the second table below must be used to generate the signature. The signature must be generated as:</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Param name</th><th scope="col" class="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">method</td><td class="left">@"GET" or @"POST" String</td></tr>
+<tr><td class="left">token</td><td class="left">A random string at least 50 length</td></tr>
+<tr><td class="left">uri</td><td class="left">The API route for eg. @"<i>api/lib/1/profile-exists</i>"</td></tr>
+<tr><td class="left">tinestamp</td><td class="left">The latest timestamp string</td></tr>
+<tr><td class="left">platform-id</td><td class="left">The id for your app</td></tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">API</th><th scope="col" class="left">Signature Items (SHA256 of the given items)</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Get Profile</td><td class="left">identity</td></tr>
+<tr><td class="left">Create Profile</td><td class="left">identifier displayname email</td></tr>
+<tr><td class="left">Add new issue</td><td class="left">message-text profile-id</td></tr>
+<tr><td class="left">Send new message</td><td class="left">profile-id message-text (type refers - for special messages)</td></tr>
+<tr><td class="left">Fetching issues</td><td class="left">profile mc since (since should be sent only when it is not empty)</td></tr>
+<tr><td class="left">Fetching single message</td><td class="left">profile-id since</td></tr>
+<tr><td class="left">Fetch FAQs</td><td class="left"></td></tr>
+<tr><td class="left">Mark FAQ as helpful</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Old v0.1 signature table</h2>
+<div class="outline-text-2" id="text-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Params for every request</th><th scope="col" class="left">Description</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left">TIMESTAMP (timestamp)</td><td class="left">Unix timestamp</td><td class="left">signature format changed due to security reasons after v0.1.1</td></tr>
+<tr><td class="left">TOKEN (token)</td><td class="left">Random token at least 50 length</td><td class="left"></td></tr>
+<tr><td class="left">APP ID (platform-id)</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">SIGNATURE (signature)</td><td class="left">HMAC-SHA256(API KEY, TIMESTAMP + TOKEN)</td><td class="left"></td></tr>
+<tr><td class="left">URI</td><td class="left"><i>api/lib/1/my-issues</i></td><td class="left"></td></tr>
+<tr><td class="left">METHOD</td><td class="left">POST/GET</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+
+
+<p>
+(def message-types
+  "Set of available message types"
+  #{"txt"                               ; Text
+    "cb"                                ; Confirmation Box
+    "ca"                                ; Confirmation Accepted
+    "cr"                                ; Confirmation Rejected
+    "rsc"                               ; Request Screen shot
+    "rer"                               ; Request Experience Rating
+    "er"                                ; Experience Rating
+    "rar"                               ; Request App store review request
+    "ar"})                              ; App store review
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-08-14 13:52:53 IST</p>
+<p class="author">Author: Roupam Ghosh</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

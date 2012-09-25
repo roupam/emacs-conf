@@ -1,0 +1,31 @@
+http://www.thehackademy.net/madchat/vxdevl/avtech/
+w3m http://www.thehackademy.net/madchat/vxdevl/avtech/
+cd
+cd git/mathematica/
+lein2 swank
+~/bin/lein2 swank
+exir
+exit
+bc -l
+exit
+ls
+clear
+ls -al
+mkdir template
+mv craig.tex template/rpg.tex
+quti
+exit
+ls
+exit
+exit
+sftp
+clear
+exit
+echo $SHELL
+new.sh "Not my first blog post"
+echo $PATH
+exit
+exit
+git status
+git hist
+exit

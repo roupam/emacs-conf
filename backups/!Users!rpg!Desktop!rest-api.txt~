@@ -1,0 +1,40 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+REST API
+--------
+
+BASE URL = "http://qotd.co/api/"
+
+POST to /login/
+
+{ "login": "rpg", "password": "576575"}
+
+{"success": "false", "error": "Wrong password/username"}
+
+{"success": "true",
+"username": "rpg",
+"avatar": "http://yahoo.com/pic.png",
+"token": "7239817387128973"}
+
+GET to /notifications/
+
+params - token
+
+{"success": "true",
+"notifications": [{"title": "Foo bar",
+                   "datetime": "2011-08-05 17:11:30 IST",
+                   "action": "vote-up",
+                   "url": "http://..."},
+                   
+                   {"title": "Foo bar",
+                   "datetime": "2011-08-05 17:11:30 IST",
+                   "action": "vote-up",
+                   "url": "http://..."}]}
+
+{"success": "false", "error": "Wrong token"}
+
+
+
+

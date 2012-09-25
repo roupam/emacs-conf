@@ -1,0 +1,23 @@
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(LaTeX-command "latex -synctex=1")
+ '(aquamacs-additional-fontsets nil t)
+ '(aquamacs-customization-version-id 213 t)
+ '(aquamacs-tool-bar-user-customization nil t)
+ '(blink-cursor-mode nil)
+ '(default-frame-alist (quote ((mouse-color . "black") (vertical-scroll-bars) (menu-bar-lines . 1) (fringe) (right-fringe) (left-fringe . 1) (internal-border-width . 0) (cursor-type . box) (background-color . "wheat") (background-mode . light) (background-toolbar-color . "#000000000000") (border-color . "#000000000000") (bottom-toolbar-shadow-color . "#000000000000") (cursor-color . "red") (foreground-color . "black") (top-toolbar-shadow-color . "#ffffffffffff"))))
+ '(display-time-mode nil)
+ '(global-linum-mode t)
+ '(ns-tool-bar-display-mode nil t)
+ '(ns-tool-bar-size-mode nil t)
+ '(tool-bar-mode nil)
+ '(visual-line-mode nil t))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(text-mode-default ((t (:inherit autoface-default :stipple nil :background "#e3ffff" :foreground "#000000" :strike-through nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Lucida Grande")))))

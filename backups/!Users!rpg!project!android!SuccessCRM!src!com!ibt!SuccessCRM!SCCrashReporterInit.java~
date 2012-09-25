@@ -1,0 +1,14 @@
+package com.ibt.SuccessCRM;
+
+import android.util.Log;
+
+public class SCCrashReporterInit {
+    public static final String TAG = "+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_";
+
+    public void initWithKeyDomain(String API_KEY, String DOMAIN_NAME)
+    {
+        Log.d(TAG, API_KEY + " " + DOMAIN_NAME);
+    } 
+   
+    //    c1e946027bf142b4b48a383fe97c993e
+}

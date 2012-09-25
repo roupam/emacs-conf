@@ -1,0 +1,6 @@
+* Change log since version 0.1
+* 2996c5a 2012-08-01 | iOS: SBJson refactored. [Roupam Ghosh]
+* 224db33 2012-08-01 | iOS: Library build version included. OpenUDID included. Plus some fixes related to issue not being fe
+* 5d76fc2 2012-08-01 | iOS: Added Library version in code. v0.1 [Roupam Ghosh]
+* 7dd7aaa 2012-08-01 | iOS: Duplicate fetch my-issues request on view will appear FIXED. Double notification count issue fix
+* ee424e6 2012-07-31 | iOS: LeNote readjusted to new lib. [Roupam Ghosh]

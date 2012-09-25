@@ -1,0 +1,2 @@
+export PS1="\u@\h:\w\$ "
+export PATH="$PATH:~/bin:/sw/bin/:~/android-sdk/tools/"

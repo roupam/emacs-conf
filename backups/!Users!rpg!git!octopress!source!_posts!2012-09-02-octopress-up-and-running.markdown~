@@ -1,0 +1,120 @@
+---
+layout: post
+title: "Octopress up and running"
+date: 2012-09-02 02:19
+comments: true
+categories:
+---
+# Octopress up and running
+* TODO
+** DONE Some crashes in and out of HSIssueScreen
+** DONE Email validation
+** DONE Widget screenshot fixes.
+** DONE "Need more help" changed
+** DONE Email validation case nil for email handled
+** DONE Bottom bar adjusted
+** DONE Widget box messages
+** DONE Like this button change
+** DONE FAQ rendering
+** DONE Search Button overlay touch makes userInteraction to disable for the view below it.
+** DONE Chat textfield like Messages.
+** DONE Common Crypto on Simulator
+** DONE Profile ID (check before prompting for username/email)
+** DONE FAQ loading crash bug fix
+** DONE Widget new background image needed
+** DONE Landscape Mode
+** DONE Single FAQ bug on third time
+** DONE Chat Message "TRY AGAIN" actionsheet
+** DONE FAQs title gets truncated to dots
+** DONE Screenshot tutorial in landscape mode
+** DONE Single FAQ padding
+** DONE Badge for developer demo
+** DONE versioning for library using sem-ver
+** DONE Notification count bug
+** DONE Refactor SBJson
+** DONE Use OpenUDID
+** DONE Differentiating b/w server and network
+** DONE List issues in a sorted way from latest to oldest posted issue
+** DONE Security architecture change
+** DONE Sending screenshot dismiss keyboard
+** DONE Screenshot sent/etc. response text should be highlighted
+** DONE Notifications bug
+** DONE Reply after Accept/Reject and Second message does not generate notification
+** DONE FAQ selection highlight for iPad
+** DONE Last updated FAQ time at bottom
+** DONE Send button on iPad chat screen
+** DONE Report an Issue must not contain smileys etc... must have at least [a-zA-Z0-9] regex
+** DONE Name should be capitalized when adding new issue
+** DONE Background color of chat screen
+** DONE Shadow color of "Need More Help?" should be 0xF2F2F2 for iPad only
+** DONE Report a new issue modal should have cancel instead of back button
+** DONE Report a new issue textbox height in landscape mode
+** DONE Support screen back button blank title (when modal present and going from landscape to portrait)
+** DONE Report a new issue check for empty entry
+** DONE Background color of BlankViewController
+** DONE Chat Screen and Main Screen should not be present together in Master-Detail view
+** DONE Badge for help button QNote
+** DONE Review Request
+** DONE Image Preview for FAQ images
+** DONE Screenshot UX for the iPad
+
+
+** TODO app-description: issue
+** TODO after checking the messages badges is not getting cleared.
+** TODO Issue with lastcursor as nil when fetched after app uninstall and reinstall
+** TODO Pressing Keyboard down does not hide chat window. both views
+** TODO Issue with chatreply table not scrolling up when typing
+** TODO After sending the screenshot camera roll does not hide
+** TODO "Your issues" when no issues should be "Report a new issue"
+** TODO Improve the search engine
+** TODO Library Version Maitenance (Discussed with Kapil)
+** TODO Rotating from portrait to landscape moves the lines up and have to scroll down.
+** TODO bugsbunny.helpshift.com/admin/issue/317 - two screenshot and one confirm request went to issue http://bugsbunny.helpshift.com/admin/issue/323/[1] instead. the messages were sent from admin to the customer.
+** TODO Coming from Support > Issue Page > Select Issues does not show the conversations list completley sometimes.
+** TODO Update mobile org file wiki.helpshift.com
+
+
+*  Meeting 29 Aug 2012
+** DONE Le Note custom zip to Abinash
+** TODO New library UI
+** TODO Embed videos in FAQ
+** TODO Screenshot sent -- time and confirmation
+** TODO iOS metadata --
+***  Network interface Wifi/3g/etc.
+***  Carrier
+***  Location information
+***  Breadcrumb and arbitrary metadata
+***  New documentation for mobile
+
+**  Status bar color change in new UI
+
+*  Steps before every release
+**  Remove NSLogs
+**  Disable Generate debugging symbols
+**  Check all major functionality
+**  Build for release and do not code sign
+**  Include resources, *.h and *.png files all in a zip
+**  Change route from http:// to https://
+**  Add SystemConfiguration Framework before next release with new documentation for Reachability
+**  Change version number if required
+**  Check delayInSeconds
+**  Build a new lenote and update on dropbox
+**  Build a new todo universal and update on dropbox
+
+
+*  New Library Features
+***  Review Requests
+
+*  App store requests
+**  Bring back deleted notes
+**  Rearrange the notes
+**  Adjust font size
+
+
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> DEFINITION NOT FOUND: 1
+</p>
+</div>
+</div>

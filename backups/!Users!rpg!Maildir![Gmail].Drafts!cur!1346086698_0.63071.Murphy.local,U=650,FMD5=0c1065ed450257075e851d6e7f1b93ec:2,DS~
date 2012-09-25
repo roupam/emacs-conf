@@ -1,0 +1,23 @@
+User-agent: mu4e 0.9.8.5; emacs 24.0.95.1
+From: Roupam Ghosh <rpg@helpshift.com>
+To: Developers <dev@helpshift.com>
+Subject: Emacs email client
+
+I have tried mew, gnus, etc. clients before.
+
+I came across mu4e (mu for emacs) and just tried this out
+http://www.djcbsoftware.nl/code/mu/mu4e.html
+Its worth taking a look at.
+
+The search thingy, autocomplete addresses, etc. are real nice.
+Initial setup was a bit time consuming, because I had to download all mails from
+GMAIL using offlineimap.
+
+But the client worked exactly as mentioned in its docs.
+The gmail configuration was easy, hardly any modifications needed.
+
+http://www.djcbsoftware.nl/code/mu/mu4e/Gmail-configuration.html
+--
+
+Roupam Ghosh
+Sent from emacs

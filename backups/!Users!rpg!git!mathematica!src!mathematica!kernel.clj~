@@ -1,0 +1,7 @@
+(ns kernel.core)
+
+(def kernel-link
+  (MathLinkFactory/createKernelLink
+   "-linkmode launch -linkname '/Applications/Mathematica.app/Contents/MacOS/MathKernel' -mathlink"))
+(def math-evaluate (math-evaluator kernel-link))
+(def-math-macro math math-evaluate)

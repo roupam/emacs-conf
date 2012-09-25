@@ -1,0 +1,19 @@
+{
+n = 12;
+max_div = 0;
+while(n < 9999999,
+	m = numdiv(n);
+	if(max_div < m,
+		   max_div = m;       
+	           l = divisors(n);
+		   i = 1;
+		   print1(n," ",log(n),"\t");
+                   while(i <  m,
+				print1(l[i]/l[i+1]," ");
+			i++
+                   );
+                   printf("\n")
+	);
+	n++
+);
+}

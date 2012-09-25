@@ -1,0 +1,75 @@
+(ns mathematica.core
+  (:import (com.wolfram.jlink MathLinkFactory KernelLink))
+  (:use [clojuratica]))
+
+
+
+(def kernel (MathLinkFactory/createKernelLink "-linkmode launch -linkname '/Applications/Mathematica.app/Contents/MacOS/MathKernel' -mathlink"))
+
+(.discardAnswer kernel)
+
+(def-math-macro math (math-evaluator kernel))
+
+(def math-evaluate (math-evaluator kernel))
+
+(math-intern :as-function math-evaluate
+             [Gamma Gamma]
+             [Zeta Zeta]
+             [Fact Factorial]
+             [C Complex]
+             [ZetaZero ZetaZero]
+             [P Power]
+             [S Sum]
+             [Factorial Factorial])
+
+(defn firstcoeff
+  [s]
+  (/ (P 2 (- s 1)) (- s 1)))
+
+(defn prod
+  [s k]
+  (/
+   (* (Gamma (+ s (* 2 k))) (Zeta (+ s (* 2 k))))
+   (* (Gamma s) (* (P 2 (* k 2)) (Factorial (+ 1 (* 2 k)))))))
+
+(defn _zeta
+  [s]
+  (+ (firstcoeff s) (reduce + (map #(prod s (* % 1.)) (range 1 100)))))
+
+(defn c+
+  [v1 v2]
+  (map #(+ %1 %2) v1 v2))
+
+(defn c-
+  [v1 v2]
+  (map #(- %1 %2) v1 v2))
+
+(defn c*
+  [[a b] [c d]]
+  (vector (- (* a c) (* b d)) (+ (* a d) (* b c))))
+
+(defn cZeta
+  [[s t]]
+  (let [v (apply vector (Zeta (C s t)))
+        a (first v)
+        b (next v)]
+    (if (nil? b)
+      a
+      (apply vector (rest v)))))
+
+(defn hZeta
+  [[a b c d]]
+  (apply vector (apply concat (vector (apply vector (c+ (cZeta (vector (+ a c) (+ b d)))
+                                                        (cZeta (vector (- a c) (- b d)))))
+                                      (apply vector (c- (cZeta (vector (+ a c) (+ b d)))
+                                                        (cZeta (vector (- a c) (- b d)))))))))
+
+(defn hAbs
+  [[a b c d]]
+  (- (+ (* a a) (* b b)) (+ (* c c) (* d d))))
+
+(defn hZetaRecur
+  [n v]
+  (if (zero? (dec n))
+    v
+    (recur (dec n) (hZeta v))))

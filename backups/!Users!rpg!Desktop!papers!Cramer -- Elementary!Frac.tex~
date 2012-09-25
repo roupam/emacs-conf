@@ -1,0 +1,292 @@
+
+\documentclass[12pt]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+\title{A Proof of Cramer's Conjecture Using Elementary Methods}
+\author{Roupam Ghosh\\
+	\MakeLowercase{roupam.ghosh@gmail.com}
+	}
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+In this paper I put forward a study of fractional parts, from which I derive some generalised formulaes involving prime differences. The results we get, gives us a insight into prime differences.
+We use that to prove Cramer's Conjecture.
+\end{abstract}
+
+\section{\Large Introduction}
+\noindent
+When Leonhard Euler gave a relation involving the zeta function $\zeta(n)$, and an infinite product involving primes, that turned to be the foundation stone for studying primes and their properties. After that, when Riemann extended the zeta function to complex numbers, in his paper \textit{"On the number of primes less than a given magnitude "}, it was a breakthrough. It was seen that complex analysis could hold the key to understanding the prime numbers. 
+\\\\
+\noindent
+Now, we dont use Euler's formula or the complex analysis and zeta function anywhere in this paper. But I mentioned it because, we get a glimpse of how, strange and fascinating functions can hold the key to one of the most fundamental objects of number theory: "prime numbers". The intuitive way to look at the big picture of Riemann's analysis would be
+$$\textit{Complex Analysis} \to \textit{Distribution of Primes}$$
+\noindent
+In this paper, we deal with a similar relation
+$$\textit{Fractional Parts} \to \textit{Prime Differences}$$
+\noindent
+I believe this would give the reader an idea of what we are about to explore, and, on how we can get a new insight on prime differences, through elementary methods (which means no complex analysis).
+\newpage
+\section{\Large The fundamental theorem}
+
+\theoremstyle{plain}
+\newtheorem*{seventh}{Theorem}
+\begin{seventh}[1]
+Let, $\{ x \}$ denote the fractional part of $x$ and $\lfloor x \rfloor$ denote the floor function.
+Given the following relations, where, $f(x) : \mathbb{R_+} \to \mathbb{R_+}$ is monotonically increasing, $p_n$ is the $n^{th}$ prime, $d_n = p_{n+1} - p_n$
+
+$$H_n = \frac{1}{p_n} \int_{p_1}^{p_n} \left\{ \frac{p_n}{f(x)} \right\} \mathrm{d}x , \quad S_n =  \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)} - \sum_{i = 1}^{n-1} \frac{d_n}{f(p_n)} , \quad T_n =  \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)} - \sum_{i = 1}^{n-1} \frac{d_n}{f(p_{n+1})}$$
+\\\\
+\noindent
+Then we shall have the following,\\\\
+I) $\lim_{n\to\infty} H_n = C$, where $0 < C < 1$
+\\\\
+II) $\lim_{n\to\infty} S_n < C < \lim_{n\to\infty}  T_n$
+\\\\
+III) If $\lim_{n\to\infty} (T_n - S_n)$ exists, then there exists $n_0 \in \mathbb{N}$ such that for all $n > n_0$ 
+$$\int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{f(x)} = \frac{d_n}{f(p_n)}$$
+\end{seventh}
+\begin{proof}:\\\\
+\noindent
+{\Large I) $\lim_{n\to\infty} H_n = C$, where $0 < C < 1$}
+\\\\
+For any function $w(x) : \mathbb{R_+} \to  \mathbb{R_+}$ and for any real $a,b$, we have $$0 < \int_{a}^{b} \left\{ w(x) \right\} \mathrm{d}x < b - a$$
+So, we have,
+\begin{equation}
+\frac{1}{p_n} \int_{k}^{k+1} \left\{ \frac{p_n}{f(x)} \right\} \mathrm{d}x < \frac{1}{p_n} \int_{k}^{k+1} 1 \mathrm{d}x
+\end{equation}
+Let us consider $$b_k = \frac{1}{p_n} \int_{k}^{k+1} 1 \mathrm{d}x$$
+Hence, we have $$\sum_{k=p_1}^{p_n} b_k = \frac{1}{p_n} \int_{p_1}^{p_n} 1 \mathrm{d}x = 1 - \frac{p_1}{p_n}$$
+Taking limits as $n\to\infty$ gives,
+$$\lim_{n\to\infty} \sum_{k=p_1}^{p_n} b_k  = \sum_{k=p_1}^{\infty} b_k = 1$$
+By comparison test we get, converges to some positive real number $0 < C < 1$,
+$$\lim_{n\to\infty} \frac{1}{p_n} \int_{p_1}^{p_n} \left\{ \frac{p_n}{f(x)} \right\} \mathrm{d}x = C$$
+\noindent
+\textbf{Remark}: Part (I) is true regardless of whether $f(x)$ is monotonically increasing or decreasing. Part(I) of theorem (1) is what I would like to name as \textit{"The Fundamental Theorem"}, because it forms the base for further results in this paper.
+\\
+\\
+{\Large II) $\lim_{n\to\infty} S_n < C < \lim_{n\to\infty}  T_n$}
+\\
+\\
+We, have $\lim_{n\to\infty} H_n = C$\\
+Now,
+\begin{equation*}
+\begin{split}
+H_n & = \frac{1}{p_n} \int_{p_1}^{p_n} \left\{ \frac{p_n}{f(x)} \right\} \mathrm{d}x \\
+	& = \frac{1}{p_n} \int_{p_1}^{p_n} \frac{p_n}{f(x)} \mathrm{d}x - \frac{1}{p_n} \int_{p_1}^{p_n} \left\lfloor \frac{p_n}{f(x)} \right\rfloor \mathrm{d}x \\
+	& = \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \frac{1}{p_n} \int_{p_1}^{p_n} \left\lfloor \frac{p_n}{f(x)} \right\rfloor \mathrm{d}x
+\end{split}
+\end{equation*}
+Hence,
+\begin{equation}
+\lim_{n\to\infty} H_n = \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \frac{1}{p_n} \sum_{i=1}^{n-1} \int_{p_i}^{p_{i+1}} \left\lfloor \frac{p_n}{f(x)} \right\rfloor \mathrm{d}x
+\end{equation}
+Now, since {$f(x)$ is monotonically increasing}, we get 
+\begin{equation*}
+\lim_{n\to\infty} H_n <  \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \frac{1}{p_n} \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i+1})} p_n
+\end{equation*}
+And, also
+\begin{equation*}
+\lim_{n\to\infty} H_n >  \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \frac{1}{p_n} \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})} p_n
+\end{equation*}
+Combining, we get
+\begin{equation*}
+ \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})} < \lim_{n\to\infty} H_n <  \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  -  \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i+1})}
+\end{equation*}
+ie., we get our desired result
+\begin{equation}
+ \lim_{n\to\infty} S_n < C <  \lim_{n\to\infty} T_n
+\end{equation}
+\\
+\\
+{\Large III) If $\lim_{n\to\infty} (T_n - S_n)$ exists, then there exists $n_0 \in \mathbb{N}$ such that for all $n > n_0$ 
+$$\int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{f(x)}= \frac{d_n}{f(p_n)}$$ }
+\\\\
+From the above equation (3) we know,
+\begin{equation*}
+ \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})} < \lim_{n\to\infty} H_n <  \lim_{n\to\infty} \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  -  \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i+1})}
+\end{equation*}
+Rearranging, we get
+\begin{equation*}
+0 < \lim_{n\to\infty} H_n - \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  + \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})} <  \lim_{n\to\infty} \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})}  -  \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i+1})}
+\end{equation*}
+which is actually,
+\begin{equation*}
+0 < \lim_{n\to\infty} ( C - S_n ) <  \lim_{n\to\infty} (T_n - S_n)
+\end{equation*}
+So obviously, if $\lim_{n\to\infty} (T_n - S_n)$ exists, let it be $L_1$, then 
+$$ 0 <  \lim_{n\to\infty}  (C - S_n ) < L_1$$
+Obviously, then $\lim_{n\to\infty} (C - S_n) = C_2 < L_1$. 
+\\
+\\
+Hence, $\lim_{n\to\infty} S_n = C  - C_2 = L_2$
+\\
+\\
+Which implies, for every $\epsilon > 0$ there exists $n_0(\epsilon)$ such that $\forall n > n_0$
+$$\left|L_2 - \int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)} + \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})}  \right| < \epsilon$$
+From this relation we can deduce that, there exists $n_0$ such that for all $n > n_0$
+$$\int_{p_1}^{p_n} \frac{\mathrm{d}x}{f(x)}  - \sum_{i=1}^{n-1} \frac{d_i}{f(p_{i})} = \int_{p_1}^{p_{n+1}} \frac{\mathrm{d}x}{f(x)}  - \sum_{i=1}^{n} \frac{d_i}{f(p_{i})}$$
+ie.,
+\begin{equation}
+\int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{f(x)} = \frac{d_n}{f(p_{n})}
+\end{equation}
+\end{proof}
+\section{\Large A powerful equation}
+\noindent
+The above theorem will be our tool in getting deeper into the prime number mystery, especially the equation of part (III).
+\\
+\\
+\noindent
+\textit{If $f(x)$ is a monotonically increasing function and $\lim_{n\to\infty} (T_n - S_n)$ exists then,\\
+	there exists $n_0 \in \mathbb{N}$, such that for all $n > n_0$
+	$$\int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{f(x)} = \frac{d_n}{f(p_n)}$$
+	}
+	
+\noindent
+The reason I am calling this equation powerful is, we can use, any monotonically increasing function $f(x)$. So $f(x)$ can be $\sqrt x$ or $\log(x)$, as per our requirements.\\
+
+\section{\Large A Proof of Cramer's Conjecture}
+\theoremstyle{plain}
+\newtheorem*{newest}{Proposition}
+\begin{newest}[Cramer, 1936]
+In the big-oh notation we have $^{[2]}$,
+$$d_n = O((\log p_n)^2)$$
+\end{newest}
+\begin{proof}
+\noindent
+Let us take $f(x) = \log x$.\\
+First we prove, that $\lim_{n\to\infty} (T_n - S_n)$ is exists
+\\Here,
+$$\lim_{n\to\infty} T_n - S_n = \sum_{i = p_1}^{\infty} \frac{d_i}{\log p_i} - \frac{d_i}{\log p_{i+1}}$$
+We use the root test $^{[1]}$ to show that the limit exists and is finite.\\
+\noindent
+Here, the $k^{th}$ term is  $$ a_k = \frac{d_k}{\log p_k} - \frac{d_k}{\log p_{k+1}}$$
+\\
+\\
+Now, in one of my previous papers $^{[5]}$,  I had showed that, $\lim_{n\to\infty} (T_n - S_n)$ exists, when $f(x) = x$. Just to show it quickly, here again,
+let, $v_k = \frac{d_k}{p_k} - \frac{d_k}{p_{k+1}}$, we get using Bertrand's Postulate,
+$$\lim \sup_{k\to\infty} \left| v_k \right|^{1/k} = \lim \sup_{k\to\infty} \left| \frac{(p_{k+1} - p_k)^2}{p_k p_{k+1}} \right|^{1/k} < \lim \sup_{k\to\infty} \left| \frac{p_k}{p_{k+1}} \right|^{1/k} = 1$$
+Hence, looking at the conclusion of root test we can say, $\lim_{n\to\infty} T_n - S_n$ exists.
+Therefore, there exists $r_0 \in \mathbb{N}$, such that for all $n > r_0$
+	$$\int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{x} = \frac{d_n}{p_n}$$
+Since, by the prime number theorem, we can show that, $\lim_{n\to\infty} {p_{n+1}}/{p_n} = 1$.$^{[3]}$
+Therefore, we get, as $n\to\infty$
+$$d_n = {p_{n+1} \log\left( \frac{p_{n+1}}{p_n} \right)}$$
+Therefore,
+\begin{equation}
+\begin{split}
+\lim \sup_{k\to\infty} \left| a_k \right|^{1/k} 
+	&= \lim \sup_{k\to\infty} \left| \frac{d_k}{\log p_k} - \frac{d_k}{\log p_{k+1}} \right|^{1/k}\\
+	&= \lim \sup_{k\to\infty} \left| \frac{p_{k+1} \log\left( \frac{p_{k+1}}{p_k} \right)}{\log p_k} - \frac{p_{k+1} \log\left( \frac{p_{k+1}}{p_k} \right)}{\log p_{k+1}} \right|^{1/k}
+\end{split}
+\end{equation}
+\noindent
+Now, we have, as $x\to\infty$  $^{[4]}$
+\begin{equation}
+\frac{x}{\log x} < \pi(x)
+\end{equation}
+Also, we have $p_n^{\frac{1}{n+1}} > p_n^{\frac{1}{p_n}}$
+Also, as $n\to\infty$, $\lim_{n\to\infty} p_n^{\frac{1}{p_n}} = 1$.
+We know from the prime number theorem, $\lim_{n\to\infty} p_{n+1} / p_n = 1$.
+Hence, as $n\to\infty$
+$$p_n^{\frac{1}{n+1}} \ge \frac{p_{n+1}}{p_n}$$
+i.e,
+\begin{equation}
+(n+1) \frac{\log p_{n+1}}{\log p_n} \le (n+2) 
+\end{equation}
+\noindent
+Therefore, we get,
+\begin{equation}
+\begin{split}
+\lim \sup_{k\to\infty} \left| a_k \right|^{1/k} 
+	&=\lim \sup_{k\to\infty} \left| \frac{p_{k+1}}{\log p_{k+1}} \log \left( \frac{p_{k+1}}{p_k} \right) \left( \frac{\log p_{k+1}}{\log p_k} - 1 \right) \right|^{1/k}\\
+	&<\lim \sup_{k\to\infty} \left| \pi(p_{k+1}) \log \left( \frac{p_{k+1}}{p_k} \right) \left( \frac{\log p_{k+1}}{\log p_k} - 1 \right) \right|^{1/k}\\
+	&=\lim \sup_{k\to\infty} \left| ({k+1}) \log \left( \frac{p_{k+1}}{p_k} \right) \left( \frac{\log p_{k+1}}{\log p_k} - 1 \right) \right|^{1/k}\\
+	&\le \lim \sup_{k\to\infty} \left|\log \left( \frac{p_{k+1}}{p_k} \right) \right|^{1/k}\\
+	&\le 1
+\end{split}
+\end{equation}
+This implies, $\lim_{n\to\infty} T_n - S_n $ exists.\\\\
+\noindent
+Hence, we get,
+there exists $n_0$, such that for all $n > n_0$, we have,
+$$\frac{d_n}{\log p_n} = \int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{\log x}$$
+\noindent Implies
+\begin{equation}
+\frac{d_n}{\log p_n} = Li(p_{n+1}) - Li(p_n)
+\end{equation}
+\\\\
+\noindent
+Similarly, we consider $f(x) = ( \log x )^2$\\\\
+\noindent
+First we prove, that $\lim_{n\to\infty} (T_n - S_n)$ exists.\\
+Here,
+$$\lim_{n\to\infty} T_n - S_n = \sum_{i = p_1}^{\infty} \frac{d_i}{(\log p_i)^2} - \frac{d_i}{(\log p_{i+1})^2}$$
+We use the comparison test to show that the limit exists.
+\noindent
+Here, the $k^{th}$ term is  $$ b_k = \frac{d_k}{( \log p_k )^2} - \frac{d_k}{(\log p_{k+1})^2}$$
+We can easily check that, as $k\to\infty$
+\begin{equation}
+0 < b_k < a_k
+\end{equation}
+$\left( \text{Since as}\quad n \to\infty,  \log p_n  + \log p_{n+1} < \log p_n \log p_{n+1} \right)$
+\\\\
+\noindent
+Hence, the sum $\sum_{i=1}^{\infty} b_k$ converges.
+\noindent
+This again implies, $\lim_{n\to\infty} T_n - S_n $ exists, for $f(x) = ( \log x )^2$. Hence, we get,
+there exists $n_1 \in \mathbb{N}$, such that for all $n > n_1$, we have,
+$$\frac{d_n}{( \log p_n )^2} = \int_{p_n}^{p_{n+1}} \frac{\mathrm{d}x}{( \log x )^2}$$
+\noindent Implies
+\begin{equation}
+\frac{d_n}{( \log p_n )^2} = Li(p_{n+1}) - Li(p_n) - \frac{p_{n+1}}{\log p_{n+1}} + \frac{p_n}{\log p_n}
+\end{equation}
+where, $Li(x)$ is the logarithmic integral function.\\\\
+From equation (9) we get, there exists $n_2 \in \mathbb{N}$ such that for all $n > n_2$
+\begin{equation}
+\begin{split}
+\frac{d_n}{( \log p_n )^2} &= \frac{d_n}{\log p_n}  - \frac{p_{n+1}}{\log p_{n+1}} + \frac{p_n}{\log p_n}\\
+	&= \frac{p_{n+1}}{\log p_n} - \frac{p_{n+1}}{\log p_{n+1}}\\
+	&= \frac{p_{n+1}}{\log p_{n+1}} \left( \frac{\log p_{n+1}}{\log p_n} - 1\right)
+\end{split}
+\end{equation}
+\noindent
+Now, we have $p_n^{\frac{1}{n+1}} > p_n^{\frac{1}{p_n}}$
+Also, as $n\to\infty$, $\lim_{n\to\infty} p_n^{\frac{1}{p_n}} = 1$.
+We know from the prime number theorem, $\lim_{n\to\infty} p_{n+1} / p_n = 1$.
+Hence, as $n\to\infty$
+$$p_n^{\frac{1}{n+1}} \ge \frac{p_{n+1}}{p_n}$$
+i.e,
+$$(n+1) \frac{\log p_{n+1}}{\log p_n} \le (n+2)$$
+\noindent
+\\
+\noindent
+Hence, as $n\to\infty$ from equation (12) we get
+\begin{equation}
+\begin{split}
+\frac{d_n}{( \log p_n )^2}
+ 		&	< \pi(p_{n+1}) \left( \frac{\log p_{n+1}}{\log p_n} - 1\right)\\
+		&	\le (n+2) - (n+1) = 1
+\end{split}
+\end{equation}
+
+\noindent
+\end{proof}
+
+\begin{thebibliography}{99} 
+\bibitem{1}Weisstein, Eric W. "Root Test." From MathWorld--A Wolfram Web Resource. \textit{http://mathworld.wolfram.com/RootTest.html}
+\bibitem{2}Cramer, Harald (1936). \textit{"On the order of magnitude of the difference between consecutive prime numbers"}. Acta Arithmetica 2: 23,46.
+\bibitem{3}Apostol, Tom M. \textit{Introduction to Analytic Number Theory}. Theorem 4.5, pg 80.
+\bibitem{4}Caldwell, Chris K. \textit{http://primes.utm.edu/howmany.shtml}
+\bibitem{5}Ghosh, Roupam \textit{An investigation into the gaps between primes}. {\tt arXiv:0912.4646 [math.GM]}
+\end{thebibliography} 
+
+\end{document}

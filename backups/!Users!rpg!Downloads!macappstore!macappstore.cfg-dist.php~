@@ -1,0 +1,18 @@
+<?php
+	/*
+	 * Written by Simone Tellini
+	 * http://tellini.info/
+	 * 
+	 * - Enter all the product IDs and names in the $products array
+	 * - Rename this file as macappstore.cfg.php
+	 */
+
+	$products = array(
+		'id'	=>	'Study Center',
+	);
+
+	// if you want to override the default output path, uncomment the following line
+	// remember to keep the trailing slash
+//	$outputPath = dirname( __FILE__ ) . '/output/';
+
+?>

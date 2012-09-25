@@ -1,0 +1,1 @@
+(:apel "required" :el-get "installed")

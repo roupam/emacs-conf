@@ -1,0 +1,13 @@
+(ns maths)
+(defn jsphs [n k]
+  (loop [n (range 1 (inc n)) k k]
+    (if (= 1 (count n))
+      (first n)
+      (let [ik (if (< k (count n)) k (rem k (count n)))]
+        (recur (concat (drop (inc ik) n) (take ik n))
+               k)))))
+
+(defn fibo [x]
+  (if (or (= x 2) (= x 1))
+    (1)
+    (+ (fibo (- x 1)) (fibo (- x 2)))))

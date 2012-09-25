@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/local/Cellar/tsung/1.4.1/share/tsung/tsung-1.0.dtd" [] >
+<tsung loglevel="info">
+
+  <clients>
+    <client host="localhost" use_controller_vm="false"/>
+  </clients>
+
+  <servers>
+    <server host="ash.qotd.co" port="80" type="tcp"/>
+  </servers>
+
+  <load>
+    <arrivalphase phase="1" duration="2" unit="minute">
+      <users arrivalrate="5" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="5" unit="minute">
+      <users arrivalrate="10" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="1" unit="minute">
+      <users arrivalrate="15" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <sessions>
+    <session name='rec20120110-1311' probability='100'  type='ts_http'>
+      <request><http url='http://ash.qotd.co/browse/questions/' version='1.1' method='GET'></http></request>
+      <request><http url='/static/css/screen.css?v=1326116819781' version='1.1' if_modified_since='Tue, 10 Jan 2012 06:21:50 GMT' method='GET'></http></request>
+      <request><http url='/static/js/chatPersist.js' version='1.1' if_modified_since='Tue, 13 Dec 2011 08:41:13 GMT' method='GET'></http></request>
+      <request><http url='/static/images/logos/poweredby-helpshift.png' version='1.1' if_modified_since='Thu, 08 Dec 2011 07:32:53 GMT' method='GET'></http></request>
+      <request><http url='http://assets.qotd.co.s3.amazonaws.com/ash/gluster_usr_20111022230108867-a7fc2120b6f6fa6/20111205200659470-466be682c88d147_113.png' version='1.1' if_modified_since='Mon, 05 Dec 2011 14:37:05 GMT' method='GET'></http></request>
+      <request><http url='http://ash.qotd.co/static/images/backgrounds/loggedout_lp_bg.png?v=20120103' version='1.1' if_modified_since='Wed, 19 Oct 2011 06:10:41 GMT' method='GET'></http></request>
+      <request><http url='/static/images/search/searchIcon.png?v=20120103' version='1.1' if_modified_since='Wed, 19 Oct 2011 06:10:41 GMT' method='GET'></http></request>
+      <request><http url='/static/images/icons/rss_16.png?v=20120103' version='1.1' if_modified_since='Wed, 19 Oct 2011 06:10:41 GMT' method='GET'></http></request>
+      <request><http url='/static/images/loading/logo-spinner-gray-trans.gif' version='1.1' if_modified_since='Wed, 19 Oct 2011 06:10:41 GMT' method='GET'></http></request>
+      <request><http url='http://themes.googleusercontent.com/static/fonts/ubuntu/v4/vRvZYZlUaogOuHbBTT1SNevvDin1pK8aKteLpeZ5c0A.woff' version='1.1' if_modified_since='Thu, 05 Jan 2012 05:54:39 GMT' method='GET'></http></request>
+      <request><http url='/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff' version='1.1' if_modified_since='Thu, 05 Jan 2012 05:54:39 GMT' method='GET'></http></request>
+      <request><http url='/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff' version='1.1' if_modified_since='Thu, 05 Jan 2012 05:54:39 GMT' method='GET'></http></request>
+      <request><http url='/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff' version='1.1' if_modified_since='Thu, 05 Jan 2012 05:54:39 GMT' method='GET'></http></request>
+      <request><http url='http://ash.qotd.co/static/images/icons/chat-widget-icon.png?v=20120103' version='1.1' if_modified_since='Tue, 15 Nov 2011 05:57:00 GMT' method='GET'></http></request>
+    </session>
+
+  </sessions>
+
+</tsung>

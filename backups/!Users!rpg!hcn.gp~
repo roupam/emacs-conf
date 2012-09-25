@@ -1,0 +1,20 @@
+{
+	a = 1;
+	H = 1;
+	emc = 0.577;
+	max_a = 0;
+	while(a < 1000000,
+		if(numdiv(a) > max_a,
+			max_a = numdiv(a);
+			r = sigma(a,1);
+			s = Pi*Pi * a/6.0 + sum(k=1,numdiv(a)-1,divisors(a)[k]/divisors(a)[k+1])*1.0 + 1;
+			t = H + exp(H)*log(H);
+			if(a < 10,
+				u = 1, 
+				u = exp(emc)*a*log(log(a))); 
+			printf("%d\t%.2f\t%.2f\t%.2f\t%.2f\n",a,r,s,t,u)
+		);
+		H = H + 1.0/a;		
+		a++
+	);
+}

@@ -1,0 +1,93 @@
+package com.ibt.HelpShift;
+
+import android.app.Application;
+//Using Users/rpg/project/android/acra-svn/tags/acra-4.2.3
+import com.ibt.HS.*;
+import com.ibt.HS.annotation.*;
+import static com.ibt.HS.ReportField.*;
+
+@ReportsCrashes(formKey = "",
+                mode = ReportingInteractionMode.TOAST,
+                mailTo = "contact@infinitelybeta.com",
+                customReportContent = {
+                    ANDROID_VERSION,
+                    APP_VERSION_CODE,
+                    APP_VERSION_NAME,
+                    AVAILABLE_MEM_SIZE,
+                    BRAND,
+                    BUILD,
+                    CRASH_CONFIGURATION,
+                    DEVICE_FEATURES,
+                    DEVICE_ID,
+                    DISPLAY,
+                    DROPBOX,
+                    DUMPSYS_MEMINFO,
+                    ENVIRONMENT,
+                    EVENTSLOG,
+                    FILE_PATH,
+                    INITIAL_CONFIGURATION,
+                    INSTALLATION_ID,
+                    IS_SILENT,
+                    LOGCAT,
+                    PACKAGE_NAME,
+                    PHONE_MODEL,
+                    PRODUCT,
+                    RADIOLOG,
+                    REPORT_ID,
+                    SETTINGS_SECURE,
+                    SETTINGS_SYSTEM,
+                    SHARED_PREFERENCES,
+                    STACK_TRACE,
+                    TOTAL_MEM_SIZE,
+                    USER_APP_START_DATE,
+                    USER_COMMENT,
+                    USER_CRASH_DATE,
+                    USER_EMAIL                  
+                    }
+        )
+
+public class HelpShift extends Object
+{
+    private static final String TAG = "-----------------------------------------------------------------------";
+    private static String stringArray[];
+    private String API_KEY;
+    private String DOMAIN_NAME;
+    
+    public String getAPI()
+    {   
+        return API_KEY;
+    }
+    
+    public void setAPI(String s)
+    {
+        API_KEY = s;
+    }
+    
+    public String getDomain()
+    {
+        return DOMAIN_NAME;
+    }
+    
+    public void setDomain(String s)
+    {
+        DOMAIN_NAME = s;
+    }
+    
+    public void install(String api_key,String domain_name,Application a) {
+        this.API_KEY = api_key;
+        this.DOMAIN_NAME = domain_name;
+        ErrorReporter.getInstance().putCustomData("API_KEY", this.API_KEY);
+        ErrorReporter.getInstance().putCustomData("DOMAIN_NAME", this.DOMAIN_NAME);
+        ACRA.init(a);
+    }
+
+    public void addLog(String logString)
+    {
+        ErrorReporter.getInstance().putCustomData("HSLOG", logString);
+    }
+
+    public String getLog(String logString)
+    {
+        return ErrorReporter.getInstance().getCustomData("HSLOG");
+    }
+}

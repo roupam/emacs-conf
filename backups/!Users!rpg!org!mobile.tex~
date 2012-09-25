@@ -1,0 +1,169 @@
+% Created 2012-08-26 Sun 23:15
+\documentclass[11pt]{article}
+\usepackage[AUTO]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{mobile}
+\author{Roupam Ghosh}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.8.11}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+\section{MOBILE LOCAL KEY VALUE STORE PAIRS}
+\label{sec-1}
+
+
+
+\begin{verbatim}
+|-----------------+------------------------------------------------------------------------------------------------------|
+| Key             | Description                                                                                          |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| API KEY         | The developer api key                                                                                |
+| DOMAIN NAME     | The developer domain                                                                                 |
+| APP ID          | The app ID                                                                                           |
+| PLATFORM        | ios, android, windows                                                                                |
+| GENERATED UUID  | MD5 of API KEY, APP ID, PLATFORM, DEVICE, INFO DICT, TIMESTAMP, PROCESS INFO                         |
+| API VERSION     | Starts with 1.0                                                                                      |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| USER IDENTIFIER | The name of the app user fed by the developer API                                                    |
+| USER METADATA   | Extra user information for analytics (like location, age, gender,etc. to be fed in by the developer) |
+| PROFILE ID      | Profile ID for identifying the user                                                                  |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| BREADCRUMB      | The breadcrumb log trails array, for the developer to track user actions                             |
+| METADATA        | Extra app specific information that the developer might want to see, to be fed in through the API    |
+|-----------------+------------------------------------------------------------------------------------------------------|
+\end{verbatim}
+
+
+\begin{verbatim}
+|----------------------+-----------------------------------------------------------------------|
+| APP USAGE ANALYTICS  |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+| APP START TIME       |                                                                       |
+| APP END TIME         |                                                                       |
+| EVENT TRACKING START | Start time for developer specified event to measure event performance |
+| EVENT TRACKING END   | End time for developer specified event to measure event performance   |
+| APP RUN COUNT        | Number of times the user has opened the app                           |
+| USER RETURN FLAG     | Whether the user is a new user or an already existing user            |
+| ... more to come ... |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+\end{verbatim}
+
+
+\begin{verbatim}
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------------|
+| My Issues            |                                                                                                                                           |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------------|
+| GLOBAL SINCE         | Fetching issues is last global since, initial nil (timestamp)                                                                             |
+| ISSUES ARRAY         | Array of Issue Dictionaries                                                                                                               |
+| ISSUE ID ARRAY       |                                                                                                                                           |
+| ISSUE COUNT UNREAD   | Number of unread mesg in issue                                                                                                            |
+| ISSUE MESSAGE CURSOR | Timestamp of how many message has been fetched and stored for this issue. Update on new message sent and when unread messages are fetched |
+|----------------------+-------------------------------------------------------------------------------------------------------------------------------------------|
+\end{verbatim}
+
+
+\begin{verbatim}
+|---------------------+---------+---------------------------------------+-----------------------------------------------------------------------------+-------------------------------------------------|
+| Issue API           | Request | Route                                 | To be sent                                                                  | Return Val                                      |
+|---------------------+---------+---------------------------------------+-----------------------------------------------------------------------------+-------------------------------------------------|
+| Get Profile         | GET     | api/lib/1/profile-exists              | Device UUID(identity)                                                       | 200, Profile ID                                 |
+| Create Profile      | POST    | api/lib/1/profiles                    | Device UUID (identifier), Name (displayname), Email (email)                 | 201, Profile ID                                 |
+| Add new issue       | POST    | api/lib/1/issues/                     | Issue Description (message-text), Profile ID (profile-id), Meta Data (meta) | 201, New Issue Json                             |
+| Send new message    | POST    | api/lib/1/issues/<id>/messages/       | Message Text (message-text), Profile ID (profile-id), Message type (type)   | 201, New Message Json                           |
+| Fetching issues     | POST    | api/lib/1/my-issues/                  | Profile ID (profile-id), Global Since (since), Message Cursor Json (mc)     | 200, Issues List Json with unread message count |
+| Fetching single msg | GET     | api/lib/1/issues/<issue-id>/messages/ | Issue Message Cursor(since)                                                 | 200, Message list Json                          |
+| Fetch FAQs          | GET     | api/lib/1/faqs/                       |                                                                             | 200, Section list json                          |
+| Mark FAQ as helpful | POST    | api/lib/1/faqs/<faq_id>/helpful/      |                                                                             | 200, Marked/Not Marked                          |
+|---------------------+---------+---------------------------------------+-----------------------------------------------------------------------------+-------------------------------------------------|
+\end{verbatim}
+\section{Common params for signature. All these params plus the params given in the second table below must be used to generate the signature,}
+\label{sec-2}
+
+
+
+\begin{verbatim}
+|-------------+-----------------------------------------------------|
+| Param name  | Description                                         |
+|-------------+-----------------------------------------------------|
+| method      | @"GET" or @"POST" String                            |
+| token       | A random string at least 50 length                  |
+| uri         | The API route for eg. @"/api/lib/1/profile-exists/" |
+| tinestamp   | The latest timestamp string                         |
+| platform-id | The id for your app                                 |
+|-------------+-----------------------------------------------------|
+\end{verbatim}
+
+
+\begin{verbatim}
+|-------------------------+-------------------------------------------------------------------|
+| API                     | Signature Items (SHA256 of the given items)                       |
+|-------------------------+-------------------------------------------------------------------|
+| Get Profile             | identity                                                          |
+| Create Profile          | identifier displayname email                                      |
+| Add new issue           | message-text profile-id                                           |
+| Send new message        | profile-id message-text (type refers - for special messages)      |
+| Fetching issues         | profile mc since (since should be sent only when it is not empty) |
+| Fetching single message | profile-id since                                                  |
+| Fetch FAQs              |                                                                   |
+| Mark FAQ as helpful     |                                                                   |
+|-------------------------+-------------------------------------------------------------------|
+\end{verbatim}
+\section{Old v0.1 signature table}
+\label{sec-3}
+
+
+
+\begin{verbatim}
+|--------------------------+---------------------------------------------+---------------------------------------------------------------|
+| Params for every request | Description                                 |                                                               |
+|--------------------------+---------------------------------------------+---------------------------------------------------------------|
+| TIMESTAMP (timestamp)    | Unix timestamp                              | signature format changed due to security reasons after v0.1.1 |
+| TOKEN (token)            | Random token at least 50 length             |                                                               |
+| APP ID (platform-id)     |                                             |                                                               |
+| SIGNATURE (signature)    | HMAC-SHA256(API KEY, TIMESTAMP + TOKEN)     |                                                               |
+| URI                      | /api/lib/1/my-issues/                       |                                                               |
+| METHOD                   | POST/GET                                    |                                                               |
+|--------------------------+---------------------------------------------+---------------------------------------------------------------|
+\end{verbatim}
+
+
+
+\begin{verbatim}
+(def message-types
+  "Set of available message types"
+  #{"txt"                               ; Text
+    "cb"                                ; Confirmation Box
+    "ca"                                ; Confirmation Accepted
+    "cr"                                ; Confirmation Rejected
+    "rsc"                               ; Request Screen shot
+    "rer"                               ; Request Experience Rating
+    "er"                                ; Experience Rating
+    "rar"                               ; Request App store review request
+    "ar"})                              ; App store review
+\end{verbatim}
+
+\end{document}

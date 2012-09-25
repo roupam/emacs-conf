@@ -1,0 +1,20 @@
+/* Computes zeta zero value iteratively */
+
+g(s,t) = intnum(x=1,[+1],t*(x - floor(x+0.5))*sin(t*log(2*x))/x^(s+1),10);
+f(k,t) = log(g(k,t))/log(2.);
+{
+print("Enter sigma0:");
+k = input();
+m = 1 - k;
+
+print("Enter t:");
+t = input();
+a = 1;
+while(a < 100,
+        k = f(k,t);
+        m = f(m,t)
+;
+        print(a,"->",abs(k-m));
+        a++
+);
+}

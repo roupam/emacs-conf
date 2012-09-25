@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/share/tsung/tsung-1.0.dtd" [] >
+<tsung loglevel="info">
+
+  <clients>
+    <client host="localhost" use_controller_vm="false"/>
+  </clients>
+
+  <servers>
+    <server host="odin.qotdinc.com" port="80" type="tcp"/>
+  </servers>
+
+  <load>
+    <arrivalphase phase="1" duration="2" unit="minute">
+      <users arrivalrate="5" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="5" unit="minute">
+      <users arrivalrate="10" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="1" unit="minute">
+      <users arrivalrate="15" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <sessions>
+    <session name='rec20120106-1440' probability='100'  type='ts_http'>
+      <request><http url='http://odin.qotdinc.com/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/js/chatPersist.js' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/css/loggedout.css?v=1325570563658' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=dependencies/app.js|modules/autoComplete.js|common/globalSearch.js|modules/simpleTabs.js|modules/placeHolder.js|common/placeHolder.js|modules/validation.js|modules/lazyLogin.js|modules/fakeAddTopics.js|anonymous.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=common/chat.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/logos/poweredby-helpshift.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/avatar/ea67737e1e530d30574960e916ae5728?s=48&amp;d=http://dywyyik8cpe3a.cloudfront.net/images/default/avatar_48.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/avatar/961dec861206b331487214e79fb883f3?s=48&amp;d=http://dywyyik8cpe3a.cloudfront.net/images/default/avatar_48.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/backgrounds/loggedout_lp_bg.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/search/searchIcon.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/sprites/logged_out_icons_gray.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/arrows/white_pointer.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/fonts/bebas/BEBAS___-webfont.ttf' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/xhr/all-topics/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/chat-widget-icon.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/favicon.ico' version='1.1' method='GET'></http></request>
+
+      <thinktime random='true' value='9'/>
+
+      <request><http url='http://odin.qotdinc.com/a/install-glusterfs-3-3-beta-1-with-unified-file-and-object-storage/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/css/screen.css?v=1325570563658' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=dependencies/app.js|modules/autoComplete.js|common/globalSearch.js|modules/placeHolder.js|common/placeHolder.js|modules/innerShiv.js|modules/modal.js|common/modal.js|common/follow.js|common/flag.js|common/vote.js|common/more.js|common/shareLinks.js|common/askQuestionWidget.js|modules/tooltip.js|common/tooltip.js|modules/popOver.js|common/popOver.js|common/notifications.js|modules/lazyLogin.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=content/comments.js|content/delete.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/noise/white-noise.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/arrows/pointer.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/facebook_32.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/twitter_32.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/comment-icon.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/linkedin_32.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/js/modules/customAnim.js?v=1325570563658' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/js/modules/confirmBox.js?v=1325570563658' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/js/modules/textEditor.js?v=1325570563658' version='1.1' method='GET'></http></request>
+
+      <thinktime random='true' value='2'/>
+
+      <request><http url='http://odin.qotdinc.com/q/test-question-2/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=content/deeplinking.js|content/comments.js|content/addAnswer.js|content/editAnswer.js|content/delete.js|content/editTopics.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/sprites/official_new.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/loading/logo-spinner-gray-trans.gif' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/misc/drop-shadow-top.png' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/sprites/icons_12x12.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/i/live-updates-for-ideas/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=content/comments.js|content/delete.js|content/editTopics.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/sprites/editor-buttons.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/v/hosanna-vinnaithaandi-varuvaaya-bluray-hd/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=videoLibrary.js|content/comments.js|content/delete.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/noise/ebebeb.jpg?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/js/modules/accordion.js?v=1325570563658' version='1.1' method='GET'></http></request>
+
+      <thinktime random='true' value='12'/>
+
+      <request><http url='http://odin.qotdinc.com/t/cli/' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/cdn/combo.js?f=modules/lazyTabs.js|common/lazyTabs.js|v=1325836174000' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/icons/rss_16.png?v=20120103' version='1.1' method='GET'></http></request>
+      <request><http url='http://odin.qotdinc.com/static/images/arrows/arrows-small.png?v=20120103' version='1.1' method='GET'></http></request>
+
+      <thinktime random='true' value='4'/>
+
+      <request><http url='http://odin.qotdinc.com/u/aamirkapasi89-1322116188/' version='1.1' method='GET'></http></request>
+      <thinktime random='true' value='17'/>
+
+      <request><http url='http://odin.qotdinc.com/v/gluster-a-better-way-to-do-storage/?section=gluster_sect_20111004215030129-68a697f57dedaf6' version='1.1' method='GET'></http></request>
+
+      <thinktime random='true' value='8'/>
+
+      <request><http url='http://odin.qotdinc.com/t/tsm/' version='1.1' method='GET'></http></request>
+    </session>
+  </sessions>
+
+</tsung>

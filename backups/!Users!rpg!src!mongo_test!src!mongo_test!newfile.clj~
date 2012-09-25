@@ -1,0 +1,17 @@
+(ns myapp
+  (:require [somnium.congomongo :as mongo]))
+(mongo/mongo!
+ :db "mydb")
+
+(def post_
+  (struct
+   :post_id
+   :post_body
+   :posted_by
+   :posted_date
+   :answers_count
+   :votes_count
+   :post_type
+   ))
+
+

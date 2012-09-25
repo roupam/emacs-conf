@@ -1,0 +1,310 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphics,psfrag,epsfig}
+\usepackage{amsfonts,latexsym,eucal,amsmath,amsthm,amssymb}
+
+
+\oddsidemargin=-0.25in
+\topmargin=-18pt
+\textwidth=498pt
+\textheight=646pt
+
+
+
+\begin{document}
+
+\newcommand{\rum}{\rule{0.5pt}{0pt}}
+\newcommand{\rub}{\rule{1pt}{0pt}}
+\newcommand{\rim}{\rule{0.3pt}{0pt}}
+\newcommand{\numtimes}{\mbox{\raisebox{1.5pt}{${\scriptscriptstyle \times}$}}}
+
+\renewcommand{\refname}{References}
+
+
+\twocolumn[%
+\begin{center}
+{\Large\bf Pseudo-Complex Analysis and the Riemann zeta function\rule{0pt}{13pt}}\par
+\bigskip
+Roupam Ghosh \\
+{\small\it B/101, Gopalanand Society, Near Kedari Gardens, Wanowrie,
+  Pune, India - 411040\rule{0pt}{13pt}}\\
+\raisebox{-1pt}{\footnotesize E-mail: roupam.ghosh@gmail.com}\par
+\bigskip\smallskip {\small\parbox{11cm}{%
+    In what follows, we shall introduce a new kind of imaginary unit
+    $j$ with the special property that its absolute value $|j| = i$,
+    $i$ being the standard imaginary number $\sqrt{-1}$.  After
+    developing the subject a bit, we shall conduct a study of the zeta
+    function extended to this class of numbers (what I call as pseudo-
+    complex numbers) and using some interesting results we shall shed
+    some light on Riemann’s long standing hypothesis.}}\bigskip
+\end{center}]{%
+
+\section*{Introduction}
+The Riemann zeta function must be one of the most widely studied
+functions in mathematics. It is not hard therefore to imagine that
+there is a lot of interesting formulas that mathematicians have come
+up with to describe this function. The function is sort of an unifying
+underlying concept in many areas of mathematics. Arising from complex
+analysis its properties have been applied in the fields of number
+theory, and even as far as physics. Clearly there is a lot of
+information hidden in this function, and which if revealed will shed
+light on all these areas.
+
+\bigskip In what follows is a study of the zeta function extended to a
+class of numbers (what I call as pseudo-complex numbers) and using
+some interesting results we shall shed light on Riemann's long
+standing hypothesis.
+
+\bigskip I am deeply indebted to the people who supported me and
+encouraged me to go on. My gratitude also goes to my family for their
+continued interest in whatever I was doing.
+
+\section*{A Brief Background}
+The Riemann zeta function was first introduced by Riemann as the
+analytic continuation of the sum, given by the Euler product formula
+over primes
+$$\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p}
+\left( 1 - \frac{1}{p^s}\right)^{-1}$$ In his seminal 1859
+paper, Riemann gave the functional equation for zeta thereby extending
+it to the entire complex plane
+$$\pi^{-\frac{s}{2}} \Gamma\left(\frac{s}{2}\right)\zeta(s) =
+\pi^{-\frac{1-s}{2}} \Gamma\left(\frac{1-s}{2}\right)\zeta(1- s)$$
+From such a scenario Riemann gave an explicit formula relating the
+non-trivial zeros of $\zeta(s)$ with that of a modified form of the
+prime counting function
+$$J(x) = Li(x) - \sum_{\rho} Li(x^\rho) - \log 2 + \int_{x}^{\infty}
+\frac{dt}{t(t^2-1)\log t}$$ This of-course shows how important the
+study of non-trivial zeros of the Riemann zeta function is. But this
+example is not the only one.  There are many proofs in modern
+mathematics, that start with \textit{"If the Riemann Hypothesis is
+  true ..."} As of now, the Riemann hypothesis stands unsolved.
+
+\section*{Pseudo-Complex numbers}
+Let's define a number $j$ with the following properties \newline
+1. $j^2 = 1$ \newline 2. $|z_1 + jz_2| = |z_1| + i|z_2|$ where $z_1$
+and $z_2$ are complex numbers, $i$ being the imaginary unit, and $|z|$
+denotes the absolute value of $z$.
+
+\bigskip So basically, you can think of $j$ as the imaginary number
+whose absolute value is $i$. Immediately we shall have formulas like
+$$|a + ib + jc + ijd|^2 = a^2 + b^2 - c^2 - d^2$$
+where $a,b,c,d \in \mathbb{R}$, and for $z \in \mathbb{C}$
+$$e^{jz} = \cosh(z) + j\sinh(z)$$
+
+\noindent Also, more importantly we can write for $\sigma,t,w \in
+\mathbb{R}$
+$$|x^{\sigma+it+jw}| = x^\sigma$$
+
+In what follows we shall investigate the Riemann zeta function
+extended to the pseudo-complex numbers. The results are similar and
+different. But most importantly a version of Riemann hypothesis will
+be proved for pseudo-complex numbers.
+
+\bigskip We shall denote the complex part of any pseudo-complex number
+$v = s_1 + js_2$ as $C(v) = s_1$ and the pseudo part as $P(v) = s_2$,
+where $s_1$ and $s_2$ are normal complex numbers. If $P(v) \in
+\mathbb{R}$ then we say that $v$ is a pure pseudo-complex number,
+otherwise we consider $v$ impure.
+
+\bigskip For the number $ij$ we consider it an imaginary number of the
+third kind. With $j^2 = 1$ we get $\frac{1}{j} = j$, $\frac{i}{j} = ij$,
+$\frac{j}{i} = -ij$ and $\frac{1}{ij} = -ij$.
+
+\subsection*{Pseudo-holomorphic functions}
+Just like the definition of holomorphic functions, we can extend the
+definition to pseudo-holomorphic functions. Consider the quotient,
+where $p_0$ is a pseudo-complex number, $$\frac{f(p_0+h) - f(p_0)}{h}$$
+If the quotient converges to a limit when $h \to 0$, then $f$ is
+pseudo-holomorphic.
+
+\subsection*{Cauchy-Riemann equations and analytic continuation}
+
+Cauchy-Riemann equations are important in the sense, if a
+complex-valued function follows those equations then it is holomorphic
+and from it we can deploy the powerful tools of complex analysis like
+analytic continuation. In the case of pseudo-holomorphic functions,
+such equations will help us bridge the gap between complex and
+pseudo-complex analysis, and instead of reinventing the wheel we can
+use already existing tools.
+
+\bigskip Consider a pseudo-holomorphic functions for impure
+pseudo-complex arguments $x,y,z,w \in \mathbb{R}$, ie., $f =
+f(x+iy+jz+ijw)$ then if we write it as $$ f = p + iq + jr + ijs $$ We
+can derive the corresponding Cauchy-Riemann equations as
+
+\begin{equation}
+\begin{split}
+\frac{\partial f}{\partial x} &= \frac{\partial p}{\partial x} +
+i\frac{\partial q}{\partial x} + j\frac{\partial r}{\partial x} +
+ij\frac{\partial s}{\partial x}\\
+\frac{1}{i}\frac{\partial f}{\partial y} &= -i\frac{\partial p}{\partial y} +
+\frac{\partial q}{\partial y} - ij\frac{\partial r}{\partial y} +
+j\frac{\partial s}{\partial y}\\
+\frac{1}{j}\frac{\partial f}{\partial z} &= j\frac{\partial p}{\partial z} +
+ij\frac{\partial q}{\partial z} + \frac{\partial r}{\partial z} +
+i\frac{\partial s}{\partial z}\\
+\frac{1}{ij}\frac{\partial f}{\partial w} &= -ij\frac{\partial p}{\partial w} +
+j\frac{\partial q}{\partial w} - i\frac{\partial r}{\partial w} +
+\frac{\partial s}{\partial w}
+\end{split}
+\end{equation}
+
+\noindent Comparing we get,
+\begin{equation}
+\begin{split}
+& \frac{\partial p}{\partial x} = \frac{\partial q}{\partial y} =
+\frac{\partial r}{\partial z} = \frac{\partial s}{\partial w}\\
+& \frac{\partial q}{\partial x} = -\frac{\partial p}{\partial y} =
+\frac{\partial s}{\partial z} = -\frac{\partial r}{\partial w}\\
+& \frac{\partial r}{\partial x} = \frac{\partial s}{\partial y} =
+\frac{\partial p}{\partial z} = \frac{\partial q}{\partial w}\\
+& \frac{\partial s}{\partial x} = -\frac{\partial r}{\partial y} =
+\frac{\partial q}{\partial z} = -\frac{\partial p}{\partial w}
+\end{split}
+\end{equation}
+
+\noindent For pure pseudo-complex arguments $x,y,z \in \mathbb{R}$
+ie., $f = f(x+iy+jz)$ we can similarly have
+\begin{equation}
+\begin{split}
+& \frac{\partial p}{\partial x} = \frac{\partial q}{\partial y} =
+\frac{\partial r}{\partial z}\\
+& \frac{\partial q}{\partial x} = -\frac{\partial p}{\partial y} =
+\frac{\partial s}{\partial z}\\
+& \frac{\partial r}{\partial x} = \frac{\partial s}{\partial y} =
+\frac{\partial p}{\partial z}\\
+& \frac{\partial s}{\partial x} = -\frac{\partial r}{\partial y} =
+\frac{\partial q}{\partial z}
+\end{split}
+\end{equation}
+
+For the first system of equations we can conclude from the
+Cauchy-Riemann equations that an impure pseudo-holomorphic function is
+holomorphic in $(x,y)$,$(y,z)$,$(z,w)$ and $(x,w)$ planes [1]. For the
+second system of equations similarly we can say that a pure
+pseduo-holomorphic function is holomorphic in $(x,y)$ and $(y,z)$
+planes. From this we can conclude that if $f=g$ in some domain of the
+pseudo-holomorphic space, then $f$ and $g$ are identical throughout
+(analytic continuation).
+
+\bigskip In the following sections we shall deal only with
+pseudo-holomorphic functions with pure pseudo-complex arguments,
+unless otherwise specified.
+
+\section*{Pseudo-complex functions}
+
+\subsection*{The Gamma function}
+For pseudo-complex numbers $v = s+jw$ where $s \in \mathbb{C}$, $w \in
+\mathbb{R}$ and $\Re(s) > 0$ we define the Gamma function as
+\begin{equation}
+\Gamma(v) = \int_0^\infty e^{-x}x^{v-1}dx
+\end{equation}
+
+This function converges absolutely for $\Re(s) > 0$, and follows from
+the standard definition of the Gamma function for complex numbers.
+
+\subsection*{The Riemann zeta function}
+\textbf{Lemma:} For pseudo-complex numbers $v = s+jw$ where $s,w \in
+\mathbb{C}$ and $\Re(s-w) > 1$ we shall have
+\begin{equation}
+\sum_{n=1}^\infty \frac{1}{n^v} =
+\frac{1}{2}(\zeta(s+w)+\zeta(s-w)) + \frac{j}{2}(\zeta(s+w)-\zeta(s-w))
+\end{equation}
+\textbf{Proof:} For $\Re(s-w) > 1$ we have
+\begin{equation}
+\begin{split}
+  & \sum_{n=1}^\infty \frac{1}{n^v} = \sum_{n=1}^\infty
+  \frac{1}{n^{s+jw}}\\
+  & = \sum_{n=1}^\infty \frac{n^w + n^{-w}}{2n^s} - j\sum_{n=1}^\infty
+  \frac{n^w - n^{-w}}{2n^s}\\
+  & = \frac{1}{2}(\zeta(s+w)+\zeta(s-w)) + \frac{j}{2}(\zeta(s+w)-\zeta(s-w))
+\end{split}
+\end{equation}
+
+Hence for $\Re(s-w) > 1$ we define the Riemann zeta function
+as
+\begin{equation}
+\zeta(s+jw) = \sum_{n=1}^\infty \frac{1}{n^{s+jw}}
+\end{equation}
+
+\subsection*{The Dirichlet eta function}
+We define the Dirichlet eta function for pseudo-complex numbers in a
+similar way as that of the zeta function before. For $\Re(s-w) > 0$
+\begin{equation}
+\eta(s+jw) = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n^{s+jw}}
+\end{equation}
+
+\noindent Immediately, we can derive that for $\Re(s-w) > 0$
+\begin{equation}
+\eta(s+jw) = \frac{1}{2}(\eta(s+w)+\eta(s-w)) + \frac{j}{2}(\eta(s+w)-\eta(s-w))
+\end{equation}
+
+\noindent It is infact straight forward to show that
+\begin{equation}
+\eta(s+jw) = (1 - 2^{1-s-jw})\zeta(s+jw)
+\end{equation}
+
+\subsection*{The functional equation}
+Using Riemann's second method [2] for finding the functional equation of
+the Riemann zeta function we can show that for a pure pseudo-complex
+number $v$ we get
+
+\begin{equation}
+\pi^{-v/2}\Gamma\left(\frac{v}{2}\right)\zeta(v) =
+\pi^{-(1-v)/2}\Gamma\left(\frac{1-v}{2}\right)\zeta(1-v)
+\end{equation}
+
+\subsection*{Zeros of the zeta function}
+
+From the functional equation it is clear that if for a purely
+pseudo-complex number $\zeta(v) = 0$ then so is $\zeta(1-v)$. Also
+from the relation of the Dirichlet eta function to that of zeta we
+shall have the same conclusion for that of the eta function. We shall
+work with the eta function since its valid for $\Re(s-w) > 0$ instead
+of $\Re(s-w) > 1$ for the zeta function definition above. Now if
+$\eta(s+jw) = 0$ we must have from equation (9) that $\eta(s+w) +
+\eta(s-w) = 0$ and $\eta(s+w) - \eta(s+w) = 0$ ie., $\eta(s+w) =
+\eta(s-w) = 0$.
+
+\bigskip This is indeed a strong condition. Obviously, $0 < \Re(s - w)
+< 1$ and $0 < \Re(s+w) < 1$ for such zeros. Now if $s = \sigma + it$
+then we shall have
+\begin{equation}
+\eta(\sigma+w+it) = \eta(\sigma-w+it) = 0
+\end{equation}
+
+\noindent If $w \neq 0$ then it implies $\sigma+w = 1 -
+(\sigma-w)$ ie., $\sigma = \frac{1}{2}$
+
+\bigskip
+\noindent \textbf{Note} that this does not prove the Riemann
+hypothesis, but instead proves a version of the hypothesis for
+pseudo-complex numbers. The original Riemann hypothesis is the case
+for $w=0$, and still remains unproved. But our result gives a strong
+hint towards it, since as $w \to 0$ the value of $\sigma$ still
+remains $\frac{1}{2}$, and I believe the zeta function will not be
+that irregular that it breaks off at $w=0$. But again, there are
+always great surprises when it comes to maths.
+
+%\section*{Acknowledgments}
+
+\smallskip
+\begin{thebibliography}{99}\small
+
+\bibitem{1} Elias M. Stein and Rami Shakarchi, \textit{Complex
+    Analysis}, First edition, Overseas Press, 2006.
+
+\bibitem{2} H.M. Edwards, \textit{Riemann's zeta function},
+Dover Publications, Inc.
+
+\bibitem{3} E.C. Titchmarsh, \textit{The Theory of the Riemann
+    Zeta-function}, Second Edition, Clarendon Press, Oxford, 1986.
+
+\bibitem{4}  Peter Borwein, Stephen Choi, Brendan Rooney, Andrea
+  Weirathmueller \textit{The Riemann Hypothesis: A Resource for the
+    Afficionado and Virtuoso Alike}, Springer, 2007.
+
+\end{thebibliography}}
+\centerline{\rule{0pt}{19pt}\rule{72pt}{0.4pt}}
+
+\end{document}

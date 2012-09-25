@@ -1,0 +1,10 @@
+{
+       x = input();
+       s = 0;
+       while(x > 0,
+              s = s + log(x);
+              x = log(x);
+       );
+
+       print(x);
+}

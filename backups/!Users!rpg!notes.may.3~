@@ -1,0 +1,76 @@
+
+What other analytics co's are upto...
+
+-------
+Keen.io
+-------
+
+** Uses key value stores for storing events
+** Gives developer the option when to upload the stored data
+
+--------------
+Localytics.com
+--------------
+
+# App analytics
+** App usage reports
+** Users and sessions
+** Events and attributes -- (Like measuring ad-request performance)
+** Real time reports
+** Cross app comparison
+
+# Engagement
+** New customers vs returning customers
+** Cohort analysis -- Basically observing group behaviours
+** Loyalty analysis
+** Session interval
+** Session length
+
+# User flow
+** Tracking user behaviour while they are using the app
+** Includes screen flow which shows (in a graphical flowchart) app usage as the user uses it
+
+# Location
+** Location based reports
+
+----------------
+Flurry Analytics
+----------------
+
+Notes for Flurry analytics only.
+Flurry also provides the following products
+  * AppCircle -- Advertising solutions
+  * AppCircle Clips -- TV style commercial on mobile apps
+  * AppSpot -- Advertising platform
+
+Big data company
+Features promoted include:
+
+#  Reports for Usage Statistics
+** New users
+** Active users
+** Number of app sessions
+** Session length analysis
+** Frequency of use
+** User retention analysis
+** Top application versions (comparing various apps by same developer)
+
+# Category benchmarks
+Basically provides insights using stats from "session length","frequency of use", "retention"
+
+# Custom events and parameters
+Basically its event analysis (for user triggered events while using the app).
+Parameters are used for more detailed info on events.
+
+# Audience segmentation
+Reports generated based on user age, interests, etc. attributes.
+They claim to automatically generate age and gender estimates!!!
+
+# Custom segmentation
+Basically things like how  well an acquisition channel retains users or a general check on the
+user engagement of the app, nderstanding heavy users, understanding
+patterns of payed vs non-payed segments of the app, etc.
+
+# Power features
+User paths -- (just like screen flow for localytics).
+Tracking cross-sell vs up-sell conversion rate.

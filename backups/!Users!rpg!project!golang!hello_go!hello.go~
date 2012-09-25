@@ -1,0 +1,20 @@
+package main
+import (
+	"fmt"
+	"http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	checkRequest(r)
+    fmt.Fprint(w, "Hello, Go!")
+}
+
+func checkRequest(r *http.Request) {
+	fmt.Println(r)
+}
+
+func main() {
+    http.HandleFunc("/", handler)
+    http.ListenAndServe(":8080", nil)
+}
+

@@ -1,0 +1,27 @@
+* UI/UX issues
+** DONE Cross button beside search
+** DONE Table sliding for FAQ
+** DONE header lines (at bottom)
+** DONE Web view background
+** DONE non sticky question
+** DONE When three is close button, touch on header shouldnt collapse the view
+** DONE All Views should collapse when another view is presented except the master view
+** DONE Chat bubbles alignment
+** DONE Chat Widget Box size and left aligned
+** DONE HSChatBar bottom line
+** DONE UITextView for chat reply requires inner shadow
+** DONE Like button for FAQ
+** DONE Shadows
+** DONE UITableViewCellBLue
+** DONE CloseButton Line Frame
+** DONE WebView FAQ loading change takes time --> Restored to original code
+** DONE BUG: Prompt Username
+** DONE Like Button not showing sometimes
+** DONE Noise background
+** DONE Report a New issue screen
+
+** TODO Upside down
+** TODO Search tableview nil background color
+** TODO SearchBar textfield border color
+** TODO Chat swiped away on dismiss
+** TODO Tap shpould work under collapsed condition

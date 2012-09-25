@@ -1,0 +1,73 @@
+* Getting the library
+** To download the library you must be logged on as an admin
+** Goto home and click on "DOWNLOAD LIBRARY" to get the zip file
+** The zip file contains
+   -> Helpshift.h header file
+   -> libHelpshift.a static library
+   -> a folder containing the images required by the library. HSResources/
+
+* Adding the library to your project
+Adding the library to your project is simple. Just unzip the zip file
+you have downloaded, and drag and drop all its contents to your XCode
+project. Make sure that in the "Build Phases" of your target
+application Helpshift.h is in "Copy Headers", libHelpshift.a is in the "Link Binary with
+Libraries" and the pngs are in "Copy Bundle Resources".  That's it,
+Helpshift is now integrated with your project.
+
+* Authentication tokens
+  -> API Key : This is your developer API Key
+  -> Domain Name : Please put your domain name without any http:// or forward slashes
+  -> App ID : This is the unique ID assigned to your app
+
+When initializing Helpshift you must pass these three tokens. You
+initialize the library by adding the following lines in the
+implementation file for your app delegate, ideally at the top of
+`application:didFinishLaunchingWithOptions:`
+
+#+begin_src C
+    [Helpshift install:@"5a867e6b07466faa939285508de33a42" :@"sandbox.helpshift.mobi" :@"sandbox_platform_20120726120113072-89b012748d5aa10"];
+#+end_src
+
+The first argument is your API Key, second is the domain name and the third
+argument is your App ID. This is all that you'll need to initialize Helpshift.
+
+* Additional Configuration (optional)
+Additionally you can configure/pre-define certain user information, so
+that the user does not have to go through filling up their name/email
+again (provided you have them). For example:
+
+#+begin_src C
+    [Helpshift setUsername:@"John"];
+    [Helpshift setUseremail:@"john@helpshift.com"];
+#+end_src
+
+Also if you already have unique indentification for your users,
+you can specifiy those as well. For example:
+
+#+begin_src C
+    [Helpshift setUserIdentifier:@"user-id-100"];
+#+end_src
+
+These are optional methods. If you do not have these information you
+do not need to put it. But they will help you in identifying your
+users and managing them in the backend.
+
+
+* Showing support screen
+To show the Helpshift support screen you need to pass the name of the
+viewcontroller on which the support screen will show up. For example
+from inside a viewcontroller you can call Helpshift support by
+passsing the argument "self"
+
+#+begin_src C
+    [[Helpshift sharedInstance] showSupport:self];
+#+end_src
+
+* Notification count
+Also if you want to show your user notifications for replies on the
+issues s/he has posted, you can get a notification count. This count
+will always be string. You can get the current count by using:
+
+#+begin_src C
+    NSString *currentCount = (NSString *)[[Helpshift sharedInstance] notificationCount];
+#+end_src

@@ -1,0 +1,4 @@
+(use 'ring.adapter.jetty)
+(require 'fetchwc.core)
+
+(run-jetty #'fetchwc.core/app {:port 8080})

@@ -1,0 +1,19 @@
+#Fix for residual editor text
+#When you open a text editor like nano in screen and then close it, the text may stay visible in your terminal. To fix this, #put the following in your ~/.screenrc:
+altscreen on
+
+# Informative statusbar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# Turn welcome message off
+startup_message off
+
+# Increase the scrollback buffer
+defscrollback 5000
+
+# open these programs automatically on screen startup
+screen -t zsh 1
+screen -t zsh 2
+screen -t htop 0 htop

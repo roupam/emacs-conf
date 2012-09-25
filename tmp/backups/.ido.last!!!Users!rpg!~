@@ -1,0 +1,457 @@
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/rpg/.emacs.d/packs/clojure/lib/" . "auto-complete/")
+ ("/Users/rpg/.emacs.d/packs/clojure/" . "config/")
+ ("/Users/rpg/.emacs.d/packs/core/" . "config/")
+ ("/Users/rpg/.emacs.d/packs/power/lib/yasnippet/" . "snippets/")
+ ("/Users/rpg/.emacs.d/packs/power/lib/" . "yasnippet/")
+ ("/Users/rpg/.emacs.d/packs/power/" . "config/")
+ ("/Users/rpg/.emacs.d/packs/" . "clojure/")
+ ("/Users/rpg/project/TodoDroid/src/com/" . "example/")
+ ("/Users/rpg/project/TodoDroid/src/" . "com/")
+ ("/Users/rpg/project/TodoDroid/" . "src/")
+ ("/Users/rpg/project/ChatTest/ChatTest/" . "ChatTest/")
+ ("/Users/rpg/project/ChatTest/" . "ChatTest/")
+ ("/Users/rpg/.emacs.d.old/elpa/" . "yasnippet-0.6.1/")
+ ("/Users/rpg/.emacs.d.old/" . "elpa/")
+ ("/sudo:root@localhost:/usr/local/etc/nginx/" . "sites-enabled/")
+ ("/sudo:root@localhost:/usr/local/etc/" . "nginx/")
+ ("/Users/rpg/project/golang/go/doc/" . "devel/")
+ ("/Users/rpg/project/golang/go/misc/" . "emacs/")
+ ("/Users/rpg/project/golang/go/" . "doc/")
+ ("/Users/rpg/project/golang/" . "go/")
+ ("/Users/rpg/project/overtone/src/" . "overtone/")
+ ("/Users/rpg/project/overtone/" . "src/")
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/kirin/" . "androidpathlikebutton/")
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/" . "kirin/")
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/" . "com/")
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/" . "src/")
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/" . "trunk/")
+ ("/Users/rpg/Downloads/siyamed-android-satellite-menu-ca4b257/" . "satellite-menu/")
+ ("/Users/rpg/.emacs.d/elpa/auto-complete-1.4.20110207/" . "dict/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKit.framework/Versions/A/" . "Resources/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKit.framework/Versions/" . "A/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKit.framework/" . "Versions/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/" . "DTDeviceKit.framework/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/Library/" . "PrivateFrameworks/")
+ ("/Developer/Platforms/iPhoneOS.platform/Developer/" . "Library/")
+ ("/Developer/Platforms/iPhoneOS.platform/" . "Developer/")
+ ("/Developer/Platforms/" . "iPhoneOS.platform/")
+ ("/Developer/" . "Platforms/")
+ ("/Users/rpg/project/mobile.old/android/HelpShift/src/com/ibt/" . "HelpShift/")
+ ("/Users/rpg/project/mobile.old/android/HelpShift/src/com/" . "ibt/")
+ ("/Users/rpg/project/mobile.old/android/HelpShift/src/" . "com/")
+ ("/Users/rpg/project/mobile.old/android/HelpShift/" . "src/")
+ ("/Users/rpg/project/mobile.old/android/" . "HelpShift/")
+ ("/Users/rpg/project/mobile.old/" . "android/")
+ ("/Users/rpg/project/zulu/src/mobile/android/HelpShift/src/com/ibt/" . "HelpShift/")
+ ("/Users/rpg/project/zulu/src/mobile/android/HelpShift/src/com/" . "ibt/")
+ ("/Users/rpg/project/zulu/src/mobile/android/HelpShift/src/" . "com/")
+ ("/Users/rpg/project/zulu/src/mobile/android/HelpShift/" . "src/")
+ ("/Users/rpg/project/zulu/src/mobile/iphone/HelpShift/" . "SuccessCRM/")
+ ("/Users/rpg/project/zulu/src/mobile/iphone/" . "HelpShift/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/src/org/apache/cordova/" . "example/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/src/org/apache/" . "cordova/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/src/org/" . "apache/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/src/" . "org/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/" . "src/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/" . "example/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/" . "android/")
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/" . "lib/")
+ ("/Users/rpg/project/mobile/iphone/HelpShift/" . "SuccessCRM/")
+ ("/Users/rpg/project/mobile/iphone/" . "HelpShift/")
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/ibt/" . "HelpShift/")
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/" . "HelpShift/")
+ ("/Users/rpg/project/mobile/android/HelpShift/src/" . "com/")
+ ("/Users/rpg/project/mobile/android/HelpShift/" . "src/")
+ ("/Users/rpg/project/helloClojure/src/" . "helloClojure/")
+ ("/Users/rpg/project/helloClojure/" . "src/")
+ ("/Users/rpg/Downloads/timburks-nu-3489bd6/examples/Console/" . "nu/")
+ ("/Users/rpg/Downloads/timburks-nu-3489bd6/examples/" . "Console/")
+ ("/Users/rpg/Downloads/timburks-nu-3489bd6/" . "examples/")
+ ("/Users/rpg/project/mobile/android/QotdApp/src/com/cname/" . "testapp/")
+ ("/Users/rpg/project/mobile/android/QotdApp/src/com/" . "cname/")
+ ("/Users/rpg/project/mobile/android/QotdApp/src/" . "com/")
+ ("/Users/rpg/project/mobile/android/QotdApp/" . "src/")
+ ("/Users/rpg/project/mobile/android/" . "HelpShift/")
+ ("/Users/rpg/project/mobile/" . "android/")
+ ("/Users/rpg/project/zulu/src/mobile/android/" . "HelpShift/")
+ ("/Users/rpg/project/zulu/src/mobile/" . "android/")
+ ("/Users/rpg/Desktop/Demo.app/" . "en.lproj/")
+ ("/Users/rpg/Library/Application Support/Reed/calibre/Contents/Resources/" . "resources/")
+ ("/Users/rpg/Library/Application Support/Reed/calibre/Contents/" . "Resources/")
+ ("/usr/local/Cellar/" . "maxima/")
+ ("/usr/local/etc/" . "nginx/")
+ ("/Users/rpg/project/zulu/src/android/HelpShift/src/com/ibt/" . "HelpShift/")
+ ("/Users/rpg/project/zulu/src/android/HelpShift/src/com/" . "ibt/")
+ ("/Users/rpg/project/zulu/src/android/HelpShift/src/" . "com/")
+ ("/Users/rpg/project/zulu/src/android/HelpShift/" . "src/")
+ ("/Users/rpg/project/zulu/src/iphone/HelpShift/" . "SuccessCRM/")
+ ("/Users/rpg/project/zulu/src/zulu/backend/" . "structs/")
+ ("/Users/rpg/project/zulu/src/android/QotdApp/src/com/cname/" . "testapp/")
+ ("/Users/rpg/project/zulu/src/android/QotdApp/src/com/" . "cname/")
+ ("/Users/rpg/project/zulu/src/android/QotdApp/src/" . "com/")
+ ("/Users/rpg/project/zulu/src/android/QotdApp/" . "src/")
+ ("/Users/rpg/project/zulu/src/public/static/js/" . "cases-convs/")
+ ("/Users/rpg/project/zulu/src/public/static/" . "js/")
+ ("/Users/rpg/project/zulu/src/public/" . "static/")
+ ("/Users/rpg/Documents/PNT/" . "Godel/")
+ ("/Users/rpg/project/zulu/src/templates/admin/snippets/" . "manage/")
+ ("/Users/rpg/project/zulu/src/templates/admin/" . "manage/")
+ ("/Users/rpg/project/static/" . "src/")
+ ("/Users/rpg/project/octopress/source/" . "_posts/")
+ ("/Users/rpg/project/octopress/sass/" . "custom/")
+ ("/Users/rpg/project/octopress/" . "source/")
+ ("/Users/rpg/project/android/TestApp/src/com/cname/" . "testapp/")
+ ("/Users/rpg/project/android/TestApp/src/com/" . "cname/")
+ ("/Users/rpg/project/android/TestApp/src/" . "com/")
+ ("/Users/rpg/project/android/TestApp/" . "src/")
+ ("/Users/rpg/project/android/SuccessCRM/src/com/ibt/SC/" . "sender/")
+ ("/Users/rpg/NetBeansProjects/TestApp/src/com/cname/" . "testapp/")
+ ("/Users/rpg/NetBeansProjects/TestApp/src/com/" . "cname/")
+ ("/Users/rpg/NetBeansProjects/TestApp/src/" . "com/")
+ ("/Users/rpg/NetBeansProjects/TestApp/" . "src/")
+ ("/Users/rpg/project/android/SuccessCRM/src/com/ibt/" . "SuccessCRM/")
+ ("/Users/rpg/project/android/SuccessCRM/src/com/" . "ibt/")
+ ("/Users/rpg/NetBeansProjects/" . "AndroidApplication1/")
+ ("/Users/rpg/project/zulu/src/android/SuccessCRM/src/com/ibt/" . "SuccessCRM/")
+ ("/Users/rpg/project/zulu/src/android/SuccessCRM/src/com/" . "ibt/")
+ ("/Users/rpg/project/zulu/src/android/SuccessCRM/src/" . "com/")
+ ("/Users/rpg/project/zulu/src/android/SuccessCRM/" . "src/")
+ ("/Users/rpg/project/zulu/src/android/" . "QotdApp/")
+ ("/Users/rpg/project/android/SuccessCRM/src/" . "com/")
+ ("/Users/rpg/project/android/SuccessCRM/" . "src/")
+ ("/Users/rpg/project/android/acra/" . "acra/")
+ ("/Users/rpg/openvpn/" . "keys/")
+ ("/Users/rpg/project/zulu/src/iphone/SuccessCRM/" . "SuccessCRM/")
+ ("/Users/rpg/project/zulu/src/iphone/" . "HelpShift/")
+ ("/Users/rpg/Downloads/acra-4.2.3/" . "doc/")
+ ("/Users/rpg/project/android/myproject/res/" . "layout/")
+ ("/Users/rpg/project/android/myproject/" . "res/")
+ ("/Users/rpg/project/android/HelloAndroid/src/com/ibt/" . "HelloAndroid/")
+ ("/Users/rpg/project/android/HelloAndroid/src/com/" . "ibt/")
+ ("/Users/rpg/project/android/HelloAndroid/src/" . "com/")
+ ("/Users/rpg/project/android/HelloAndroid/res/" . "values/")
+ ("/Users/rpg/project/android/HelloAndroid/" . "src/")
+ ("/Users/rpg/project/android/" . "SuccessCRM/")
+ ("/usr/local/" . "share/")
+ ("/Users/rpg/Projects/Build/Intermediates/Notes.build/Release/" . "Notes.build/")
+ ("/Users/rpg/Projects/Build/Intermediates/Notes.build/" . "Release/")
+ ("/Users/rpg/Projects/Build/Intermediates/" . "Notes.build/")
+ ("/Users/rpg/Projects/Build/" . "Intermediates/")
+ ("/Users/rpg/Projects/" . "Build/")
+ ("/Users/rpg/Documents/" . "PNT/")
+ ("/Users/rpg/project/zulu/src/templates/app/" . "question/")
+ ("/Users/rpg/project/zulu/src/tests/" . "kalapani/")
+ ("/Users/rpg/project/zulu/src/zulu/" . "backend/")
+ ("/Users/rpg/project/zulu/src/kalapani/" . "utils/")
+ ("/Users/rpg/project/zulu/src/templates/master/" . "macros/")
+ ("/Users/rpg/project/zulu/src/templates/" . "snippets/")
+ ("/Users/rpg/project/zulu/" . "src/")
+ ("/Users/rpg/project/" . "zulu/")
+ ("/Users/rpg/project/zulu/src/" . "kalapani/")
+ ("/Users/rpg/github/" . "stunnel/")
+ ("/Users/rpg/src/fetchwc/src/" . "fetchwc/")
+ ("/Users/rpg/src/fetchwc/" . "script/")
+ ("/Users/rpg/.emacs.d/elpa/vm/" . "info/")
+ ("/Users/rpg/.emacs.d/elpa/" . "yasnippet-0.6.1/")
+ ("/Users/rpg/src/adder/src/" . "adder/")
+ ("/Users/rpg/src/adder/" . "script/")
+ ("/" . "Developer/")
+ ("/Users/rpg/src/mongo_test/test/mongo_test/" . "test/")
+ ("/Users/rpg/src/mongo_test/test/" . "mongo_test/")
+ ("/Users/rpg/src/mongo_test/src/" . "mongo_test/")
+ ("/Users/rpg/src/mongo_test/" . "src/")
+ ("/Users/rpg/iPhone/" . "SuccessCRM/")
+ ("/Users/rpg/iPhone/SuccessCRM/" . "SuccessCRM/")
+ ("/Users/rpg/Downloads/Crittercism_v2_9_16/" . "CrittercismSDK/")
+ ("/Users/rpg/Downloads/uservoice-uservoice-iphone-sdk-637ae1d/" . "Categories/")
+ ("/Users/rpg/src/test_project/src/" . "test_project/")
+ ("/Users/rpg/src/test_project/" . "src/")
+ ("/Users/" . "rpg/")
+ ("/Users/rpg/.emacs.d/" . "packs/")
+ ("/Users/rpg/Downloads/" . "resupportlibraryicons/")
+ ("/Users/rpg/src/" . "fetchwc/")
+ ("/Users/rpg/Desktop/pivot-1/pivot-1.xcodeproj/project.xcworkspace/xcuserdata/" . "rpg.xcuserdatad/")
+ ("/Users/rpg/Desktop/pivot-1/pivot-1.xcodeproj/project.xcworkspace/" . "xcuserdata/")
+ ("/Users/rpg/Desktop/pivot-1/pivot-1.xcodeproj/" . "project.xcworkspace/")
+ ("/Users/rpg/Desktop/pivot-1/" . "pivot-1/")
+ ("/Users/rpg/Desktop/" . "Demo.app/")
+ ("/Users/rpg/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/rpg/.emacs.d.old/"
+ "/Users/rpg/.emacs.d/packs/clojure/config/"
+ "/Users/rpg/.emacs.d/packs/clojure/"
+ "/Users/rpg/.emacs.d/packs/core/"
+ "/Users/rpg/.emacs.d/packs/power/config/"
+ "/Users/rpg/.emacs.d/packs/power/lib/yasnippet/"
+ "/Users/rpg/project/"
+ "/Users/rpg/project/zulu/src/kalapani/utils/"
+ "/Users/rpg/.emacs.d/packs/power/"
+ "/Users/rpg/.emacs.d/"
+ "/Users/rpg/project/ChatTest/ChatTest/ChatTest/"
+ "/Users/rpg/.emacs.d/elpa/yasnippet-0.6.1/"
+ "/Users/rpg/"
+ "/Users/rpg/.emacs.d/elpa/"
+ "/Users/rpg/project/TodoDroid/src/com/example/"
+ "/Users/rpg/.emacs.d.old/elpa/yasnippet-0.6.1/"
+ "/tmp/"
+ "/Users/rpg/.emacs.d.bg/"
+ "/Users/rpg/.emacs.d/elpa/dictem-1.0.2/"
+ "/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/"
+ "/sudo:root@localhost:/usr/local/etc/nginx/sites-enabled/"
+ "/Users/rpg/project/zulu/src/zulu/backend/structs/"
+ "/Users/rpg/project/helloClojure/src/helloClojure/"
+ "/Users/rpg/project/mobile/android/QotdApp/src/com/cname/testapp/"
+ "/Users/rpg/Downloads/"
+ "/Users/rpg/project/mobile/iphone/HelpShift/SuccessCRM/"
+ "/Users/rpg/project/golang/go/doc/devel/"
+ "/Users/rpg/project/golang/hello_go/"
+ "/Users/rpg/project/golang/go/"
+ "/Users/rpg/project/golang/go/misc/emacs/"
+ "/Users/rpg/project/overtone/src/overtone/"
+ "/Users/rpg/Desktop/"
+ "/Users/rpg/Downloads/resupportlibraryicons/"
+ "/Users/rpg/Downloads/supportlibraryicons/"
+ "/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/kirin/androidpathlikebutton/"
+ "/Users/rpg/Downloads/siyamed-android-satellite-menu-ca4b257/satellite-menu/"
+ "/Users/rpg/Downloads/siyamed-android-satellite-menu-ca4b257/"
+ "/Users/rpg/.emacs.d/elpa/auto-complete-1.4.20110207/dict/"
+ "/Users/rpg/Adobe Photoshop CS 5 Mac/"
+ "/Users/rpg/Camera/"
+ "/Users/rpg/HSCrash/"
+ "/Users/rpg/project/zulu/src/kalapani/snippets/"
+ "/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKit.framework/Versions/A/Resources/"
+ "/Users/rpg/project/zulu/"
+ "/Users/rpg/project/zulu/src/templates/admin/snippets/manage/"
+ "/Users/rpg/.emacs.d/elpa/emacs-eclim/"
+ "/Users/rpg/project/mobile/android/"
+ "/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/annotation/"
+ "/Users/rpg/NetBeansProjects/AndroidApplication1/"
+ "/Users/rpg/Downloads/CodeMirror-2.23/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "auto-complete-conf.el"
+ "yasnippet-conf.el"
+ "CHar"
+ "banned_domains.clj"
+ "ChatTestAppDelegate.m"
+ "TAGS"
+ "auto-complete-etags.el"
+ "TodoActivity.java"
+ "Char"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/rpg/.emacs.d.old/" (20443 6561) "url/" "tramp" "TODO" "tmp/" "themes/" "starter-kit-ruby.el" "starter-kit-registers.el" "starter-kit-perl.el" "starter-kit-misc.el" "starter-kit-lisp.el" "starter-kit-js.el" "starter-kit-eshell.el" "starter-kit-elpa.el" "starter-kit-defuns.el" "starter-kit-bindings.el" "README.markdown" "places" "package.el" "newsticker/" "loaddefs.el" "init.el~" "init.el" "hacker-news.el" "elpa-to-submit/" "elpa/" "dominating-file.el" "custom.el" "COPYING" "color-theme-tango.el" "clang-completion-mode.el" "bbdb-autoloads.el" "backups/" "auto-save-list/" "auto-complete-etags.el" "ac-comphist.dat" ".gitignore" ".git/" ".DS_Store" "%backup%~" "#bbdb-autoloads.el#" "../" "./")
+
+ ("/Users/rpg/.emacs.d.old/elpa/" (20443 3701) "yasnippet-0.6.1/" "yaml-mode-0.0.7/" "w32-browser-21.0/" "w3-4.0.46/" "vm/" "twitter-20090422/" "tex-math-preview-readme.txt" "synonyms-1.0/" "swank-clojure-1.1.0/" "slime-repl-20100404/" "slime-20100404.1/" "slime-20100404/" "shellfm-0.1/" "sgftree-readme.txt" "scratch-20110708/" "Save-visited-files-readme.txt~" "Save-visited-files-readme.txt" "Save-visited-files-1.2/" "ruby-mode-1.1/" "peepopen-0.1.0/" "org-email-0.6/" "nterm-0.1/" "nero.el" "monk-8/" "mew/" "mc-theme2.el" "mc-theme.el" "mc-dark.el" "maxframe.el" "magit-1.0.0/" "lacarte-22.0/" "jukebox/" "json-1.2/" "inf-ruby-2.2.1/" "idle-highlight-mode-1.1.1/" "icomplete+-21.0/" "google-translate-0.1.1/" "go-mode-12869/" "gist-0.5/" "find-file-in-project-2.1/" "etags-table-1.1/" "etags-select-1.13/" "emacs-nav/" "emacs-eclim/" "eieio-1.4/" "ecb-2.40/" "dictionary-1.8.7/" "dictem-1.0.2/" "csv-mode-1.50/" "command-frequency-1.1/" "columnify-readme.txt" "columnify-1.0/" "color-theme-zenburn-0.3/" "color-theme-wombat-0.0.1/" "color-theme-wombat+-0.0.2/" "color-theme-vim-insert-mode-0.1/" "color-theme-twilight-0.1/" "color-theme-tangotango-0.0.2/" "color-theme-tango-0.0.2/" "color-theme-solarized-1.0.0/" "color-theme-sanityinc-solarized-2.2/" "color-theme-railscasts-0.0.2/" "color-theme-ir-black-1.0.1/" "color-theme-github-0.0.3/" "color-theme-emacs-revert-theme-0.1/" "color-theme-eclipse-0.0.2/" "color-theme-dpaste-0.0.1/" "color-theme-dg-0.1.0/" "color-theme-complexity-0.1.1/" "color-theme-colorful-obsolescence-0.0.1/" "color-theme-actress-0.1.0/" "color-theme-active-0.0.1/" "color-theme-6.6.1/" "clojure-mode-1.10.0/" "auto-complete-1.4.20110207/" "auctex-readme.txt" "auctex-11.86/" "archives/" "android-mode-0.1/" "all-readme.txt" "ajc-java-complete/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/clojure/lib/auto-complete/" (20440 58938) "TODO.txt" "README.txt" "popup.el" "Makefile" "fuzzy.el" "etc/" "doc/" "dict/" "COPYING.GPLv3.txt" "COPYING.FDL.txt" "auto-complete.el" "auto-complete-config.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/clojure/lib/" (20440 58938) "slime/" "rainbow-delimiters.el" "paredit.el" "highlight.el" "eval-sexp-fu.el" "durendal.el" "clojure-mode/" "auto-complete/" "align-cljlet/" "ac-slime/" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/clojure/config/" (20440 58938) "slime-conf.el" "paredit-conf.el" "lisps-conf.el" "highlight-flash-conf.el" "durendal-conf.el" "clojure-conf.el" "auto-complete-conf.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/clojure/" (20440 58938) "lib/" "init.el" "config/" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/zulu/backend/structs/" (20374 22572) "videos.clj" "users.clj" "topics.clj" "sites.clj" "sections.clj" "questions.clj" "notes.clj" "messages.clj" "issues.clj" "ideas.clj" "history.clj" "handlers.clj" "events.clj" "core.clj" "conversations.clj" "comments.clj" "chats.clj" "articles.clj" "answers.clj" ".DS_Store" "../" "./")
+
+ ("/tmp/" (20443 6193) "tmp79lA1d/" "stack-logs.7153.BTServer.EXAtQK.index" "launchd-364.pQY9HA/" "launchd-23583.ZHKPyG/" "launchd-14008.TquN5k/" "launch-W7yNRb/" "launch-PtgplI/" "launch-md0z1x/" "launch-IZX5QX/" "launch-Hkmeq5/" "launch-FSAYsP/" "launch-8Lmfs1/" "launch-5Q6hxR/" "geplugin_introspect_install_mutex" "foo" "fishd.socket.rpg" "fishd.log.rpg" "CrashReportCopyLock-rpg's iPod" "CrashReportCopyLock-iPad" "BTServer_stdout.log" "BTServer_stderr.log" "adb.log" ".XcodeGDBRemote-3582-70" ".keystone_install_lock" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/power/config/" (20443 6252) "yasnippet-conf.el" "volatile-highlights-conf.el" "undo-tree-conf.el" "refheap-conf.el" "quick-jump-conf.el" "git-conf.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/power/lib/yasnippet/snippets/" (20440 58938) "text-mode/" "../" "./")
+
+ ("/Users/rpg/" (20443 6176) "WebToolsWorkspace/" "VirtualBox VMs/" "Vagrantfile" "Vagrant/" "TouchTest/" "Textual.zip" "successcrm" "stale/" "src/" "Sites/" "RHCriterion.pdf" "resolv.conf.orig" "Reed2.zip" "redhat.png" "README.html" "qadissiyah" "Public/" "Projects/" "project/" "plcrashutil" "Pictures/" "pacpl_4.0.5-3_all.deb" "org-test.org" "nz.txt" "notes.may.intro" "notes.may.3" "notes.may.2" "notes.math" "News/" "NetBeansProjects/" "MyAndroidBackup/" "myabc/" "Music/" "Movies/" "movielist.txt" "mongodb/" "maxout.gnuplot_pipes" "mathSheet.tm~" "mathSheet.tm" "mail/" "LinkedIn 52.ipa" "Library/" "libHelpShift.a" "Le Note.zip" "Le Note.app/" "iPhoneAndroid/" "init-art" "ImageMagick/" "icon.png" "HSCrash/" "history" "HelpShift.jar" "guile.pdf" "gp/" "gl.jpg" "github/" "gapps-ics-20120224-signed.zip" "Game of Thrones/" "ftp_backup_66ghz/" "fractionalPartSums.tm" "file.crash" "exception-list-android" "email" "emacs.zip" "elisp/" "eclipse/" "DropNote/" "dropbox.png" "Dropbox/" "Downloads/" "Documents/" "Desktop alias" "Desktop/" "dead.letter" "data/" "DaduTicket.pdf" "cm9-p500-pasquale-KANG.zip" "chrome.png" "Camera/" "Calibre Library/" "C" "bin/" "bglecture" "Applications/" "AppIcon-iPhone.png" "android-temp/" "android-sdk.zip" "android-sdk/" "Abduction.ttf" "99232144.mp4" "2.txt" "1.txt" ".zshrc.pre-oh-my-zsh" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump" ".xmaximarc" ".xdvirc" ".Xcode/" ".xchat2/" ".Xauthority" ".weechat/" ".vnc/" ".viminfo" ".vim/" ".vagrant.d/" ".tsung/" ".Trash/" ".TeXmacs/" ".temp" ".swt/" ".subversion_IDEA/" ".subversion/" ".ssh2/" ".ssh/" ".smex-items" ".slime-history.eld" ".sh_history" ".rvm/" ".rnd" ".recentf" ".Rapp.history" ".profile" ".pinerc" ".overtone/" ".oh-my-zsh/" ".nush_history" ".nnmail-cache" ".newsrc.eld" ".netbeans/" ".mc/" ".maxima_history" ".macports/" ".m2/" ".lynxrc" ".links/" ".lesshst" ".lein/" ".keystore" ".java_history" ".java_base.tag" ".irssi/" ".irb_history" ".ido.last" ".hgignore_global" ".gnuplot_history" ".gitk" ".gitconfig.old" ".gitconfig" ".gem/" ".gdb_history" ".fonts/" ".fontconfig/" ".folders" ".eshell/" ".emacs.d.old/" ".emacs.d.live/" ".emacs.d/" ".emacs-mail-crash-box" ".eclim/" ".dvdcss/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".cpan/" ".config/" ".cocoapods/" ".CFUserTextEncoding" ".cabal/" ".bashrc" ".bash_history" ".android/" ".adobe/" ".addressbook" "#notes.May2#" "#.zshrc#" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/power/lib/yasnippet/" (20440 58938) "yasnippet.el" "snippets/" "dropdown-list.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/power/lib/" (20440 58938) "yasnippet/" "volatile-highlights.el" "undo-tree.el" "scratch.el" "refheap.el" "quick-jump.el" "mwe-log-commands.el" "magit/" "ace-jump-mode.el" "../" "./")
+
+ ("/Users/rpg/project/ChatTest/ChatTest/ChatTest/" (20443 5959) "main.m" "en.lproj/" "ChatTestViewController.m" "ChatTestViewController.h" "ChatTestAppDelegate.m" "ChatTestAppDelegate.h" "ChatTest-Prefix.pch" "ChatTest-Info.plist" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/kalapani/utils/" (20366 34445) "urls.clj" "template_filters.clj" "syndicate.clj" "roles.clj" "massagers.clj" "lineage.clj" "js_sets/" "format.clj" "email.clj" "css/" "common_feed.clj" "cdn.clj" "banned_domains.clj" "aws/" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/kalapani/" (20366 34445) "xhrs/" "wip/" "views/" "utils/" "snippets/" "server.clj" "preview.clj" "pages/" "nio-adaptor.clj" "mailgun/" "inheritance.clj" "emails/" "data.clj" "coldhands.clj" "auth/" "api/" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/" (20366 34444) "zulu/" "tests/" "templates/" "settings.clj" "settings/" "public/" "mobile/" "migrate/" "kalapani/" "ibt/" "frontend/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/zulu/" (20374 22618) "tools/" "src/" "README" "project.clj" "misc/" "logs/" "lib/" "docs/" "classes/" "changelogs/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/power/" (20440 58938) "lib/" "init.el" "config/" "../" "./")
+
+ ("/Users/rpg/project/TodoDroid/src/com/example/" (20442 63109) "TodoActivity.java" "../" "./")
+
+ ("/Users/rpg/.emacs.d/" (20441 63236) "tmp/" "README.md" "packs/" "init.el" "etc/" ".gitignore" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/yasnippet-0.6.1/" (20089 35146) "yasnippet.elc" "yasnippet.el" "yasnippet-pkg.elc" "yasnippet-pkg.el" "yasnippet-autoloads.el" "snippets/" "dropdown-list.elc" "dropdown-list.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/" (20443 3701) "yasnippet-0.6.1/" "yaml-mode-0.0.7/" "w32-browser-21.0/" "w3-4.0.46/" "vm/" "twitter-20090422/" "tex-math-preview-readme.txt" "synonyms-1.0/" "swank-clojure-1.1.0/" "slime-repl-20100404/" "slime-20100404.1/" "slime-20100404/" "shellfm-0.1/" "sgftree-readme.txt" "scratch-20110708/" "Save-visited-files-readme.txt~" "Save-visited-files-readme.txt" "Save-visited-files-1.2/" "ruby-mode-1.1/" "peepopen-0.1.0/" "org-email-0.6/" "nterm-0.1/" "nero.el" "monk-8/" "mew/" "mc-theme2.el" "mc-theme.el" "mc-dark.el" "maxframe.el" "magit-1.0.0/" "lacarte-22.0/" "jukebox/" "json-1.2/" "inf-ruby-2.2.1/" "idle-highlight-mode-1.1.1/" "icomplete+-21.0/" "google-translate-0.1.1/" "go-mode-12869/" "gist-0.5/" "find-file-in-project-2.1/" "etags-table-1.1/" "etags-select-1.13/" "emacs-nav/" "emacs-eclim/" "eieio-1.4/" "ecb-2.40/" "dictionary-1.8.7/" "dictem-1.0.2/" "csv-mode-1.50/" "command-frequency-1.1/" "columnify-readme.txt" "columnify-1.0/" "color-theme-zenburn-0.3/" "color-theme-wombat-0.0.1/" "color-theme-wombat+-0.0.2/" "color-theme-vim-insert-mode-0.1/" "color-theme-twilight-0.1/" "color-theme-tangotango-0.0.2/" "color-theme-tango-0.0.2/" "color-theme-solarized-1.0.0/" "color-theme-sanityinc-solarized-2.2/" "color-theme-railscasts-0.0.2/" "color-theme-ir-black-1.0.1/" "color-theme-github-0.0.3/" "color-theme-emacs-revert-theme-0.1/" "color-theme-eclipse-0.0.2/" "color-theme-dpaste-0.0.1/" "color-theme-dg-0.1.0/" "color-theme-complexity-0.1.1/" "color-theme-colorful-obsolescence-0.0.1/" "color-theme-actress-0.1.0/" "color-theme-active-0.0.1/" "color-theme-6.6.1/" "clojure-mode-1.10.0/" "auto-complete-1.4.20110207/" "auctex-readme.txt" "auctex-11.86/" "archives/" "android-mode-0.1/" "all-readme.txt" "ajc-java-complete/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/" (20433 43469) "QNote/" "HelpShift/" "Demo/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/HelpShift/" (20443 3506) "UIPlaceHolderTextView.m" "UIPlaceHolderTextView.h" "SuccessCRM/" "HelpShift.xcodeproj/" "build/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/HelpShift/SuccessCRM/" (20443 3506) "widget_icons.png" "WebAPICalls.m" "WebAPICalls.h" "UncaughtExceptionHandler.m" "UncaughtExceptionHandler.h" "UIPlaceHolderTextView.m" "UIPlaceHolderTextView.h" "TAGS" "SystemLog.m" "SystemLog.h" "SBJsonWriter.m" "SBJsonWriter.h" "SBJsonUTF8Stream.m" "SBJsonUTF8Stream.h" "SBJsonTokeniser.m" "SBJsonTokeniser.h" "SBJsonStreamWriterState.m" "SBJsonStreamWriterState.h" "SBJsonStreamWriterAccumulator.m" "SBJsonStreamWriterAccumulator.h" "SBJsonStreamWriter.m" "SBJsonStreamWriter.h" "SBJsonStreamParserState.m" "SBJsonStreamParserState.h" "SBJsonStreamParserAdapter.m" "SBJsonStreamParserAdapter.h" "SBJsonStreamParserAccumulator.m" "SBJsonStreamParserAccumulator.h" "SBJsonStreamParser.m" "SBJsonStreamParser.h" "SBJsonParser.m" "SBJsonParser.h" "SBJson.h" "question.png" "poweredby-helpshift.png" "NSObject+SBJson.m" "NSObject+SBJson.h" "MyClass.m" "MyClass.h" "MBProgressHUD.m" "MBProgressHUD.h" "issue.png" "ImageList.m" "ImageList.h" "idea.png" "HSWeb.m" "HSWeb.h" "HSSubmitAnIssue.m" "HSSubmitAnIssue.h" "HSSubmitAnIdea.m" "HSSubmitAnIdea.h" "HSResourceManager.m" "HSResourceManager.h" "HSReportIssue.m" "HSReportIssue.h" "HSMenu.m" "HSMenu.h" "HSMainView.m" "HSMainView.h" "HSMain.m" "HSMain.h" "HSFindASolution.m" "HSFindASolution.h" "HSFeedbackViewController.m" "HSFeedbackViewController.h" "HSCrashReporter.m" "HSCrashReporter.h" "HSChatScreen.m" "HSChatScreen.h" "HSAskAQuestion.m" "HSAskAQuestion.h" "HelpShift.m" "HelpShift.h" "HelpShift-Prefix.pch" "feedback.png" "External/" "Empty.xib" "chat.png" "Base64.m" "Base64.h" "auto-complete-etags.el" "ASIProgressDelegate.h" "ASINetworkQueue.m" "ASINetworkQueue.h" "ASIInputStream.m" "ASIInputStream.h" "ASIHTTPRequestDelegate.h" "ASIHTTPRequestConfig.h" "ASIHTTPRequest.m" "ASIHTTPRequest.h" "ASIFormDataRequest.m" "ASIFormDataRequest.h" "ASIDownloadCache.m" "ASIDownloadCache.h" "ASIDataDecompressor.m" "ASIDataDecompressor.h" "ASIDataCompressor.m" "ASIDataCompressor.h" "ASICacheDelegate.h" "ASIAuthenticationDialog.m" "ASIAuthenticationDialog.h" "../" "./")
+
+ ("/Users/" (20199 16309) "Shared/" "rpg/" "PortDetect.log" ".localized" "../" "./")
+
+ ("/Users/rpg/project/" (20442 63906) "zulu/" "yuigo/" "TodoDroid/" "TodoApp/" "SuccessCRM_Android_Alpha/" "static/" "roupam.github.com/" "overtone/" "octopress/" "nu/" "noVNC/" "ncurses/" "MVP/" "moby/" "mobile.old.May17/" "mobile.old/" "mobile/" "KeenClient-iOS/" "helloClojure.zip" "helloClojure/" "hello.git/" "hello/" "golang/" "CordovaBasedApp/" "cloned_hello/" "ChatTestIPad/" "ChatTest/" "backup/" "asm/" "AnimationDemo/" "android-path-like-button-read-only/" "android/" "acra.diff" "a86/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/TodoDroid/src/com/" (20424 28830) "example/" "../" "./")
+
+ ("/Users/rpg/project/TodoDroid/src/" (20424 28830) "com/" "../" "./")
+
+ ("/Users/rpg/project/TodoDroid/" (20440 20231) "TodoDroid.iml" "src/" "res/" "proguard.cfg" "out/" "local.properties" "libs/" "gen/" "default.properties" "build.xml" "build.properties" "bin/" "assets/" "AndroidManifest.xml" ".idea/" "../" "./")
+
+ ("/Users/rpg/project/ChatTest/ChatTest/" (20394 16902) "ChatTest.xcodeproj/" "ChatTest/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/ChatTest/" (20394 16902) "ChatTest/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d.old/elpa/yasnippet-0.6.1/snippets/" (20089 35114) "text-mode/" "../" "./")
+
+ ("/Users/rpg/.emacs.d.old/elpa/yasnippet-0.6.1/snippets/text-mode/" (20391 43716) "time" "sql-mode/" "snippet-mode/" "scala-mode/" "ruby-mode/" "rst-mode/" "python-mode/" "perl-mode/" "nxml-mode/" "markdown-mode/" "latex-mode/" "html-mode/" "f90-mode/" "erlang-mode/" "email" "emacs-lisp-mode/" "css-mode/" "cc-mode/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/.emacs.d.old/elpa/yasnippet-0.6.1/snippets/text-mode/cc-mode/" (20392 56197) "struct" "prop" "once" "objc-mode/" "main" "inc.1" "inc" "if" "for" "do" "csharp-mode/" "c-mode/" "c++-mode/" "../" "./")
+
+ ("/Users/rpg/.emacs.d.old/elpa/yasnippet-0.6.1/" (20089 35146) "yasnippet.elc" "yasnippet.el" "yasnippet-pkg.elc" "yasnippet-pkg.el" "yasnippet-autoloads.el" "snippets/" "dropdown-list.elc" "dropdown-list.el" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/" (20440 58938) "user/" "themes/" "programming/" "power/" "notes/" "core/" "clojure/" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/core/" (20440 58938) "lib/" "init.el" "config/" "../" "./")
+
+ ("/Users/rpg/.emacs.d/packs/core/config/" (20442 62144) "window-number-conf.el" "which-func-conf.el" "util-fns.el" "tramp-conf.el" "smex-conf.el" "recentf-conf.el" "osx.el" "multi-term-conf.el" "mouse-conf.el" "ido-conf.el" "ibuffer-git-conf.el" "cosmetic.el" "built-in.el" "backup-dir-conf.el" "../" "./")
+
+ ("/Users/rpg/android-temp/" (20275 44890) "../" "./")
+
+ ("/Users/rpg/.emacs.d.bg/" (20441 63236) "tmp/" "README.md" "packs/" "init.el" "etc/" ".gitignore" "../" "./")
+
+ ("/Users/rpg/android-sdk/" (20144 59048) "tools/" "temp/" "SDK Readme.txt" "samples/" "platforms/" "platform-tools/" "keystore/" "add-ons/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/android-sdk/tools/" (20052 27226) "zipalign" "traceview" "sqlite3" "source.properties" "proguard/" "NOTICE.txt" "monkeyrunner" "mksdcard" "lib/" "layoutopt" "Jet/" "hprof-conv" "hierarchyviewer" "etc1tool" "emulator-x86" "emulator-arm" "emulator" "draw9patch" "dmtracedump" "ddms" "apkbuilder" "ant/" "android" "adb_has_moved.txt" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/dictem-1.0.2/" (18886 22391) "TODO" "README" "NEWS" "make_cvsdist" "make_changelog" "dictem.el" "COPYING" "ChangeLog" "AUTHORS" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/mobile/iphone/HelpShift/SuccessCRM/" (20366 34447) "WebAPICalls.m" "WebAPICalls.h" "UncaughtExceptionHandler.m" "UncaughtExceptionHandler.h" "UIPlaceHolderTextView.m" "UIPlaceHolderTextView.h" "SystemLog.m" "SystemLog.h" "SBJsonWriter.m" "SBJsonWriter.h" "SBJsonUTF8Stream.m" "SBJsonUTF8Stream.h" "SBJsonTokeniser.m" "SBJsonTokeniser.h" "SBJsonStreamWriterState.m" "SBJsonStreamWriterState.h" "SBJsonStreamWriterAccumulator.m" "SBJsonStreamWriterAccumulator.h" "SBJsonStreamWriter.m" "SBJsonStreamWriter.h" "SBJsonStreamParserState.m" "SBJsonStreamParserState.h" "SBJsonStreamParserAdapter.m" "SBJsonStreamParserAdapter.h" "SBJsonStreamParserAccumulator.m" "SBJsonStreamParserAccumulator.h" "SBJsonStreamParser.m" "SBJsonStreamParser.h" "SBJsonParser.m" "SBJsonParser.h" "SBJson.h" "NSObject+SBJson.m" "NSObject+SBJson.h" "MyClass.m" "MyClass.h" "MBProgressHUD.m" "MBProgressHUD.h" "ImageList.m" "ImageList.h" "HSReportIssue.m" "HSReportIssue.h" "HSMain.m" "HSMain.h" "HSInstall.m" "HSInstall.h" "HSCrashReporter.m" "HSCrashReporter.h" "HelpShift-Prefix.pch" "External/" "Base64.m" "Base64.h" "ASIProgressDelegate.h" "ASINetworkQueue.m" "ASINetworkQueue.h" "ASIInputStream.m" "ASIInputStream.h" "ASIHTTPRequestDelegate.h" "ASIHTTPRequestConfig.h" "ASIHTTPRequest.m" "ASIHTTPRequest.h" "ASIFormDataRequest.m" "ASIFormDataRequest.h" "ASIDownloadCache.m" "ASIDownloadCache.h" "ASIDataDecompressor.m" "ASIDataDecompressor.h" "ASIDataCompressor.m" "ASIDataCompressor.h" "ASICacheDelegate.h" "ASIAuthenticationDialog.m" "ASIAuthenticationDialog.h" "#SCMainViewController.h#" "#HSInstall.h#" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/mobile/android/HelpShift/src/com/ibt/HelpShift/" (20366 34445) "HSImageList.java" "HSCrashReportSender.java" "HSCrashReporterInit.java" "HSApplication.java" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/settings/" (20366 34447) "thor.clj" "staging.clj" "production.clj" "prodnew.clj" "local.clj" "../" "./")
+
+ ("/Users/rpg/.emacs.d/elpa/emacs-eclim/" (20365 14091) "vendor/" "snippets/" "README.md" "History.txt" "eclim.el" "eclim-project.el" "eclim-problems.el" "eclim-maven.el" "eclim-java.el" "eclim-ant.el" "company-emacs-eclim.el" "ac-emacs-eclim-source.el" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/Desktop/" (20441 61374) "…bg≥.png" "xcode_4.1_for_lion__gm_seed.dmg" "word_freqs.clj" "Windows_7_Ultimate_64.dmg" "Windows XP/" "why.png" "ux.jpg" "transparentBlack.png" "TopicsOverlay.png" "test.clj" "Test/" "temp/" "tableCellBack.png" "SuccessCRM_Source.zip" "successcrm" "StudyCenter20110822.pkg" "selectedBg.png" "Screen Shot 2012-06-07 at 4.21.30 PM.png" "Screen Shot 2012-05-16 at 3.47.53 PM.png" "Screen Shot 2012-04-24 at 2.22.13 PM.png" "Screen Shot 2012-04-16 at 12.59.48 PM.png" "Screen Shot 2012-04-16 at 12.59.48 PM (2).png" "Screen Shot 2012-04-09 at 3.08.40 PM.png" "Screen Shot 2012-03-02 at 1.57.15 PM.png" "Screen Shot 2012-03-02 at 1.57.04 PM.png" "Screen Shot 2012-03-01 at 1.28.18 PM.png" "Screen Shot 2012-01-31 at 7.18.30 PM.png" "Screen Shot 2011-11-15 at 2.36.52 PM.png" "Screen Shot 2011-10-29 at 1.19.46 PM.png" "Screen Shot 2011-10-13 at 2.39.29 PM.png" "Screen Shot 2011-10-13 at 2.39.16 PM.png" "Screen Shot 2011-10-13 at 2.38.46 PM.png" "save-today.txt" "Sample Tunnelblick VPN Configuration/" "roupam.jpeg" "Riemann Hypothesis/" "ricepaper2.png" "rest-api.txt" "reg_details.png" "question.png" "purchaseform.pdf" "proto.clj" "Prime Numbers A Computational Perspective.pdf" "nback_nav.png" "MobileHIG.pdf" "mc-theme.el" "MacOSXUpdCombo10.7.3.dmg" "lightpaperfibers.png" "libSuccessCRM.a" "Keirsey/" "kde.png" "Journal/" "issue.png" "iphone-4-dark-background-10.jpg" "iphone-4-dark-background-04.jpg" "iphone/" "iOS Simulator Screen shot 30-Mar-2012 1.02.13 PM.png" "ido-ubiquitous-0.1/" "ideas.png" "icons grid.png" "ICONS alias" "ICONS/" "icon.png" "hsphone/" "hexrgb-21.0/" "HelpShiftIcon.jpg" "HelpShift.zip" "helpshift.png" "HelpShift.jar" "HelpShift/" "Help_Button_3.jpg" "half-backgrtound-gone.png" "half-background.png" "grid.txt" "grad_back.png" "gl.jpg" "Fourier-Analysis.pdf" "foo.html" "fbloginipad.png" "Empty Tunnelblick VPN Configuration/" "emacs/" "DemoApp2.zip" "DemoApp2/" "DemoApp.zip" "Demo.app/" "Demo Testing/" "dashboard.png" "dash.png" "command_line_tools_for_Xcode.dmg" "com/" "collatz-craig.pdf" "close.txt" "close.png" "camera.txt" "camera.png" "book.epub" "attach.png" "Archive.zip" "Apple Updates/" "Algorithmic Information Theory/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/Downloads/" (20441 62711) "zynga-FontLabel-2fe3721.zip" "zynga-FontLabel-2fe3721/" "zubhiumsdk.zip" "zubhiumsdk/" "zero_free_region.tex" "zero_free_region.pdf" "zegal-yasobjc-e26114a.zip" "z4root.1.3.0.apk" "yuigo" "yui_3.5.1.zip" "ymacs-latest.tar.gz" "Ymacs/" "yasobjc/" "X-Chat_Aqua.0.16.0.dmg" "wl-2.14.0.tar.gz" "wl/" "Window Tidy v. 1.1 [K]racked/" "Wiley - Elements Of Information Theory.pdf" "whizzytex-1.3.2.tgz" "whizzytex-1.3.2/" "werner77-WEPopover-b666e8f/" "web20layerstylesv1.asl" "Wd55_ben.exe.download/" "Vuze_Installer.dmg" "VSM08English.doc" "void-forever-addon.zip" "void-forever-addon/" "Vodafone Mobile Broadband 4.07.00.00.dmg" "vm-8.1.1.tgz" "Viewer-1/" "Viewer/" "uservoice-uservoice-iphone-sdk-637ae1d/" "UserInterfaceState_new.xcuserstate.zip" "untitled folder/" "UniversalIndentGUI_macx/" "UniversalIndentGUI_1.2.0_macx.tar.gz" "UniversalAndroot-1.6.2-beta5.apk" "univ-india-final.pdf" "UncaughtExceptions.zip" "UncaughtExceptions 2/" "UncaughtExceptions/" "ubuntu-12.04-beta1-alternate-i386.iso.download/" "ubuntu-12.04-alternate-i386.iso.torrent" "ubuntu-12.04-alternate-i386.iso" "tuntap_20090913.tar.gz" "tuntap_20090913 (1).tar.gz" "tuntap_20090913/" "Tunnelblick_3.2beta32.dmg" "ttf-bitstream-vera-1.10.zip" "ttf-bitstream-vera-1.10/" "Transmission-2.42.dmg" "TradeTigerSetup2.0.msi" "TradeTigerSetup.msi" "TotalTerminal-1.1.4.dmg" "TotalTerminal-1.1.3.dmg" "TorBrowser_en-US.app/" "Topics_in_metric_fixed_point_theory.djvu" "ToGhosh.pdf" "TodoApp.zip" "TodoApp/" "tn3270_X_3.3b6.dmg" "tn3270_X_3.2.4.dmg" "tiny-xmms.el" "timburks-nu-3489bd6/" "TigerVNC-1.2.0.dmg" "three20/" "TheRealKerni-QuincyKit-c623c39/" "TheRealKerni-QuincyKit-2.1.5-14-gc623c39.zip" "TheNounProject-png.zip" "TheNounProject-png/" "theme-25.epf" "theme-21.epf" "The_Piano_Collection_(25_cds)_(MP3-192Kbs).5112075.TPB.torrent" "The_Little_Schemer_4th_Edition.pdf" "The_Joint_Rolling_Handbook.pdf" "The proof and paradox of kurt godel - rebecca goldstein.pdf" "The Man Who Knew Infinity - A Life of the Genius Ramanujan.pdf" "Texts-0.3.dmg" "TeXmacs-1.0.7.14.dmg" "tetheredboot copy/" "TerminusBold.ttf" "Terminus.ttf" "terminus-font-4.36/" "Taming_of_The_Deftype_Baishampayan_Ghose.pdf" "svg_554_1.zip" "svg_42.zip" "supportlibraryicons.zip" "supportlibraryicons/" "Superuser-3.0.7-d-signed.zip" "Superuser-3.0.7-d-signed/" "SuperCollider-3.5.2-OSX.dmg" "super user v3.0.7.apk" "Sunrise2.2.0.dmg" "suburbsofgoa.pls" "submit_screens.png" "su-2.3.6.2-efgh.zip" "su-2.3.6.2-efgh/" "StudyCenter20110822.pkg" "StudyCenter20110822-1.pkg" "StudyCenter.pkg.zip" "StudyCenter.pkg" "stig-json-framework-v3.1alpha2-11-g26a2afe.zip" "stig-json-framework-f723881/" "stig-json-framework-5509f80/" "stig-json-framework-26a2afe/" "StackTraceElement | Android Developers.webarchive" "square-WaxSim-64952de.zip" "square-WaxSim-64952de/" "SourceTree_1.3.2.dmg" "Skype_5.5.0.2340.dmg" "siyamed-android-satellite-menu-ca4b257.zip" "sintaxi-phonegap-examples-30e48e7/" "SimpleComic_1.7_252.zip" "Simple Comic.app/" "Silverlight.dmg" "shifticons.otf" "shifticons-webfont.ttf" "shifticons-preview-with-unicode.fw.png" "sencha-touch-1.1.0.zip" "SelfTesting.zip" "SelfTesting/" "ScreenFace-1.0.tar.gz" "ScreenFace-1.0 2/" "ScreenFace-1.0/" "Satyamev Jayate - 6th May 2012 - YouTube [360p].mp4" "Satyajit_Roy_-_Agantuk.dvdrip.Bengali____SAYAN.5480115.TPB.torrent" "Salary_Sept.pdf" "SALARY_Sept-1.pdf" "Salary_Oct.pdf" "SALARY_Oct-1.pdf" "Salary_June.pdf" "Salary_June-1.pdf" "Salary_July.pdf" "Salary_July-1.pdf" "SALARY_Aug_final.pdf" "SALARY_Aug-1.pdf" "rsms-kod-6043dcb/" "rpg.el" "roupam.zip" "roupam.apk" "roupam-roupam.github.com-1aa8e95/" "roupam-pics.rar" "roupam-pics/" "roupam 2/" "roupam/" "rom-manager-4.8.0.9.apk" "Rom Manager Premium 4.5.0.1.apk" "rodrigo-lima-SampleLib-114b3ae.zip" "rodrigo-lima-SampleLib-114b3ae/" "rmp5006.apk" "rmp5005.apk" "rmp5004as.apk" "RHFE.pdf" "RHCriterion.pdf" "RH Main/" "rfc.sh" "resupportlibraryicons.zip" "resupportlibraryicons/" "RENTAL_AGREEMENT_SCANNED.zip" "RENTAL_AGREEMENT_SCANNED/" "Rental agreement A207.pdf" "regridmenuimage.zip" "regridmenuimage/" "refman.pdf" "Reed_2.0_20120301030423.txt" "Reed_2.0_20120301015256.txt" "Reed_1.0_20111118003000.txt" "Reed.app/" "redspace.el" "redsn0w_mac_0.9.8b5/" "redsn0w_mac_0.9.8b3/" "redsn0w_mac_0.9.10b3/" "Reachability.zip" "Reachability/" "Raven.zip" "Quicksilver B61.dmg" "QuickContacts.zip" "QuickContacts/" "quick_start_guide.pdf" "QOTD, Inc. - Certificate of Incorporation.PDF" "PwnageTool_5.0.1.dmg.6915059.TPB.torrent" "PwnageTool_5.0.1.dmg" "PwnageTool_4.3.3.dmg.6370757.TPB.torrent" "PwnageTool_4.3.3.dmg" "PwnageTool.app/" "psneuter.zip" "psneuter/" "profile.php.html.download/" "Prime-v2.zip" "Prime-v2/" "preview-latex-0.9.1.tar.gz" "preview-latex-0.9.1/" "Presentation1.pptx" "Pr937.pdf" "Power, Sex, Suicide - Mitochondria and the Meaning of Life [Nick Lane].pdf" "pokeb-asi-http-request-v1.8.1-28-ga879b8e.tar" "pokeb-asi-http-request-a879b8e 2/" "pokeb-asi-http-request-a879b8e/" "PNEI12000512SH0316.pdf" "plugins/" "PLCrashReporter-1.1-beta1.dmg" "plcrashreporter-1.0.tar.bz2" "PLCrashReporter-1.0.dmg" "plcrashreporter-1.0 2/" "plcrashreporter-1-1.1-beta1.tar.gz" "PLCrashReporter-1-1.1-beta1.dmg" "Picture5.jpg" "picard.rtf" "Photo1.jpg" "phonegap-phonegap-de1960d/" "Perian_1.2.3.dmg" "paulb777-AppLaudApp-04314c2/" "pari-2.5.0.tar" "pari-2.5.0/" "papers/" "PaperCamera1.3.apk" "PaintCode Trial.app/" "P500-v10E-baseband.7z" "P500-v10E-baseband/" "overtone-emacs-live-5192103.zip" "os_x_lion_software_update_10.7.2_gm_seed_build_11c73_combo_update__reversioner.dmg" "os_x_10.7.2_build_11c73_gm_seed_note_.rtf" "orpheus-1.6.tar" "orientation - Android - disable landscape mode? - Stack Overflow.webarchive" "orgcard.pdf" "org.pdf" "Org Mode - Organize Your Life In Plain Text!.webarchive" "OReilly Programming the iPhone User Experience.pdf" "openvpn-config.tar.gz" "openvpn-config 2/" "openvpn-config/" "openSUSE-12.1-DVD-i586.iso.torrent" "Online JavaScript beautifier_files/" "Online JavaScript beautifier.html" "ohminteractive-dropbox-sdk-ios-5e31deb.zip" "Nu-2.0.1.dmg" "NokiaWebTools_1.5.0.pkg" "Nicolas_1988.pdf" "Netbeans_Twilight_Theme.zip" "netbeans-7.0.1-ml-javase-macosx.dmg" "neror-CA360-87abbcd.zip" "neror-CA360-87abbcd/" "nandroid-2.0.zip" "nandroid-2.0/" "muller.rtf" "MTOS.zip" "MTOS/" "mosh-1.1.3-2.pkg" "monk.tar" "monk-8/" "mongodb-osx-x86_64-1.8.3.tgz" "mobile-app-images.rar" "mobile-app-images/" "Microsoft_Press_ebook_Programming_Windows_Phone_7_PDF.pdf" "mew-6.3.tar.gz" "mew/" "META MATH.pdf" "MessagesBeta.dmg" "mercurial-2.0_20111101-py2.7-macosx10.7/" "mde230272011fr.pdf" "mde230272011en.pdf" "mattgemmell-MGTwitterEngine-e40658f.zip" "mattgemmell-MGTwitterEngine-e40658f/" "MathSlov_53-2003-2_3.pdf" "mathics-0.4.1.zip" "mathics/" "marstall-shim-97a51be.zip" "manualvsm08.doc" "manualvsm08-1.doc" "MajicRank.app/" "MacVim-snapshot-64.tbz" "MacVim-snapshot-64/" "MacRuby 0.10.zip" "MacRuby 0.10/" "MacPorts-2.0.3-10.7-Lion.dmg" "macappstore.zip" "macappstore/" "lush130.pls" "LTCD.ISO" "lookio-LookIO-Libraries-6f30019.zip" "lookio-LookIO-Libraries-6f30019/" "loggedout_lp_bg.png" "Limits Of Reason - Chaitin.pdf" "limera1n.app/" "levey-AwesomeMenu-9238b37.zip" "levey-AwesomeMenu-9238b37/" "less.vim" "less (1).vim" "LeNoteAdHoc (1).mobileprovision" "Le Note.zip" "Le Note.app/" "Latexian.zip" "Latexian/" "Langlands.pdf" "KSP_osx_0_13.zip" "Kod.zip" "kharagpur.ps" "kaler-CrashKit-6d7cea9.zip" "kaler-CrashKit-6d7cea9/" "jukebox-bin.tar" "jukebox/" "Journal_of_Acta_Mathematica_March_2005-June_2011.6510032.TPB.torrent" "Jomic-0.9.34.dmg" "jkaving-intellij-colors-solarized-82a8be3.zip" "jkaving-intellij-colors-solarized-82a8be3/" "jhaynie-iphonesim-d930444.zip" "jhaynie-iphonesim-d930444/" "jgale-CustomBackButtonExample-718ca3e/" "jdg-MBProgressHUD-3e3e361/" "jcurses-src-0.9.5b.tar" "jcurses/" "iTunes10.5.dmg" "iTerm2-1_0_0_20111020.zip" "ISTP Profile-FINAL REVISED MASTER.8-08.pdf" "ISTJ Profile-FINAL REVISED MASTER.8-08.pdf" "ISFJ Profile-FINAL REVISED MASTER.8-08.pdf" "IPSW Images/" "iPhone2,1_5.0_9A334_Restore.ipsw" "iPad1,1_4.3.3_8J3_Restore.ipsw" "Introduction-to-metric-fixed-theory.pdf" "Intro-Modular-Form.djvu" "INTP Profile-FINAL REVISED MASTER.8-08.pdf" "INTP Profile-FINAL REVISED MASTER.8-08 (1).pdf" "INTJ Profile-FINAL REVISED MASTER.8-08.pdf" "installation.pdf" "Install Mac OS X Lion.app/" "input-bg.png" "Inkscape-0.48.1-1-LEOPARD+.dmg" "INFP Profile-FINAL REVISED MASTER.8-08.pdf" "INFJ Profile-FINAL REVISED MASTER.8-08.pdf" "INFJ Profile-FINAL REVISED MASTER.8-08 (1).pdf" "Infected_Mushroom_-_Legend_Of_The_Black_Shawarma-Promo-2009-UPE/" "Infected Mushroom Complete Discography @ 320 kbps/" "index.php" "Inconsolata.otf" "Inconsolata (1).otf" "IN05297Q0000087INBOM.pdf" "IN05297Q0000087INBOM-1.pdf" "ImageMagick-x86_64-apple-darwin11.0.0.tar" "ideaIC-11.1.2.dmg" "id411447203.html" "id" "iBooks_Collection.6555414.TPB.torrent" "iAlertU_0.76.zip" "HttpPostSender.java - acra - Application Crash Report for Android - Google Project Hosting_files/" "HttpPostSender.java - acra - Application Crash Report for Android - Google Project Hosting.html" "HSDemo_iPad.mobileprovision" "HockeyKit-iOS-latest.zip" "HockeyKit/" "HexColorPicker-1.6.1.zip" "Hex Color Picker/" "HEN79.pdf" "Helpshift.pdf" "HelpShift-1.jar" "HelpShift-1/" "HelpShift/" "hello_world.tar" "haiku-r1alpha3-iso.zip" "gvim73_46.exe" "Guy_Robin_1984.pdf" "groovesalad64.pls" "groovesalad.pls" "groovesalad-1.pls" "grid.png" "gp/" "Gosh-RH-2012.pdf" "GoogleVoiceAndVideoSetup.dmg" "googleearth-mac-plugin-intel.dmg" "googlechrome.dmg" "Godel_Widgerson_Text.pdf" "Godel, Escher, Bach-An Eternal Golden Braid.pdf" "GO GOA!!! New Years Eve Edition 2012/" "glyphish-icons-1/" "glyphish-icons/" "GlossCausticShader/" "gl3.c" "GitHub for Mac 1.0.6.zip" "gitbox-1.5.zip" "git_tutorial.zip" "git_tutorial/" "gist551646-81e0b7cc9ac6074ee36d59fb494c61d18a9fade7.tar.gz" "gist551646-81e0b7cc9ac6074ee36d59fb494c61d18a9fade7/" "gist527103-76d44b9e1b9670b30a534b69f698f0e81c7c2dbe.tar.gz" "gist527103-76d44b9e1b9670b30a534b69f698f0e81c7c2dbe/" "GingerBreak-v1.20.apk" "ghoseb-dotemacs-15bba39.zip" "gapps-gb-20110828-signed.zip" "gapps-gb-20110828-signed/" "Functional Analysis/" "Full_Version_Hitchens_and_Boteach_Debate_on_God.flv" "FortAwesome-Font-Awesome-657fdf4/" "Form19.PDF" "Form10C.PDF" "fonts.txt" "fltpdf/" "fixedsys500c.zip" "fixedsys500c/" "fixedPoint.pdf" "Fixed.Points_Shashkin_082189000X.djvu" "fishfish.pkg" "Firefox 9.0.dmg" "Firefox 12.0.dmg.download/" "fink-0.31.1.tar.gz" "fink-0.31.1/" "fbvncserver" "fastdroid-vnc" "facebook-three20-527051a/" "facebook-three20-1.0.6.2-0-g300db17.tar alias" "facebook-three20-1.0.6.2-0-g300db17.tar" "ESTJ Profile-FINAL REVISED MASTER.pdf" "EPUB_Collection_(108_Books).5818696.TPB.torrent" "Epub_Collection.5613234.TPB.torrent" "EPUB Collection/" "Enqueue.dmg" "enigma-beta-0.2/" "emp confirmation letter.pdf" "emp confirmation letter-1.pdf" "emms-3.0.tar" "EMaximaIntro.ps" "emacs-nav-20110220.tar" "Emacs-24.1-universal-10.6.8.dmg" "Emacs-23.3-universal-10.6.6.dmg" "emacs-23.3-bin-i386.zip" "ee220s02lec3.ppt" "eclipse-SDK-3.7.1-macosx-cocoa.tar.gz" "eclipse-fullscreen_1.0.7.zip" "eclipse - How can I use external JARs in an Android project  - Stack Overflow_files/" "eclipse - How can I use external JARs in an Android project  - Stack Overflow.html" "eclim_1.7.3.jar" "dual.tm~" "dual.tm" "dropbox-ios-sdk-1.2.2.zip" "dropbox-ios-sdk-1.2.2 2/" "dropbox-ios-sdk-1.2.2 (1).zip" "dropbox-ios-sdk-1.2.2/" "Dropbox 1.1.35.dmg" "droiddraw-r1b22.dmg" "droiddraw-r1b19.dmg" "Draw Something v1.1.18.apk" "download_vrscdx_night_rod_special.jpg" "dotNetFx40_Full_x86_x64.exe" "djvulibre-3.5.22+djview-4.5-intel.dmg" "djvulibre-3.5.22+djview-4.5-intel-3.zip" "deque.clj" "dash.jpg" "DarkPastels.jar" "Dark.mtz" "CSS Image Encoder.zip" "CSS Image Encoder Lite.app/" "Crittercism_v2_9_31-1/" "Crittercism_v2_9_31/" "Crittercism_v2_9_16.zip" "Crittercism_v2_9_16/" "crittercism_v1_1_1.jar" "crittercism_v1_0_1.jar" "crittercism_v1_0_1 (1).jar" "Crittercism - App Settings_files/" "Crittercism - App Settings.html" "cotvnc-20b4.dmg" "Copy Hackers.zip" "Copy Hackers/" "CoolTable2/" "CoolButton/" "Contribution-agreement-template-Oct-2010.pdf" "color-theme-6.6.0/" "collection.pdf" "Codeux-Textual-67f8bce/" "codemirror.zip" "CodeMirror-2.25/" "CodeMirror-2.23/" "CM7_ThemePack_v2.7z" "CM7_ThemePack_v2/" "close-button3.png" "close-button.png" "clojure-contrib-1.2.0.zip" "clojure-1.2.1.zip" "class-dump-z_0.2-0.tar.gz" "class-dump-z_0.2-0/" "class-dump-3.3.4.dmg" "Christie_Agatha_ePub_Collection.6106096.TPB.torrent" "Christie Agatha ePub Collection/" "Children.Of.Heaven.1997.LIMITED.DVDRip.XViD-DDX.3292374.TPB.torrent" "ChatTestAdHoc.mobileprovision" "ChatTest.mobileprovision" "charva.zip" "charva/" "chap9.ps" "chakra.iso" "chakra-2012.02.08-Archimedes-i686.torrent" "Chaitin G.J. - Algorithmic information theory(1997)(235).pdf" "certificates/" "CarbonEmacs-Leopard-20100115.dmg" "calibre-0.8.34.dmg" "Byword_v1.1_[K]racked.6307205.TPB.torrent" "Bwod12.rar" "Bwod12/" "Button_Collection__250_psds_by_easydisplayname/" "busybox.zip" "busybox" "bugsense-trace-1-1.jar" "BroadcastChatUI1.zip" "BroadcastChatUI1/" "BrandonDark.zip" "boctor-idev-recipes-40cd85d.zip" "boctor-idev-recipes-40cd85d/" "Bob Dylan - The Very Best Of Bob Dylan (2000) 320 vtwin88cube/" "blackra1n.app/" "binutils-2.14_gcc-3.3.2-c-c++_newlib-1.12.0_gdb-6.0.pkg.tar" "BinaryPeak-kdcomplete-c0143e1.zip" "beurling.tar.bz2" "beurling-1.tar.bz2" "beurling 2/" "beurling/" "bengardner-uncrustify-uncrustify-0.59-125-g159921c.zip" "bengardner-uncrustify-159921c/" "Bengali_Movie_-_Heerak_Rajar_Deshe(1980)-Satyajit_Ray__s_Film.6588718.TPB.torrent" "bbdb-2.35.tar.gz" "bbdb-2.35/" "BasicSetup - acra - How to install ACRA 4.x in your Android application project. - Application Crash Report for Android - Google Project Hosting.html" "base64.ttf" "Bank_Statement_6_mths_updated_address.pdf" "Bank_Statement_6_months.pdf" "bank6.pdf" "bank6-1.pdf" "auctex-11.86.tar.gz" "auctex-11.86/" "arm_elf_toolchain-alpha.pkg/" "ARM_AssyLang.pdf" "arc2.tar" "Aquamacs-JDEE-2.3.5.1.pkg.tgz" "Aquamacs-JDEE-2.3.5.1.pkg/" "Aquamacs-Emacs-2.3a2.dmg" "Apparatus v1.0.4.apk" "App Icon Template [1.0]/" "AnonymousTTMac.zip" "AnonymousTT/" "animal_farm_read_it_.pdf" "androidvncserver" "androidpeople.com-notification.zip" "androidpeople.com-notification/" "Android: Using linear gradient as background looks banded - Stack Overflow.webarchive" "android-sdk_r13-mac_x86.zip" "android-ndk-r6b-darwin-x86.tar.bz2" "android-ndk-r6b/" "android-book.pdf" "Android Programming Tutorials 2.9.pdf" "andresteingress-intellij-color-schemes-4da1934.zip" "andresteingress-intellij-color-schemes-4da1934/" "An_introduction_to_the_Langlands_program.djvu" "Algorithms by Robert Sedgewick.pdf" "AIT.pdf" "AIF_1995__45_1_143_0.pdf" "Afloat 2.4/" "AdvancedUsage - acra - Advanced Usage Guide - Application Crash Report for Android - Google Project Hosting.html" "acra-4.2.3.zip" "acra-4.2.3 2/" "acra-4.2.3 (1).zip" "acra-4.2.3/" "About Downloads.pdf" "abc/" "a233/" "A Garden of Integrals.pdf" "A First Course in Modular Forms(GTM 228).pdf" "_Salary_Sept-1.pdf" "__ MSRTC __ Online Reservation System18thMay.pdf" "__ MSRTC __ Online Reservation System.pdf" "9407003v1.pdf" "9407003v1-1.pdf" "915104000511180000_PS-24011pdf.pdf" "915104000511180000_COI_24011].pdf" "4617NNNN0144NNNN.pdf" "4617NNNN0144NNNN-1.pdf" "4.3.5 iPhone 4 Bundle/" "3G-Towns.zip" "36490_2011-08-26--0387905332_0354905332.djvu" "23270462_1336622407443.pdf" "23270462_1336622387105.pdf" "23270462_1336474925971.pdf" "23270462_1336474900962.pdf" "23270462_1336474709956.pdf" "23270462_1319934378469.pdf" "23270462_1318582150183.pdf" "23270462_1313852894407.pdf" "23270462_1313852863749.pdf" "20120524-go.pdf" "2 Riemann Hypothesis/" "1984.pdf" "161665_1498360606_2731335_n.jpg" "13.asc" "1110.2982v1.pdf" "11 Posov Ilya The Mellin transform.ppt" "10.1.1.87.2267.pdf" "10.1.1.76.3145.pdf" "10.1.1.76.3145 (2).pdf" "10.1.1.76.3145 (1).pdf" "10.1.1.75.7474.pdf" "10.1.1.64.437.pdf" "10.1.1.192.9750.pdf" "10.1.1.170.5242.pdf" "10.1.1.153.6844.pdf" "10.1.1.153.6423.pdf" "0904.1957v2.pdf" "0606713v1.pdf" "0508572v1.pdf" ".localized" ".DS_Store" "(2) Van K Tharp - Trade Your Way to Financial Freedom.pdf" "#tiny-xmms.el#" "#index.php#" " Epub-Collection.zip" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/" (20441 60557) "util/" "sender/" "HSSubmitAnIdea.java" "HSReportAnIssue.java" "HSMenuModel.java" "HSMenuCallBack.java" "HSMenu.java" "HSMainView.java" "HSImageList.java" "HSFindASolution.java" "HSFeedback.java" "HSCrashReporterInit.java" "HSChatScreen.java" "HSAskAQuestion.java" "HelpShift.java" "extern/" "annotation/" ".git/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/" (20404 63345) "HelpShift/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/" (20404 63345) "com/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/" (20424 46014) "src/" "res/" "README" "project.properties" "proguard.cfg" "NOTICE.ACRA" "nbandroid/" "META-INF/" "local.properties" "LICENSE.ACRA" "libs/" "HelpShift.jar" "gen/" "export.properties" "default.properties" "build.xml" "build.properties" "bin/" "ant.properties" "AndroidManifest.xml" ".project" ".git/" ".DS_Store" ".classpath" "../" "./")
+
+ ("/Users/rpg/project/mobile/" (20432 42717) "plcrashreporter-1.1-beta1/" "iphone/" "ipad/" "android/" ".gitignore" ".git/" "../" "./")
+
+ ("/etc/" (20423 21013) "zshenv" "xtab" "xgrid/" "ttys" "thnuclnt/" "syslog.conf" "sudoers" "sshd_config" "ssh_host_rsa_key.pub" "ssh_host_rsa_key" "ssh_host_key.pub" "ssh_host_key" "ssh_host_dsa_key.pub" "ssh_host_dsa_key" "ssh_config" "snmp/" "smb.conf.old" "shells" "services" "security/" "rtadvd.conf" "rpc" "rmtab" "resolv.conf" "rc.netboot" "rc.imaging" "rc.common" "racoon/" "protocols" "profile" "ppp/" "postfix/" "php.ini.default-5.2-previous" "php.ini.default" "pf.os" "pf.conf" "pf.anchors/" "periodic/" "pear.conf-previous" "paths.d/" "paths" "passwd" "pam.d/" "openldap/" "ntp.conf" "ntp-restrict.conf" "notify.conf" "newsyslog.d/" "newsyslog.conf" "networks" "nanorc" "named.conf" "moduli" "memberd.conf" "master.passwd" "manpaths.d/" "manpaths" "man.conf" "mail.rc" "mail/" "mach_init_per_user.d/" "mach_init_per_login_session.d/" "mach_init.d/" "locate.rc" "localtime" "krb5.keytab" "kern_loader.conf" "jabberd/" "irbrc" "hosts~orig" "hosts~" "hosts.umbrella" "hosts.equiv" "hosts" "hostconfig~orig" "hostconfig" "group" "gettytab" "gdb.conf" "ftpusers" "ftpd.conf.default" "ftpd.conf" "fstab.hd" "find.codes" "emond.d/" "efax.rc" "dnsextd.conf" "devdocsets" "defaults/" "cups/" "csh.logout" "csh.login" "csh.cshrc" "com.apple.screensharing.agent.launchd" "certificates/" "bind.keys" "bashrc" "autofs.conf" "auto_master~orig" "auto_master" "auto_home" "authorization~previous" "authorization" "asl.conf" "apache2/" "amavisd.conf.default" "aliases.db" "aliases" "afpovertcp.cfg" "AFP.conf" "6to4.conf" "../" "./")
+
+ ("/Users/rpg/project/helloClojure/src/helloClojure/" (20428 23107) "core.clj" "../" "./")
+
+ ("/Users/rpg/project/zulu/src/zulu/backend/" (20366 34448) "utils.clj" "users.clj" "structs/" "stripe.clj" "perms.clj" "notes.clj" "nodes.clj" "domains.clj" "customers.clj" "current.clj" "common.clj" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/QotdApp/src/com/cname/" (20404 63345) "testapp/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/QotdApp/src/com/" (20404 63345) "cname/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/QotdApp/src/" (20404 63345) "com/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/QotdApp/" (20424 29121) "src/" "res/" "project.properties" "proguard.cfg" "nbandroid/" "local.properties" "libs/" "gen/" "default.properties" "build.xml" "build.properties" "bin/" "ant.properties" "AndroidManifest.xml" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/golang/hello_go/" (20420 35322) "hello.go" "hello.8" "8.out" "../" "./")
+
+ ("/Users/rpg/Downloads/CodeMirror-2.23/" (20363 52417) "theme/" "test/" "README.md" "mode/" "LICENSE" "lib/" "keymap/" "index.html" "doc/" "demo/" "../" "./")
+
+ ("/Users/rpg/NetBeansProjects/AndroidApplication1/" (20130 25091) "src/" "res/" "proguard.cfg" "libs/" "gen/" "bin/" "AndroidManifest.xml" "../" "./")
+
+ ("/Users/rpg/project/golang/go/doc/devel/" (20170 4767) "weekly.html" "roadmap.html" "release.html" "index.html" "../" "./")
+
+ ("/Users/rpg/project/golang/go/doc/" (20170 4767) "video-005.jpg" "video-004.png" "video-003.png" "video-002.png" "video-001.png" "tmpltohtml.go" "talks/" "sieve.gif" "root.html" "progs/" "popups.js" "playground.html" "play_overlay.png" "makehtml" "Makefile" "logo.png" "logo-153x55.png" "install.html" "ie.css" "gopher/" "godocs.js" "GoCourseDay3.pdf" "GoCourseDay2.pdf" "GoCourseDay1.pdf" "go_tutorial.tmpl" "go_tutorial.html" "go_spec.html" "go_mem.html" "go_for_cpp_programmers.html" "go_faq.html" "go-logo-white.png" "go-logo-blue.png" "go-logo-black.png" "gccgo_install.html" "gccgo_contribute.html" "frontpage.css" "ExpressivenessOfGo.pdf" "effective_go.html" "docs.html" "devel/" "debugging_with_gdb.html" "contribute.html" "contrib.html" "community.html" "codewalk/" "codereview_with_mq.html" "codelab/" "code.html" "button_background.png" "all.css" "../" "./")
+
+ ("/Users/rpg/Documents/PNT/" (20411 32773) "Untitled.tex" "TLR/" "RH-Functional-Equation/" "RH-Final/" "prv_pnt.log" "pnt.toc" "pnt.tex~" "pnt.tex" "pnt.synctex.gz" "pnt.pdf" "pnt.log" "pnt.aux" "Godel/" "_region_.tex" "_region_.prv/" "_region_.pdf" "_region_.log" "_region_.aux" ".DS_Store" "#pnt.tex#" "../" "./")
+
+ ("/Users/rpg/project/asm/" (20332 7474) "install-sdk" "helloworld.c" "../" "./")
+
+ ("/Users/rpg/Downloads/HelpShift/" (20338 59976) "README" "NOTICE.ACRA" "LICENSE.ACRA" "HelpShift.jar" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/Downloads/phonegap-phonegap-de1960d/lib/android/example/src/org/apache/cordova/example/" (20308 35476) "cordovaExample.java-e" "cordovaExample.java" "../" "./")
+
+ ("/Users/rpg/project/mobile.old/android/HelpShift/src/com/ibt/HelpShift/" (20283 24685) "HSImageList.java" "HSCrashReportSender.java" "HSCrashReporterInit.java" "HSApplication.java" "../" "./")
+
+ ("/Users/rpg/project/mobile.old/android/HelpShift/" (20283 24685) "src/" "res/" "project.properties" "proguard.cfg" "nbandroid/" "META-INF/" "local.properties" "libs/" "HelpShift.jar" "gen/" "export.properties" "default.properties" "build.xml" "build.properties" "bin/" "ant.properties" "AndroidManifest.xml" ".project" ".DS_Store" ".classpath" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/sender/" (20404 63360) "ReportSenderException.java" "ReportSender.java" "HttpPostSender.java" "GoogleFormSender.java" "EmailIntentSender.java" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/HelpShift/src/com/HelpShift/annotation/" (20404 63345) "ReportsCrashes.java" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/" (20404 63360) "xml/" "README" "QotdApp/" "HelpShift/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/mobile/android/QotdApp/src/com/cname/testapp/" (20411 31593) "HelpShiftDemo.java" "#FirstStep.java#" "../" "./")
+
+ ("/Users/rpg/project/golang/go/misc/emacs/" (20170 4768) "go-mode.el" "go-mode-load.el" "../" "./")
+
+ ("/Users/rpg/project/golang/go/misc/" (20170 4768) "zsh/" "xcode/" "vim/" "swig/" "notepadplus/" "kate/" "IntelliJIDEA/" "goplay/" "godoc/" "fraise/" "emacs/" "dashboard/" "chrome/" "cgo/" "bbedit/" "bash/" "arm/" "../" "./")
+
+ ("/Users/rpg/project/golang/go/" (20170 5891) "test/" "src/" "robots.txt" "README" "pkg/" "PATENTS" "misc/" "LICENSE" "lib/" "include/" "favicon.ico" "doc/" "CONTRIBUTORS" "bin/" "AUTHORS" ".hgtags" ".hgignore" ".hg/" "../" "./")
+
+ ("/Users/rpg/project/golang/" (20170 6800) "hello_go/" "go/" "../" "./")
+
+ ("/Users/rpg/project/overtone/src/overtone/" (20416 40983) "version.clj" "studio/" "speech.clj" "sc/" "repl/" "protocols.clj" "music/" "live.clj" "libs/" "inst/" "helpers/" "gui.clj" "gui/" "device/" "core.clj" "config/" "algo/" "../" "./")
+
+ ("/Users/rpg/project/overtone/src/" (20416 40983) "overtone/" "../" "./")
+
+ ("/Users/rpg/project/overtone/test/" (20416 40983) "test_utils.clj" "overtone/" "data/" "../" "./")
+
+ ("/Users/rpg/project/overtone/" (20416 41224) "TODO.md" "test/" "src/" "script/" "README.md" "project.clj" "LICENSE" "lib/" "examples/" "docs/" "classes/" "CHANGELOG.md" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rpg/Downloads/resupportlibraryicons/" (20413 62388) "search-icon.txt" "search-icon.png" "menu-list-icon.txt" "menu-list-icon.png" "highlight.txt" "highlight-box.png" "header2.txt" "header.txt" "header.png" "close_button.txt" "close-button.png" "background.txt" "background.png" "../" "./")
+
+ ("/Users/rpg/Downloads/supportlibraryicons/" (20404 40859) "twitter-icon.txt" "twitter-icon.png" "feedback-icon.txt" "feedback-icon.png" "FAQ-icon.txt" "FAQ-icon.png" "chat-icon.txt" "chat-icon.png" "call-icon.txt" "call-icon.png" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/kirin/androidpathlikebutton/" (20400 42472) "specialmenuModel.java" "specialmenuCallBack.java" "specialmenu.java" "AndroidpathlikebuttonActivity.java" ".svn/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/kirin/" (20400 42472) "androidpathlikebutton/" ".svn/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/com/" (20400 42472) "kirin/" ".svn/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/src/" (20400 42472) "com/" ".svn/" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/trunk/" (20400 42473) "src/" "res/" "project.properties" "proguard.cfg" "gen/" "bin/" "assets/" "AndroidManifest.xml" ".svn/" ".project" ".classpath" "../" "./")
+
+ ("/Users/rpg/project/mobile/android-path-like-button-read-only/" (20400 42473) "wiki/" "trunk/" "tags/" "branches/" ".svn/" "../" "./")
+
+ ("/Users/rpg/Downloads/siyamed-android-satellite-menu-ca4b257/satellite-menu/" (20243 1048) "TODO.txt" "src/" "res/" "project.properties" "pom.xml" "LICENSE" "AndroidManifest.xml" ".project" ".gitignore" ".classpath" "../" "./")
+
+ ("/Users/rpg/Downloads/siyamed-android-satellite-menu-ca4b257/" (20243 1048) "satellite-menu-sample/" "satellite-menu/" "README.md" "../" "./")
+
+ ("/Users/rpg/project/mobile/iphone/Demo/" (20382 35237) "icon.png" "Demo.xcodeproj/" "Demo/" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/rpg/project/helloClojure/src/" (20312 18318) "helloClojure/" "../" "./")
+
+ ("/Users/rpg/project/hello/" (20077 57366) "README" "rakefile" "lib/" ".git/" "../" "./")
+
+ ("/Users/rpg/Projects/" (20360 9859) "Notes-aqhvmdelgebukdchzbrawyyposjz/" "Build/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
+

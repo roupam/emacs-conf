@@ -1,0 +1,60 @@
+ -*- mode: org; comment-column: 0; -*-
+
+* MOBILE LOCAL KEY VALUE STORE PAIRS
+
+|-----------------+------------------------------------------------------------------------------------------------------|
+| Key             | Description                                                                                          |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| API KEY         | The developer api key                                                                                |
+| DOMAIN NAME     | The developer domain                                                                                 |
+| APP ID          | The app ID                                                                                           |
+| PLATFORM        | ios, android, windows                                                                                |
+| GENERATED UUID  | MD5 of API KEY, APP ID, PLATFORM, DEVICE, INFO DICT, TIMESTAMP, PROCESS INFO                         |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| USER IDENTIFIER | The name of the app user fed by the developer API                                                    |
+| USER METADATA   | Extra user information for analytics (like location, age, gender,etc. to be fed in by the developer) |
+| PROFILE ID      | Profile ID for identifying the user                                                                  |
+|-----------------+------------------------------------------------------------------------------------------------------|
+| BREADCRUMB      | The breadcrumb log trails array, for the developer to track user actions                             |
+| METADATA        | Extra app specific information that the developer might want to see, to be fed in through the API    |
+|-----------------+------------------------------------------------------------------------------------------------------|
+
+|----------------------+-----------------------------------------------------------------------|
+| APP USAGE ANALYTICS  |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+| APP START TIME       |                                                                       |
+| APP END TIME         |                                                                       |
+| EVENT TRACKING START | Start time for developer specified event to measure event performance |
+| EVENT TRACKING END   | End time for developer specified event to measure event performance   |
+| APP RUN COUNT        | Number of times the user has opened the app                           |
+| USER RETURN FLAG     | Whether the user is a new user or an already existing user            |
+|----------------------+-----------------------------------------------------------------------|
+| ... more to come ... |                                                                       |
+|----------------------+-----------------------------------------------------------------------|
+
+|--------------------+----------------------------------------------------------------------------------------------------------------------------|
+| My Issues          |                                                                                                                            |
+|--------------------+----------------------------------------------------------------------------------------------------------------------------|
+| GLOBAL SINCE       | (defaults to nil for first time) Last time when user sees an issue  (Fetch myissue changes/ open an issue/ send a message) |
+| ISSUES ARRAY       | New Messages will be appended                                                                                              |
+| ISSUE ID ARRAY     |                                                                                                                            |
+| ISSUE COUNT UNREAD | Number of unread mesg in issue                                                                                             |
+|--------------------+----------------------------------------------------------------------------------------------------------------------------|
+
+|--------------------+---------+-------------------------------+-------------------------------+-----------------------|
+| Issue API          | Request | Route                         | To be sent                    | Return Val            |
+|--------------------+---------+-------------------------------+-------------------------------+-----------------------|
+| First Report Issue | POST    | api/lib/profiles              | User Identifier, Name, Email  | 201, Profile ID       |
+| Add new issue      | POST    | api/lib/issues/               | Issue Description, Profile ID | 201, New Issue Json   |
+| Send new message   | POST    | api/lib/issues/<id>/messages/ | Message Text, Profile ID      | 201, New Message Json |
+| Fetching issues    | GET     | api/lib/issues/               | Profile ID, Global Since      | 200, Issues List Json |
+|--------------------+---------+-------------------------------+-------------------------------+-----------------------|
+
+|--------------------------+-----------------------------------------|
+| Params for every request | Description                             |
+|--------------------------+-----------------------------------------|
+| TIMESTAMP                | Unix timestamp                          |
+| TOKEN                    | Random token at least 50 length         |
+| APP ID                   |                                         |
+| SIGNATURE                | HMAC-SHA256(API KEY, TIMESTAMP + TOKEN) |
+|--------------------------+-----------------------------------------|

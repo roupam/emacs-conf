@@ -1,0 +1,13 @@
+f(x) = x - floor(x);
+L(t) = (t*intnum (x=1,100000000,sin(t*log(2*x))*(f(x+0.5) - 0.5)/(x*sqrt(x))))^2;
+{
+	a = 10;
+	maxt = 0;
+	while(a < 100000,
+                print("Enter a:");
+                a = input();
+		v = L(a);
+		print("L(a)",v);
+		a++
+	);
+}

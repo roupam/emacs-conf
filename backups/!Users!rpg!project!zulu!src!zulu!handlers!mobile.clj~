@@ -1,0 +1,14 @@
+(ns zulu.handlers.mobile
+  (:require [zulu.models.answers :as m]
+            [zulu.events.handlers :as ze]
+            [zulu.cleanup.handlers :as zc]
+            [zulu.handlers.utils :as u]
+            [zulu.models.users :as user]
+            [zulu.database.domains :as dbd]
+            [zulu.database :as db]
+            [zulu.stats.handlers :as stats])
+  (:use [zulu.handlers :only [handler]]))
+
+(defn create-app
+  [{:keys [app-name app-id]}]
+  )

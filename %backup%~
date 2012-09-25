@@ -1,0 +1,19 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+#192.168.254.101 ash.helpshift.mobi #odin
+127.0.0.1 pd6.blist.parallels.com
+127.0.0.1 pd7.blist.parallels.com
+127.0.0.1 pdfm7.blist.parallels.com
+127.0.0.1 registration.parallels.com
+127.0.0.1 parallels.com
+127.0.0.1 update.parallels.com
+50.19.39.145 nagios.qotdinc.com
+192.168.254.101 sandbox.helpshift.com
+255.255.255.255	broadcasthost
+::1             localhost 
+fe80::1%lo0	localhost

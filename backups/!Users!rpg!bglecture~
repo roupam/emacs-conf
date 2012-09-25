@@ -1,0 +1,54 @@
+--- 29 August 2011
+
+Clojure Data types:
+------------------
+
+"String"
+42
+symbol
+:keyword
+#"regex+"
+ratio
+
+
+Clojure first class data structures
+-----------------------------------
+
+'(1 2 3) --> list first/rest
+[1 2 3] --> vector first/rest/nth
+{:x 1, :y 2, :z 3} --> map assoc/dissoc select-keys/merge
+#{1,2,3} --> set
+
+Strings and Characters
+"Hello is string"
+\c \h \a \r \a \c \t \e \r
+
+Homoiconicity --> Code and data is same
+
+---------
+Homework:
+1. Given a collection, return the last item.
+2. ampersand url encoding
+---------
+
+--- 30 August 2011
+
+Destructuring
+-------------
+only takes place in two places. let binding and arg vector
+(let [[a b c] x])
+or
+(defn foo [a b c]
+
+(let [{a :x b :y :as m} m]
+(let [{{a :x b :y} :or {a 4, b 2}} m] 
+
+Homework Problem:
+-----------------
+(drop nth)
+
+Lazy Seq
+--------
+ iterate
+ lazy-seq -- use rarely
+ cons

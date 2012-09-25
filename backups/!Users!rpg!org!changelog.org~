@@ -1,0 +1,17 @@
+* Changes in version 0.1.1
+** 2996c5a 2012-08-01 | iOS: SBJson refactored. [Roupam Ghosh]
+** 224db33 2012-08-01 | iOS: Library build version included. OpenUDID included. Plus some fixes related to issue not being fe
+** 5d76fc2 2012-08-01 | iOS: Added Library version in code. v0.1 [Roupam Ghosh]
+** 7dd7aaa 2012-08-01 | iOS: Duplicate fetch my-issues request on view will appear FIXED. Double notification count issue fix
+** ee424e6 2012-07-31 | iOS: LeNote readjusted to new lib. [Roupam Ghosh]
+** 4839dbf 2012-08-06 | iOS: Latest L<C3><A9> Note and 0.1.1 v for lib (v0.1.1) [Roupam Ghosh]
+
+
+* Changes in version 0.1.2
+** e8e0553 2012-08-13 | iOS: WebView behaviour adjusted. (HEAD, v0.1.2, develop.support) [Roupam Ghosh]
+** f4b7fd5 2012-08-09 | iOS: When pressing "Ok, attach" button for screenshot, progress indicator covered by keyboard, w
+** c8fc14c 2012-08-09 | iOS: Changed API signature methodology. [Roupam Ghosh]
+** e72cb5f 2012-08-09 | iOS: Removed AFNetworking and ASIHttpRequests. Handling natively with NSURLConnection for https:
+** 94ee9ff 2012-08-07 | iOS: Sorted issues from latest to oldest. [Roupam Ghosh]
+** e373ba9 2012-08-07 | iOS: HTML unescaping and HSReachability added for checking internet connection available or not.
+** ff6e09b 2012-08-06 | iOS: HTML entities bug fixed. [Roupam Ghosh]

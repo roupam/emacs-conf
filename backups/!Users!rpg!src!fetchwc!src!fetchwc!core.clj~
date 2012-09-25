@@ -1,0 +1,43 @@
+(ns wourdcount.core
+  (:require compojure.core)
+  (:require hiccup.core)
+  (:require hiccup.page-helpers)
+  (:require [clojure.contrib.duck-streams :as d]))
+
+
+(defn layout [& content]
+  (html
+   (doctype :xhtml-strict)
+      (xhtml-tag "en"
+              [:head
+               [:meta {:http-equiv "Content-type"
+                       :content "text/html; charset=utf-8"}]
+               [:title "Fetch Web Page and Count Words"]]
+              [:body content])))
+
+(defn input-screen []
+  (layout
+   [:h3 "Enter a full address like http://www.google.com"]
+   [:form {:method "post" :action "/"}
+    [:input {:type "text" :name "addr"}]
+    [:input.action {:type "submit" :value "Get Word Count"}]]))
+
+(defn output-screen
+  [url]
+  (layout
+   [:h3 "Word Count"]
+   [:p (hiccup.core/html (execute-it url))]))
+
+(defroutes fetchapp
+  (GET "/" []
+       (input-screen))
+
+  (POST "/" [addr]
+        (output-screen addr)))
+
+
+(defn execute-it
+  [url]
+  (clojure.core/take 10 (sort-by val > (frequencies (re-seq #"[a-zA-Z0-9]+" (str/replace-re #"</?+>" " " (str (line-seq (d/reader url)))))))))
+
+
