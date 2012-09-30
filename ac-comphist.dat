@@ -1,4 +1,24 @@
-((("lambda-list-keywords" .
+((("tex" .
+   [1 0 0])
+  ("message" .
+   [0 0 0 0 0 1 0])
+  ("text" .
+   [2 0 0 1])
+  ("alert" .
+   [13 0 0 0 0])
+  ("align" .
+   [0 0 1 0 0])
+  ("window-margins" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("window" .
+   [0 0 0 0 0 1])
+  ("defun" .
+   [0 0 0 1 0])
+  ("color-theme-spec" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("color-themes" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda-list-keywords" .
    [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("lsh" .
    [0 0 1])
@@ -49,7 +69,7 @@
   ("TeX-command" .
    [0 0 1 0 0 0 0 0 0 0 0])
   ("color-theme-sanityinc-solarized-dark" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
   ("color-theme-salmon-diff" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
   ("color-theme-oswald" .
@@ -69,7 +89,7 @@
   ("nero" .
    [0 0 0 1])
   ("color-theme-print" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0])
   ("Product" .
    [1 0 0 0 0 0 0])
   ("0.5" .
@@ -93,7 +113,7 @@
   ("pprint" .
    [1 0 0 0 0 0])
   ("term" .
-   [1 0 0 0])
+   [1 0 1 0])
   ("color-theme-molokai" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0])
   ("color-theme-zenburn" .
@@ -161,7 +181,7 @@
   ("initial-scratch-message" .
    [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
   ("set-default-font" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15])
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19])
   ("yas/trigger-key" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("eclim-executable-find" .
@@ -297,7 +317,7 @@
   ("set-default" .
    [0 0 0 0 0 1 0 0 0 0 2])
   ("nil" .
-   [86 0 0])
+   [87 0 0])
   ("when-not" .
    [3 0 0 0 0 0 0 0])
   ("tp" .
@@ -411,9 +431,9 @@
   ("load-library" .
    [0 0 0 0 2 4 4 4 1 0 0 10])
   ("color-gray-p" .
-   [0 0 0 0 3 0 0 0 0 0 0 0])
+   [0 0 0 0 6 0 0 0 0 0 0 0])
   ("color-theme-mode" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+   [0 0 0 0 0 0 0 2 0 1 0 0 0 0 0 0])
   ("color-theme-solarized" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("If" .
@@ -607,7 +627,7 @@
   ("%2" .
    [11 0])
   ("concat" .
-   [53 0 0 4 7 0])
+   [53 0 0 4 7 3])
   ("col" .
    [7 0 1])
   ("c1" .
@@ -1139,7 +1159,7 @@
   ("helloClojure.core>" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
   ("require" .
-   [2 0 0 2 2 0 0])
+   [2 0 0 4 2 0 0])
   ("this-single-command-keys" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   (".set" .
@@ -1341,4 +1361,14 @@
   ("messageComposeViewController-didFinishWithResult" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("core-run" .
-   [0 0 0 0 1 0 0 0])))
+   [0 0 0 0 1 0 0 0])
+  ("NILP" .
+   [2 0 0 0])
+  ("color-theme-complexity" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("growl" .
+   [1 0 0 0 0])
+  ("server-start" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("rcirc-notify" .
+   [0 0 1 0 0 0 0 0 0 0 0 0])))

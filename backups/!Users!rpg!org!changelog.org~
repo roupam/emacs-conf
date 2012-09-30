@@ -15,3 +15,26 @@
 ** 94ee9ff 2012-08-07 | iOS: Sorted issues from latest to oldest. [Roupam Ghosh]
 ** e373ba9 2012-08-07 | iOS: HTML unescaping and HSReachability added for checking internet connection available or not.
 ** ff6e09b 2012-08-06 | iOS: HTML entities bug fixed. [Roupam Ghosh]
+
+* Changes in version 0.1.3
+** b18354a 2012-08-23 | iOS: Simulator release. Includes bug fixes. (HEAD, develop.support) [Roupam Ghosh]
+** 58fc610 2012-08-23 | iOS: Some cosmetic changes for the iPad UI. (origin/develop.support) [Roupam Ghosh]
+** cd0aa43 2012-08-23 | iOS: DONE Report an Issue must not contain smileys etc... must have at least [a-zA-Z0-9] regex
+                             DONE Report an Issue must not contain smileys etc... must have at least [a-zA-Z0-9] regex
+                             DONE Name should be capitalized when adding new issue
+                             DONE Background color of chat screen
+                             DONE Shadow color of "Need More Help?" should be 0xF2F2F2 for iPad only`
+                             DONE Report a new issue modal should have cancel instead of back button
+                             DONE Report a new issue textbox height in landscape mode
+                             DONE Support screen back button blank title (when modal present and going from landscape to portrait)
+                             DONE Report a new issue check for empty entry
+** 8362565 2012-08-23 | iOS: DONE Notifications bug
+                             DONE Reply after Accept/Reject and Second message does not generate notification
+                             DONE FAQ selection highlight for iPad
+                             DONE Last updated FAQ time at bottom
+** 4cf07e9 2012-08-21 | iOS: iPad UI for chat messages, report a new issue screen and other cosmetic changes. [Roupam Ghosh]
+** c243e11 2012-08-20 | iOS: iPad implementation of Chat Screen Reply field and FAQs. [Roupam Ghosh]
+** 3085371 2012-08-20 | iOS: MGSplitViewController modified for detail view controller refresh problem. [Roupam Ghosh]
+** 9448520 2012-08-20 | iOS: iPad implementation started. [Roupam Ghosh]
+** 6050863 2012-08-20 | iOS: Fixed issue sorting. [Roupam Ghosh]
+** 122af20 2012-08-14 | iOS: App store release for Le Note and library chat special message response, background set. [Roupam Ghosh]

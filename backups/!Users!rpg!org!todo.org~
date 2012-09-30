@@ -107,13 +107,27 @@
 
 * Abinash todo
 ** DONE Auto-correct/spell check for issue text area.
+** TODO Resync notes from Dropbox on App reinstall
+** TODO Faster launch animation
+** TODO Change Sumbit button to send button
+** TODO Goto the chat screen after submitting new issue
+** TODO Message queueing under all circumstances
+** TODO Take screenshot new theme
+** TODO Go back to the chat screen on take screenshot return
+** TODO Rating/Feedback
+** TODO Two different Le Note bundle identifiers
 
 * New UI todo
-** TODO Portrait Upside Down
+** DONE Portrait Upside Down
 ** TODO Landscape
 ** TODO iOS 6 and Simulator Universal Library
 ** TODO Payment System
 ** TODO Fixes
+** DONE Screenshot Delay
+** DONE Twice/Thrice Messages
+** TODO Close Buttons Alignment
+** TODO Documentation changes
+** DONE Loss of messages/comes back when chat screen brought down
 
 * Astrid Bugs
 ** DONE GCD for notification unread count
@@ -125,4 +139,4 @@
 ** DONE Loading Screen shouldn't be there on every load
 ** DONE Search Bar bottom border when searching
 ** TODO Config API
-** TODO Native Buttons
+** DONE Native Buttons

@@ -15,7 +15,10 @@
 ;;(set-default-font "M+_1m-14")
 ;;(set-default-font "Anonymous-14")
 ;;(set-default-font "Terminus-18")
-(set-default-font "Inconsolata-16")
+;;(set-default-font "Inconsolata-16")
+;;(set-default-font "Latin_Modern_Sans_Quotation-14")
+(set-default-font "CMU_Sans_Serif-18")
+;;(set-default-font "Gill_Sans-16")
 ;;(set-default-font "Continuum_Light-18")
 ;;(set-default-font "Share-TechMono-16")
 ;;(set-default-font "BloomingGrove-15")
@@ -133,19 +136,18 @@
 ;; (setq exec-path (append exec-path '("/usr/local/Cellar/tiger-vnc/1.0.1/bin/")))
 ;; (setq exec-path (append exec-path '("/usr/local/Cellar/dict/1.9.15/bin/")))
 
-(load-library "color-theme-actress")
+ (load-library "color-theme-actress")
 ;; (load-library "color-theme-cobalt")
-(load-library "color-theme-complexity")
+ (load-library "color-theme-complexity")
 ;; (load-library "color-theme-dawn-night")
 ;; (load-library "color-theme-eclipse")
 ;; (load-library "color-theme-github")
 ;; (load-library "color-theme-gruber-darker")
 ;; (load-library "color-theme-ir-black")
 ;; (load-library "color-theme-tangotango")
-(color-theme-complexity)
 ;;(load-library "mc-theme3")
 ;;(mc-theme3)
-
+(color-theme-sanityinc-solarized-dark)
 ;; (load-library "mc-theme")
 ;; (mc-theme)
 
@@ -436,11 +438,11 @@
 
      ;; something about ourselves
      (setq
-        user-mail-address "rpg@helpshift.com"
+        user-mail-address "math.post.git@gmail.com"
         user-full-name  "Roupam Ghosh"
         message-signature
          (concat
-           "\n\nRoupam Ghosh\n"
+           "Roupam Ghosh\n"
            "Sent from emacs\n"))
 
      ;; sending mail -- replace USERNAME with your gmail username
@@ -502,10 +504,10 @@
 
 ;; ------ Powerline -------
 
-(require 'powerline)
-(custom-set-faces
- '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+;; (require 'powerline)
+;; (custom-set-faces
+;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
 ;; ------- Sauron notifications ------
 (add-to-list 'load-path "~/.emacs.d/elpa/sauron/")
@@ -515,7 +517,8 @@
 
 ;; ------ IRC clients ------
 (setq rcirc-server-alist
-      '(("irc.qotdinc.com" :channels ("#dev" "#bakvaas"))))
+      '(("irc.freenode.net" :channels ("#emacs"))))
+(require 'rcirc-notify)
 
 ;; ------ Emacs Muse ------
 ;; Add this to your .emacs or .xemacs/init.el file.
@@ -524,4 +527,10 @@
 (require 'muse-publish)
 (require 'muse-html)  ;; and so on
 
+
+;; ----- Alert Notifications ----
+(require 'alert)
+
+;; ---- Start Emacs Server ----
+(server-start)
 ;;init.el end

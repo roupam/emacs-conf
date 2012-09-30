@@ -20,8 +20,9 @@
 ** DONE Noise background
 ** DONE Report a New issue screen
 
+* Left TODO
 ** TODO Upside down
 ** TODO Search tableview nil background color
 ** TODO SearchBar textfield border color
 ** TODO Chat swiped away on dismiss
-** TODO Tap shpould work under collapsed condition
+** TODO Tap should work under collapsed condition
